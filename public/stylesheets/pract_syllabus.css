@@ -1,0 +1,62 @@
+body {
+  background-color: #f1f7fd;
+}
+#wrapper {
+  padding: 50px;
+}
+
+#practicals--heading {
+  border-bottom: 5px solid bisque;
+  display: inline;
+}
+
+@media all and (max-width: 800px) {
+  #practicals--heading {
+    border-bottom: 5px solid bisque;
+    display: inline;
+    text-align: center;
+    
+  }
+}
+
+#leaderboard--wrapper {
+  margin-top: 30px;
+  max-width: 350px;
+  height: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  position: fixed;
+  padding: 10px;
+  margin-top: -20px;
+}
+
+@media all and (max-width: 800px) {
+  #leaderboard--wrapper {
+    position: relative;
+    margin-top: 20px;
+  }
+}
+
+#leaderboard--heading {
+  text-align: center;
+  padding: 10px;
+  background-color: #051e34;
+  color: white;
+  border-radius: 20px;
+}
+
+#user--wrapper {
+  /* height: 60px; */
+  /* width: 100%; */
+  /* border: 1px solid gray; */
+  background-color: #FF842F;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.practicals--card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 20px;
+}
