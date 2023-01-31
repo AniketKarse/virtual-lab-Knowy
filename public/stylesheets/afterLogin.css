@@ -1,0 +1,72 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+}
+
+
+
+#form_wrapper{
+  width: 500px;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* Dashboard */
+
+#sidebar {
+  width: 25%;
+  background-color: #051E34;
+
+}
+
+#mainview {
+  margin-left: 25%;
+  padding: 0px;
+  
+}
+
+#mainView--wrapper{
+  padding: 20px;
+  background-color: #F1F7FD;
+  margin-top: 0px;
+}
+
+@media all and (max-width: 800px) {
+  #sidebar {
+    /*display: none;*/
+    width: 300px;
+    background-color: #051E34;
+    z-index: 1000000;
+  }
+
+  #mainview {
+    margin-left: 0px;
+  }
+}
+
+/* NAVBAR */
+.nav-link {
+  color: black !important;
+  margin-right: 20px;
+  font-size: 120%;
+}
+
+.menu_wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F1F7FD;
+  border-bottom: 1px solid gray;
+}
+
+
+
+
+.dashboard--card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 20px;
+
+
+}
+
