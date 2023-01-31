@@ -75,3 +75,44 @@ body {
   font-size: small;
 }
 
+
+/* SIDEBAR */
+
+
+#sidebar--profile--container h5{
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+#sidebar--profile--container img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 50px;
+ 
+}
+
+#sidebar--score{
+
+  position: fixed;
+  bottom: 0;
+  width: 25%;
+
+  background-color:#FF842F;
+  padding: 10px;
+  text-align: center;
+
+}
+
+@media all and (max-width: 800px) {
+  #sidebar--score{
+    width: 300px;
+  }
+
+}
+
+
+
+
+
