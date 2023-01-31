@@ -12,6 +12,10 @@ router.get('/me', (req, res, next) => {
   res.render('dashboard', {name:'Shreyash', class:'10th'})
 })
 
+router.get('/me/physics', (req, res) => {
+  res.render('physics/physicsPract')
+})
+
 router.post('/sendForm', (req, res, next) => {
   console.log(req.body)
 })
