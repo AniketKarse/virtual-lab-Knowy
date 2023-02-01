@@ -1,0 +1,78 @@
+{{>internalNabBar}}
+
+<div id="practical--wrapper">
+    <div class="row flex-column-reverse flex-lg-row">
+        <div class="col-sm-6" id="clm1">
+            <br>
+            <p class="card-title" id="practical--heading">
+                Subject : Physics <br>
+                Practical No : 1 <br>
+                Progress : 0%
+            </p>
+        </div>
+        <div class="col-sm-6" id="clm2">
+
+            <nav class="nav">
+                <a class="btn btn-primary" href="#" onclick="displayVideo()">Video</a>
+                <a class="btn btn-primary" href="#" onclick="displayAnimation()">Animation</a>
+
+                <a class="btn btn-primary" href="#">Test</a>
+
+            </nav>
+
+            <div style="margin-top: 50px;" id="Container">
+                <div id="video--Container">
+                    VIDEO
+                </div>
+
+                <div id="animation--Container">
+                    Animation
+                </div>
+
+                <div id="test--Container">
+                    Test
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var videoContainer = document.getElementById("video--Container")
+    var animationContainer = document.getElementById("animation--Container")
+    var testContainer = document.getElementById("test--Container")
+
+    function displayVideo() {
+        if (window.getComputedStyle(videoContainer).display == "none") {
+            videoContainer.style.display = "block"
+            animationContainer.style.display = "none"
+            testContainer.style.display = "none"
+        }
+    }
+
+    function displayAnimation() {
+        if (window.getComputedStyle(animationContainer).display == "none") {
+            videoContainer.style.display = "none"
+            animationContainer.style.display = "block"
+            testContainer.style.display = "none"
+        }
+    }
+
+    function displayTest() {
+        if (window.getComputedStyle(animationContainer).display == "none") {
+            videoContainer.style.display = "none"
+            animationContainer.style.display = "block"
+            testContainer.style.display = "none"
+        }
+    }
+
+
+
+
+
+</script>

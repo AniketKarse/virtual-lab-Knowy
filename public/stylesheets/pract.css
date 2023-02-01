@@ -1,0 +1,57 @@
+#practical--wrapper {
+}
+
+#clm1 {
+  /* border: 1px solid red; */
+  height: 100vh;
+}
+
+#clm2 {
+  /* border: 1px solid red; */
+  padding: 20px;
+  border-left: 1px dotted gray;
+}
+
+.nav a {
+  margin-right: 5px;
+}
+
+#clm2 nav {
+  position: fixed;
+}
+
+#video--Container {
+  display: block;
+}
+
+#animation--Container {
+  display: none;
+}
+
+#test--Container {
+  display: none;
+}
+
+#Container {
+  position: fixed;
+}
+
+@media all and (max-width: 800px) {
+  #clm2 nav {
+    position: relative;
+  }
+
+  #Container {
+    position: relative;
+  }
+}
+
+#practical--heading {
+
+    box-shadow: 0 4px 8px 0 rgba(151, 182, 251, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px;
+  color: gray;
+  padding: 20px;
+  border-radius: 20px;
+  
+}

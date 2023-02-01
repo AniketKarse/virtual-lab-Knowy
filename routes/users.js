@@ -16,6 +16,14 @@ router.get('/me/physics', (req, res) => {
   res.render('physics/physicsPract')
 })
 
+router.get('/me/physics/pract-1', (req, res) => {
+  res.render('physics/1')
+})
+
+router.get('/me/html', (req, res) => {
+  res.render('html/htmlPract')
+})
+
 router.post('/sendForm', (req, res, next) => {
   console.log(req.body)
 })
