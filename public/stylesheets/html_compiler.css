@@ -1,4 +1,12 @@
+.editor{
+    position: fixed;
+}
 
+@media all and (max-width: 800px) {
+    .editor{
+        position: relative;
+    }
+}
 #html-code{
     width: 100%;
     height: 200px;

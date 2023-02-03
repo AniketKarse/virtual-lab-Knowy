@@ -3,13 +3,17 @@
 
 #clm1 {
   /* border: 1px solid red; */
-  height: 100vh;
+  /* height: 100vh; */
+  background-color: #051E34;
+  color: white;
+
 }
 
 #clm2 {
   /* border: 1px solid red; */
   padding: 20px;
   border-left: 1px dotted gray;
+  background-color:#F1F7FD;
 
 }
 
@@ -51,7 +55,7 @@
 
     box-shadow: 0 4px 8px 0 rgba(151, 182, 251, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 20px;
-  color: gray;
+  color: #FF842F;
   padding: 20px;
   border-radius: 20px;
   
@@ -59,4 +63,18 @@
 
 .practicals--card{
   cursor: pointer;
+}
+
+
+
+#practicalData--wrapper{
+  border: 2px dashed gray;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#theory--wrapper{
+
 }
