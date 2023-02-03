@@ -1,0 +1,100 @@
+<div class="editor">
+    <button onclick="displayHtml()" class="btn btn-dark">Index.html</button>
+    <button onclick="displayCss()" class="btn btn-dark">style.css</button>
+    <button class="btn btn-primary" onclick="run()">RUN</button>
+    <br>
+    <br>
+
+    <textarea id="html-code"><html>&#13;&#10;<head>&#13;&#10; <title>Virtual Lab</title>&#13;&#10;</head>&#13;&#10;<body>&#13;&#10;
+                Write Your Code Here&#13;&#10;</body>&#13;&#10;</html></textarea>
+    <textarea id="css-code">body {&#13;&#10; margin:0px;&#13;&#10;}</textarea>
+    <br>
+    <h5>OUTPUT</h5>
+    {{!-- <textarea id="js-code"></textarea> --}}
+    <iframe id="output"></iframe>
+
+    
+    
+    <input id="filename" placeholder="filename with extension" />
+    <button id="download">Download file</button>
+</div>
+
+<script>
+
+    
+    function run(){
+        let htmlCode = document.querySelector(".editor #html-code").value
+        let cssCode = "<style>" + document.querySelector(".editor #css-code").value + "</style>"
+        {{!-- let jsCode = document.querySelector(".editor #js-code").value --}}
+        let output = document.querySelector(".editor #output")
+
+        {{!-- console.log(htmlCode, cssCode, jsCode) --}}
+        output.contentDocument.body.innerHTML = htmlCode+cssCode
+
+    }
+
+</script>
+<script>
+    let htmlContainer = document.getElementById("html-code")
+    let cssContainer = document.getElementById("css-code")
+
+    function displayHtml(){
+        htmlContainer.style.display = "block";
+        cssContainer.style.display = "none";
+    }
+
+    function displayCss(){
+        htmlContainer.style.display = "none";
+        cssContainer.style.display = "block";
+    }
+
+</script>
+<script>
+
+
+{{!-- This Code Downloads the file --}}
+function downloadFile(filename, content) {
+  // It works on all HTML5 Ready browsers as it uses the download attribute of the <a> element:
+  const element = document.createElement('a');
+  
+  //A blob is a data type that can store binary data
+  // "type" is a MIME type
+  // It can have a different value, based on a file you want to save
+  const blob = new Blob([content], { type: 'plain/text' });
+
+  //createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
+  const fileUrl = URL.createObjectURL(blob);
+  
+  //setAttribute() Sets the value of an attribute on the specified element.
+  element.setAttribute('href', fileUrl); //file location
+  element.setAttribute('download', filename); // file name
+  element.style.display = 'none';
+  
+  //use appendChild() method to move an element from one element to another
+  document.body.appendChild(element);
+  element.click();
+  
+  //The removeChild() method of the Node interface removes a child node from the DOM and returns the removed node
+  document.body.removeChild(element);
+};
+
+window.onload = () => {
+  document.getElementById('download').
+  addEventListener('click', e => {
+    
+    //The value of the file name input box
+    const filename = document.getElementById('filename').value;
+    
+    //The value of what has been input in the textarea
+    const content = document.getElementById('html-code').value +"\n" + document.getElementById('css-code').value;
+    
+    // The && (logical AND) operator indicates whether both operands are true. If both operands have nonzero values, the result has the value 1 . Otherwise, the result has the value 0 .
+    
+    if (filename && content) {
+      downloadFile(filename, content);
+    }
+  });
+};
+
+
+</script>
