@@ -1,22 +1,21 @@
-<div class="editor" >
-    <button onclick="displayHtml()" class="btn btn-dark">Index.html</button>
-    <button onclick="displayCss()" class="btn btn-dark">style.css</button>
-    <button class="btn btn-primary" onclick="run()">RUN</button>
-    <br>
-    <br>
+<div class="editor">
+  <button onclick="displayHtml()" class="btn btn-dark">Index.html</button>
+  <button onclick="displayCss()" class="btn btn-dark">style.css</button>
+  <button class="btn btn-primary" onclick="run()">RUN</button>
+  <br>
+  <br>
 
-    <textarea id="html-code"><html>&#13;&#10;<head>&#13;&#10; <title>Virtual Lab</title>&#13;&#10;</head>&#13;&#10;<body>&#13;&#10;
-                Write Your Code Here&#13;&#10;</body>&#13;&#10;</html></textarea>
-    <textarea id="css-code">body {&#13;&#10; margin:0px;&#13;&#10;}</textarea>
-    <br>
-    <h5>OUTPUT</h5>
-    {{!-- <textarea id="js-code"></textarea> --}}
-    <iframe id="output"></iframe>
+  <textarea id="html-code"><html>&#13;&#10;<head>&#13;&#10; <title>Virtual Lab</title>&#13;&#10;</head>&#13;&#10;<body>&#13;&#10;<!-- Write Your Code Here -->&#13;&#10;</body>&#13;&#10;</html></textarea>
+  <textarea id="css-code">body {&#13;&#10; margin:0px;&#13;&#10;}</textarea>
+  <br>
+  <h5>OUTPUT</h5>
+  {{!-- <textarea id="js-code"></textarea> --}}
+  <iframe id="output"></iframe>
 
-    
-    
-    <input id="filename" placeholder="filename with extension" />
-    <button id="download">Download file</button>
+
+
+  <input id="filename" placeholder="filename with extension" />
+  <button id="download">Download file</button>
 </div>
 
 <script>

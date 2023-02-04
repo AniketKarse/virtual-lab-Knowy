@@ -112,6 +112,14 @@ body {
 
 }
 
+@media all and (max-width: 800px) {
+#compilerImage{
+  display: none;
+}
+#groupchatImage{
+  display: none;
+}
+}
 
 
 

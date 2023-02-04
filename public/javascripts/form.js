@@ -9,17 +9,17 @@
 
 //     console.log(formDataJson)
     
-//     fetch(Url, {
-//         method: 'POST',
-//         headers: {
-//             'Accept': 'application/json',
-//             'Content-Type': 'application/json'
-//           },
-//         body: formDataJson
-//     }).then((response) => {
-//         alert(response)
-//     }).catch((e) => {
-//         // alert(e)
-//     })
+    // fetch(Url, {
+    //     method: 'POST',
+    //     headers: {
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json'
+    //       },
+    //     body: formDataJson
+    // }).then((response) => {
+    //     alert(response)
+    // }).catch((e) => {
+    //     // alert(e)
+    // })
 
 // })

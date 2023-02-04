@@ -40,33 +40,100 @@
                         Then, inside the &lt;html&gt; element there is a
                         &lt;body&gt;
                         element:
-                        <br>    
+                        <br>
                         <br>
                         The &lt;h1&gt; element defines a heading. <br>
                         It has a start tag &lt;h1&gt; and an end tag &lt;/h1&gt;
-                        <br>    
+                        <br>
                         <br>
                         The &lt;p&gt; element defines a paragraph.<br>
                         It has a start tag &lt;p&gt; and an end tag &lt;/p&gt;
-                        
-                        
-                        </p>
-
-                    </div>
+                    </p>
 
                 </div>
 
-            </div>
-            <div class="col-sm-6" id="clm2">
-
-                {{>html_compiler}}
-
-
-
-
-
-
 
             </div>
+
+
+            <div id="test--wrapper">
+                <h5><span style="color: #FF842F;">QUESTIONS </span></h5>
+
+                <h6>Q1. Which of the following is not a HTML tag ?</h6>
+
+                <form id="myForm">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="Q1" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;h1&gt; &lt;/h1&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="Q2" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;h7&gt; &lt;/h7&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="Q3" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;p&gt; &lt;p&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="Q4" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;marquee&gt; &lt;/marquee&gt;
+                        </label>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit" class="btn btn-success">SUBMIT</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="col-sm-6" id="clm2">
+
+            {{>html_compiler}}
+
+            {{!-- {{>universal_compiler}} --}}
+
+
+
+
+
+
+
         </div>
     </div>
+</div>
+
+<script>
+
+    const form = document.getElementById("myForm")
+    const ansOfQ1 = document.getElementById("Q2")
+
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        if(ansOfQ1.checked === true){
+            alert("Congraluations")
+            {{!-- Now Add this score in database --}}
+        }else{
+            alert("Try again")
+        }
+      
+
+
+    })
+
+
+</script>

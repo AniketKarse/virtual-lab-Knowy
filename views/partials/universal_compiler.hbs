@@ -1,0 +1,39 @@
+<div class="editor">
+    <button class="btn btn-primary" onclick="run()">RUN</button>
+    <textarea id="code"></textarea>
+
+    <br>
+    <h5>OUTPUT</h5>
+    {{!-- <textarea id="js-code"></textarea> --}}
+    <iframe id="output"></iframe>
+
+</div>
+
+
+<script>
+
+    function run(){
+        let Code = document.querySelector(".editor #code").value
+
+       const Url = '/compiler/runPY'
+
+       fetch(Url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+             body: Code
+        }).then((response) => {
+            alert(response)
+        }).catch((e) => {
+            // alert(e)
+        })
+            
+        let output = document.querySelector(".editor #output")
+        output.contentDocument.body.innerHTML = Code
+
+
+    }
+
+
+</script>

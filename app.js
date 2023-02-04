@@ -9,6 +9,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var compilerRouter = require('./routes/compiler');
+
 
 var port = process.env.PORT || '3000';
 
@@ -33,6 +35,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/compiler', compilerRouter);
+
 
 
 
