@@ -1,0 +1,175 @@
+{{>internalNabBar}}
+
+<div id="practical--wrapper">
+    <div class="row">
+        <div class="col-sm-6" id="clm1">
+            <br>
+            <p class="card-title" id="practical--heading">
+                Subject : HTML <br>
+                Practical No : 3 <br>
+                Progress : 0%
+            </p>
+
+
+
+            <div id="practicalData--wrapper">
+                <h5> <span style="color: #FF842F;">AIM </span> <br>Learn About
+                    HTML Headings</h5>
+                <br>
+                <div id="theory--wrapper">
+                    <h5><span style="color: #FF842F;">THEORY </span></h5>
+                    <p>
+                        <ul>
+                            <li style="margin-bottom: 20px;">HTML headings are
+                                titles or subtitles that you want to display on
+                                a webpage. </li>
+                            <li style="margin-bottom: 20px;">A HTML heading or
+                                HTML h tag can be defined as a title or a
+                                subtitle which you want to display on the
+                                webpage. When you place the text within the
+                                heading tags &lt;h1&gt.........&lt;/h1&gt, it is
+                                displayed
+                                on the browser in the bold format and size of
+                                the text depends on the number of heading.</li>
+                            <li style="margin-bottom: 20px;">There are six
+                                different HTML headings which are defined with
+                                the &lt;h1&gt to&lt;h6&gt tags, from
+                                highest level h1 (main heading) to the least
+                                level h6 (least important heading).</li>
+                            <li style="margin-bottom: 20px;">h1 is the largest
+                                heading tag and h6 is the smallest one. So h1 is
+                                used for most important heading and
+                                h6 is used for least important.</li>
+                        </ul>
+
+                        <h5>HTML Headings:</h5>
+
+                        <h5>CODE</h5>
+                        <ul>
+                            <li> &lt;h1&gt; Heading 1 &lt;/h1&gt;</li>
+                            <li> &lt;h2&gt; Heading 2 &lt;/h2&gt;</li>
+                            <li> &lt;h3&gt; Heading 3 &lt;/h3&gt;</li>
+                            <li> &lt;h4&gt; Heading 4 &lt;/h4&gt;</li>
+                            <li> &lt;h5&gt; Heading 5 &lt;/h5&gt;</li>
+                            <li> &lt;h6&gt; Heading 6 &lt;/h6&gt;</li>
+
+                        </ul>
+                        <h5>OUTPUT</h5>
+
+                        <ul>
+                            <li><h1> Heading 1</h1></li>
+                            <li><h2> Heading 2</h2></li>
+                            <li><h3> Heading 3</h3></li>
+                            <li><h4> Heading 4</h4></li>
+                            <li><h5> Heading 5</h5></li>
+                            <li><h6> Heading 6</h6></li>
+
+                        </ul>
+
+                        <br>
+
+                        <h5>Bigger Headings</h5>
+                        Each HTML heading has a default size. However, you can
+                        specify the size for any heading with the style
+                        attribute, using the CSS font-size property:
+                        <br>
+                        <br>
+                        Example <br>
+                        &lt;h1&gt; style="font-size:60px;"> Heading 1
+                        &lt;/h1&gt;
+
+
+
+
+
+
+
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="test--wrapper">
+                <h5><span style="color: #FF842F;">QUESTIONS </span></h5>
+
+                <h6>Q1. Which of the following is not a HTML tag ?</h6>
+
+                <form id="myForm">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="Q1" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;h1&gt; &lt;/h1&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="Q2" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;h7&gt; &lt;/h7&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="Q3" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;p&gt; &lt;p&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="Q4" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;marquee&gt; &lt;/marquee&gt;
+                        </label>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit" class="btn btn-success">SUBMIT</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="col-sm-6" id="clm2">
+
+            {{>html_compiler}}
+
+            {{!-- {{>universal_compiler}} --}}
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    const form = document.getElementById("myForm")
+    const ansOfQ1 = document.getElementById("Q2")
+
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        if(ansOfQ1.checked === true){
+            alert("Congraluations")
+            {{!-- Now Add this score in database --}}
+        }else{
+            alert("Try again")
+        }
+      
+
+
+    })
+
+
+</script>

@@ -30,6 +30,22 @@ router.get('/me/html/pract-1', (req, res) => {
   res.render('1html/html-1')
 })
 
+router.get('/me/html/pract-2', (req, res) => {
+  res.render('1html/html-2')
+})
+
+router.get('/me/html/pract-3', (req, res) => {
+  res.render('1html/html-3')
+})
+
+router.get('/me/html/pract-4', (req, res) => {
+  res.render('1html/html-4')
+})
+
+router.get('/me/html/pract-5', (req, res) => {
+  res.render('1html/html-5')
+})
+
 
 // COMPILER
 router.get('/me/compiler', (req, res) => {
