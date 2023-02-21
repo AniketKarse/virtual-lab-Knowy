@@ -10,15 +10,10 @@
 
     <div id="teacher-sidebar-navigation">
 
-     
-
- 
-
-            <h5>Students List</h5>
+            <h5 onclick="showStudentList()" style="cursor: pointer;">Students List</h5>
             <hr>
-            <h5>Students Progress</h5>
-            <hr>
-    
+            <h5 onclick="showStudentProgress()" style="cursor: pointer;">Students Progress</h5>
+            <hr>    
 
     </div>
 
@@ -31,7 +26,16 @@
 
 <div id="mainview">
  
-{{>student_data}}
+ <div id="student_data" style="display:block;">
+  {{>student_data}}
+ </div>
+
+ <div id="student_progress" style="display: none;">
+{{>student_progress}}
+ </div>
+
+
+
   
 </div>
 
@@ -44,4 +48,23 @@
     function w3_close() {
       document.getElementById("sidebar").style.display = "none";
     }
+  </script>
+
+
+  <script>
+
+    const student_list = document.getElementById("student_data")
+    const student_progress = document.getElementById("student_progress")
+
+
+    function showStudentList(){
+      student_list.style.display = "block"
+      student_progress.style.display = "none"
+    }
+
+    function showStudentProgress(){
+      student_list.style.display = "none"
+      student_progress.style.display = "block"
+    }
+
   </script>

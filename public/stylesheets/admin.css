@@ -21,6 +21,7 @@ h5{
     color: white;
 }
 
+/* STUDENT LIST */
 #student-list-wrapper{
     padding: 40px;
     
@@ -28,4 +29,14 @@ h5{
 
 .table{
     border: 1px dashed black;
+}
+
+/* STUDENT PROGRESS */
+#student-progress-wrapper{
+    padding: 40px;
+}
+
+#student-progress-attendence-wrapper{
+    border: 1px dashed black;
+    padding: 20px;
 }
