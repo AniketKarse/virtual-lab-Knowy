@@ -6,9 +6,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser'); 
 var urlencodedParser = bodyParser.urlencoded({ extended: false }) 
+const mongoose = require('mongoose')
+
+require('./db/mongoDB')
+const User = require('./models/user-model')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var teacherRouter = require('./routes/teacher')
 var compilerRouter = require('./routes/compiler');
 
 
@@ -35,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/compiler', compilerRouter);
+app.use('/teacher', teacherRouter);
 
 
 // catch 404 and forward to error handler

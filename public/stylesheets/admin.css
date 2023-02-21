@@ -1,0 +1,31 @@
+
+#teacher-sidebar-profile-container{
+    background-color: #FF842F;
+    padding: 15px 0px;
+    text-align: center;
+}
+
+#teacher-sidebar-profile-container-subject{
+    /* background-color: #051E34; */
+    color: white;
+    font-weight: 700;
+}
+
+#teacher-sidebar-navigation{
+    margin-top: 20px;
+    color: white;
+    padding: 20px;
+}
+
+h5{
+    color: white;
+}
+
+#student-list-wrapper{
+    padding: 40px;
+    
+}
+
+.table{
+    border: 1px dashed black;
+}

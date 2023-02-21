@@ -14,7 +14,8 @@
 
             <nav class="nav">
                 <a class="btn btn-primary" href="#" onclick="displayVideo()">Video</a>
-                <a class="btn btn-primary" href="#" onclick="displayAnimation()">Animation</a>
+                <a class="btn btn-primary" href="#"
+                    onclick="displayAnimation()">Animation</a>
                 <a class="btn btn-primary" href="#">Test</a>
             </nav>
 
@@ -24,7 +25,17 @@
                 </div>
 
                 <div id="animation--Container">
-                    Animation
+                    <img class="img-fluid" usemap="#workmap" src="/images/phy-1.gif" id="animation1">
+                    <img class="img-fluid" usemap="#workmap" src="https://www.myjigyasa.com/images/How_It_Works_3.jpg" style="display:none" id="animation2">
+               
+                    <map name="workmap">
+                        <area shape="rect" coords="34,44,270,350" alt="Computer"
+                            onclick="run()">
+                        <area shape="rect" coords="290,172,333,250" alt="Phone"
+                            href="phone.htm">
+                        <area shape="circle" coords="337,300,44" alt="Cup of
+                            coffee" href="coffee.htm">
+                    </map>
                 </div>
 
                 <div id="test--Container">
@@ -67,6 +78,19 @@
             animationContainer.style.display = "block"
             testContainer.style.display = "none"
         }
+    }
+
+    var animation1 = document.getElementById("animation1")
+    function run(){
+
+        alert("ABCD")
+
+        animation1.style.display = "none"
+        animation2.style.display = "block"
+
+
+        
+
     }
 
 
