@@ -29,27 +29,27 @@ const userSchema = new mongoose.Schema({
     htmlScore: {
         score: [
             {
-                "pract-1": {
+                pract1: {
                     type: Number
                 }
             },
             {
-                "pract-2": {
+                pract2: {
                     type: Number
                 }
             },
             {
-                "pract-3": {
+                pract3: {
                     type: Number
                 }
             },
             {
-                "pract-4": {
+                pract4: {
                     type: Number
                 }
             },
             {
-                "pract-5": {
+                pract5: {
                     type: Number
                 }
             },
