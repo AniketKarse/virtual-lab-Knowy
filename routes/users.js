@@ -30,8 +30,8 @@ router.post('/saveUser', async (req, res) => {
 // To Update Htm Score (TEST)
 router.post('/updateHTML', async (req, res) => {
 
-  var user_id = '63f37651af4dd26e167cf1ef';
-  User.findByIdAndUpdate(user_id, {name: 'Shreyash'}, (err, docs) => {
+  var user_id = req.body.id;
+  User.findByIdAndUpdate(user_id, {htmlScore: req.body.htmlScore}, (err, docs) => {
     if (err) {
       console.log(err)
     }
@@ -41,6 +41,25 @@ router.post('/updateHTML', async (req, res) => {
   })
 
 })
+
+// Get the list of students
+router.get('/student_list', async (req, res) => {
+
+  try {
+
+    const filter = {};
+    const all = await User.find(filter);
+
+    console.log(all)
+    res.send(all)
+    
+  } catch (error) {
+    res.send(500)
+  }
+
+})
+
+
 
 // PHYSICS
 router.get('/me/physics', (req, res) => {

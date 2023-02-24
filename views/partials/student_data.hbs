@@ -16,30 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>A</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>V</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>E</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
+       
 
 
 
@@ -57,7 +34,7 @@ function myFunction() {
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
+    td = tr[i].getElementsByTagName("td")[1];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -68,4 +45,49 @@ function myFunction() {
     }       
   }
 }
+</script>
+
+
+{{!-- This script fetch all student data from database --}}
+<script>
+
+  let table = document.getElementById("myTable");
+
+  fetch('/users/student_list')
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data[0].htmlScore.pract1)
+
+    for(var i=0; i<data.length; i++){
+
+      console.log(data[i]._id)
+
+      let row = table.insertRow(-1);
+
+      let c1 = row.insertCell(0);
+      let c2 = row.insertCell(1);
+      let c3 = row.insertCell(2);
+      let c4 = row.insertCell(3);
+
+
+      c1.innerText = "1"
+      c2.innerText = data[i].name
+      c3.innerText = data[i].age
+      c4.innerText = data[i].htmlScore.pract1
+
+      row.appendChild(c1);
+      row.appendChild(c2);
+      row.appendChild(c3);
+      row.appendChild(c4);
+
+
+    }
+
+
+  });
+
+  
+
+
+
 </script>

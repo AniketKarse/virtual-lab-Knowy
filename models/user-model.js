@@ -27,34 +27,34 @@ const userSchema = new mongoose.Schema({
         type: String
     },
     htmlScore: {
-        score: [
-            {
+       
+            
                 pract1: {
                     type: Number
-                }
-            },
-            {
+                },
+            
+            
                 pract2: {
                     type: Number
-                }
-            },
-            {
+                },
+            
+            
                 pract3: {
                     type: Number
-                }
-            },
-            {
+                },
+            
+            
                 pract4: {
                     type: Number
-                }
-            },
-            {
+                },
+            
+            
                 pract5: {
                     type: Number
                 }
-            },
+            
 
-        ]
+        
     },
 })
 
