@@ -2,15 +2,18 @@ POST http://localhost:3000/users/saveUser HTTP/1.1
 content-type: application/json
 
 {
-    "name" : "Aniket Karse",
+    "name" : "Kshijit Deshmukh",
     "age" : 20,
     "password" : "ABCD",
-    "email" : "Aiket@gmail.com",
+    "email" : "kshijit@gmail.com",
     "htmlScore" : {
-        "pract1" : 10,
-        "pract2" : 20,
-        "pract3" : 20
-    }
+        "pract1" : {
+            "score" : 30,
+            "timeStamp": "01-03-2023"
+        }
+        
+    },
+    "attendance":["2023-02-01"]
 }
 
 ###
@@ -27,3 +30,10 @@ content-type: application/json
 
 ###
 GET http://localhost:3000/users/student_list HTTP/1.1
+
+###
+GET http://localhost:3000/users/getStudent HTTP/1.1
+
+###
+
+PUT http://localhost:3000/users/updateAttendence HTTP/1.1

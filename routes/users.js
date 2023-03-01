@@ -1,4 +1,5 @@
 var express = require('express');
+var moment = require('moment');
 var router = express.Router();
 const User = require('../models/user-model')
 
@@ -56,6 +57,31 @@ router.get('/student_list', async (req, res) => {
   } catch (error) {
     res.send(500)
   }
+
+})
+
+// Get the single student by ID
+router.get('/getStudent', async (req, res) => {
+
+  try {
+
+    const user = await User.findById("63fc95859ea17f3087262903")
+    res.send(user)
+    
+
+  } catch (error) {
+    res.send(500)
+  }
+
+})
+
+// Update the attendence of user
+
+router.put('/updateAttendence', async (req, res) => {
+  
+  await User.findOneAndUpdate({_id : "63fc95859ea17f3087262903"},
+    {$push:{attendance: ["2023-02-02"]}}
+  )
 
 })
 

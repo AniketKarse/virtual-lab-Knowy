@@ -26,31 +26,62 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String
     },
+    attendance : 
+        [
+            {
+                type: String
+            }
+        ],
     htmlScore: {
        
             
                 pract1: {
-                    type: Number
+                    score: {
+                        type: Number
+                    },
+                    timeStamp:{
+                        type: String
+                    }
                 },
             
             
                 pract2: {
-                    type: Number
+                    score: {
+                        type: Number
+                    },
+                    timeStamp:{
+                        type: String
+                    }
                 },
             
             
                 pract3: {
-                    type: Number
+                    score: {
+                        type: Number
+                    },
+                    timeStamp:{
+                        type: String
+                    }
                 },
             
             
                 pract4: {
-                    type: Number
+                    score: {
+                        type: Number
+                    },
+                    timeStamp:{
+                        type: String
+                    }
                 },
             
             
                 pract5: {
-                    type: Number
+                    score: {
+                        type: Number
+                    },
+                    timeStamp:{
+                        type: String
+                    }
                 }
             
 
