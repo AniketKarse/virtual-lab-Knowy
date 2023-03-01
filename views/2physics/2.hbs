@@ -13,8 +13,7 @@
 
             <div id="practicalData--wrapper">
                 <h5> <span style="color: #FF842F;">AIM </span> <br>
-                    To construct a simple circuit using a switch, battery, and
-                    bulb.
+                    To construct a series circuit using two bulbs and battery.
                 </h5>
                 <br>
                 <div id="theory--wrapper">
@@ -25,7 +24,7 @@
 
                         <ul>
                             <li>Battery (5V)</li>
-                            <li>Bulb (5V)</li>
+                            <li>Two bulbs (5V)</li>
                             <li>Switch</li>
                             <li>Connecting wires</li>
                             <li>Battery holder (optional)</li>
@@ -34,33 +33,39 @@
                         <h5>Procedure:</h5>
 
                         <p style="text-align: justify;">
-                            1. Connect one end of the bulb to the positive
-                            terminal
-                            of the battery using a connecting wire. <br>
-                            2. Connect the other end of the bulb to one terminal
-                            of
-                            the switch using another connecting wire. <br>
-                            3. Connect the other terminal of the switch to the
+                            1. Connect one end of the first bulb to the positive
+                            terminal of the battery using a connecting wire.
+                            <br>
+                            2. Connect the other end of the first bulb to one
+                            end of the second bulb using another connecting
+                            wire.<br>
+                            3. Connect the other end of the second bulb to the
                             negative terminal of the battery using another
                             connecting wire.<br>
                             4. Ensure that all connections are secure and the
                             circuit is properly closed.<br>
-                            5. Turn on the switch and observe the bulb lighting
-                            up.<br>
-                            6. Turn off the switch and observe the bulb turning
-                            off.
+                            5. Turn on the switch and observe both bulbs
+                            lighting up.<br>
+                            6. Turn off the switch and observe both bulbs
+                            turning off.
                         </p>
 
                         <h5>Explanation:</h5>
                         <p style="text-align: justify;">
-                            When the switch is turned on, it closes the circuit,
-                            allowing the current to flow from the battery,
-                            through the bulb, and back to the battery. The bulb
-                            lights up because the current passing through it
-                            causes the filament to heat up and emit light. When
-                            the switch is turned off, the circuit is broken, and
-                            the current stops flowing, causing the bulb to turn
-                            off.
+                            In a series circuit, the components are connected
+                            end to end, so the current has only one path to
+                            follow. When the switch is turned on, the current
+                            flows from the battery, through the first bulb, then
+                            through the second bulb, and finally back to the
+                            battery. Because the bulbs are connected in series,
+                            the same current flows through both bulbs, causing
+                            them to light up. However, since the voltage of the
+                            battery is divided between the two bulbs, each bulb
+                            receives only a fraction of the voltage, causing
+                            them to be dimmer than in a single bulb circuit.
+                            When the switch is turned off, the circuit is
+                            broken, and the current stops flowing, causing both
+                            bulbs to turn off.
                         </p>
 
                         <h5>Note</h5>
@@ -69,8 +74,8 @@
                             It is important to follow proper safety guidelines
                             when working with electricity. Always ensure that
                             the circuit is properly closed before turning on the
-                            switch, and avoid touching the battery or bulb when
-                            the circuit is in operation.
+                            switch, and avoid touching the battery or bulbs when
+                            the circuit is in operation
                         </p>
 
                     </p>
@@ -81,176 +86,177 @@
             </div>
 
             <div id="test--wrapper">
-                <h5><span style="color: #FF842F;" id="questions">QUESTIONS </span></h5>
+                <h5><span style="color: #FF842F;" id="questions">QUESTIONS
+                    </span></h5>
                 <br>
-                
+
 
                 <form id="myForm">
 
                     {{!-- Question 1 --}}
-                    <h6>Q1. In a circuit with a switch, battery, and bulb, what happens when the switch is turned on?</h6>
+                    <h6>Q1. What is the purpose of the resistor in a circuit with a battery, bulb, and resistor?</h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="1"
                             id="1.1" name="q1">
                         <label class="form-check-label" for="flexCheckDefault">
-                            The circuit is broken, and the bulb turns off
+                            To increase the voltage of the battery
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="2"
                             id="1.2" name="q1">
                         <label class="form-check-label" for="flexCheckDefault">
-                            The circuit is closed, and the bulb lights up
+                            To decrease the current flowing through the circuit
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="3"
                             id="1.3" name="q1">
                         <label class="form-check-label" for="flexCheckDefault">
-                            The battery explodes
+                            To increase the brightness of the bulb
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="4"
                             id="1.4" name="q1">
                         <label class="form-check-label" for="flexCheckDefault">
-                            The bulb flickers
+                            To prevent the battery from overheating
                         </label>
                     </div>
                     <br>
 
                     {{!-- Question 2 --}}
-                    <h6>Q.2 What happens when the switch is turned off in a circuit with a switch, battery, and bulb?</h6>
+                    <h6>Q.2 What happens when the resistor is removed from the circuit with a battery, bulb, and resistor?</h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="1"
                             id="2.1" name="q2">
                         <label class="form-check-label" for="flexCheckDefault">
-                            The circuit is broken, and the bulb turns off
+                            The current flowing through the circuit increases
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="2"
                             id="2.2" name="q2">
                         <label class="form-check-label" for="flexCheckDefault">
-                            The circuit is closed, and the bulb lights up brighter
+                            The current flowing through the circuit decreases
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="3"
                             id="2.3" name="q2">
                         <label class="form-check-label" for="flexCheckDefault">
-                            The battery drains faster
+                            The brightness of the bulb increases
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="4"
                             id="2.4" name="q2">
                         <label class="form-check-label" for="flexCheckDefault">
-                            The bulb explodes
+                            The brightness of the bulb decreases
                         </label>
                     </div>
                     <br>
 
                     {{!-- Question 3 --}}
-                    <h6>Q.3 What is the purpose of the switch in a circuit with a switch, battery, and bulb?</h6>
+                    <h6>Q.3 How does the brightness of the bulb change when the resistor is increased in a circuit with a battery, bulb, and resistor?</h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="1"
                             id="3.1" name="q3">
                         <label class="form-check-label" for="flexCheckDefault">
-                            To regulate the voltage of the battery
+                            The brightness of the bulb increases
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="2"
                             id="3.2" name="q3">
                         <label class="form-check-label" for="flexCheckDefault">
-                            To increase the brightness of the bulb
+                            The brightness of the bulb decreases
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="3"
                             id="3.3" name="q3">
                         <label class="form-check-label" for="flexCheckDefault">
-                             To open and close the circuit
+                            The brightness of the bulb remains the same
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="4"
                             id="3.4" name="q3">
                         <label class="form-check-label" for="flexCheckDefault">
-                            To prevent the battery from overheating
+                            The bulb does not light up
                         </label>
                     </div>
                     <br>
 
                     {{!-- Question 4 --}}
-                    <h6>Q.4 What is the voltage of the battery required for the practical?</h6>
+                    <h6>Q.4 What is the effect of a loose connection in a circuit with a battery, bulb, and resistor?</h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="1"
                             id="4.1" name="q4">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            1V
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" value="2"
-                            id="4.2" name="q4">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            1.2V
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" value="3"
-                            id="4.3" name="q4">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            5V
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" value="4"
-                            id="4.4" name="q4">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            2V
-                        </label>
-                    </div>
-                    <br>
-
-                    {{!-- Question 5 --}}
-                    <h6>Q.5 What is the effect of a loose connection in a circuit with a switch, battery, and bulb?</h6>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" value="1"
-                            id="5.1" name="q5">
                         <label class="form-check-label" for="flexCheckDefault">
                             The bulb gets brighter
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="2"
-                            id="5.2" name="q5">
+                            id="4.2" name="q4">
                         <label class="form-check-label" for="flexCheckDefault">
-                            The switch gets hot
+                            The resistor gets hot
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="3"
-                            id="5.3" name="q5">
+                            id="4.3" name="q4">
                         <label class="form-check-label" for="flexCheckDefault">
                             The circuit does not work
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="4"
-                            id="5.4" name="q5">
+                            id="4.4" name="q4">
                         <label class="form-check-label" for="flexCheckDefault">
-                            The battery drains faster
+                           The battery drains faster
                         </label>
                     </div>
                     <br>
 
-                   
+                    {{!-- Question 5 --}}
+                    <h6>Q.5 What is the purpose of the battery in a circuit with a battery, bulb, and resistor?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="5.1" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                           To regulate the voltage of the resistor
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="5.2" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                             To increase the current flowing through the circuit
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="5.3" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            To provide the energy to light up the bulb
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="5.4" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            To prevent the resistor from overheating
+                        </label>
+                    </div>
+                    <br>
 
 
-                    
+
+
+
                     <div>
                         <button type="submit" class="btn btn-success">SUBMIT</button>
                     </div>
@@ -275,7 +281,7 @@
             <div style="margin-top: 50px;" id="Container">
                 <div id="video--Container">
 
-                    <iframe src="https://tinyurl.com/2ew8rqf8" width="200%"
+                    <iframe src="https://tinyurl.com/2zuodc7q" width="200%"
                         height="400">
 
                     </iframe>
@@ -351,14 +357,13 @@
 
 
 </script>
-
 <script>
 
     const form = document.getElementById("myForm")
 
     const ansOfQ1 = document.getElementById("1.2")
     const ansOfQ2 = document.getElementById("2.1")
-    const ansOfQ3 = document.getElementById("3.3")
+    const ansOfQ3 = document.getElementById("3.2")
     const ansOfQ4 = document.getElementById("4.3")
     const ansOfQ5 = document.getElementById("5.3")
 
