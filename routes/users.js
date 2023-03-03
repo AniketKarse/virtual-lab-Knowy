@@ -14,7 +14,7 @@ router.get('/me', (req, res, next) => {
   res.render('dashboard', { name: 'Shreyash', class: '10th' })
 })
 
-// To Save User
+// To Save User "REGISTRATION"
 router.post('/saveUser', async (req, res) => {
   console.log(req.body)
   const user = new User(req.body)
@@ -28,20 +28,6 @@ router.post('/saveUser', async (req, res) => {
   }
 })
 
-// To Update Htm Score (TEST)
-router.post('/updateHTML', async (req, res) => {
-
-  var user_id = req.body.id;
-  User.findByIdAndUpdate(user_id, {htmlScore: req.body.htmlScore}, (err, docs) => {
-    if (err) {
-      console.log(err)
-    }
-    else {
-      console.log("Updated User : ", docs);
-    }
-  })
-
-})
 
 // Get the list of students
 router.get('/student_list', async (req, res) => {
@@ -79,7 +65,6 @@ router.get('/getStudent:studentID', async (req, res) => {
 })
 
 // Update the attendence of user
-
 router.put('/updateAttendence', async (req, res) => {
   
   await User.findOneAndUpdate({_id : "63fc95859ea17f3087262903"},
@@ -87,7 +72,6 @@ router.put('/updateAttendence', async (req, res) => {
   )
 
 })
-
 
 
 // PHYSICS

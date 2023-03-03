@@ -1,13 +1,14 @@
+# ADD NEW STUDENT
 POST http://localhost:3000/users/saveUser HTTP/1.1
 content-type: application/json
 
 {
-    "name" : "Aniket Karse",
+    "name" : "Nachiket Yawalkar",
     "age" : 23,
     "password" : "ABCD",
-    "email" : "Aniket@gmail.com",
+    "email" : "Nachiket@gmail.com",
     "class" : "10",
-    "studentID" : "19BE001",
+    "studentID" : "19BE002",
     "htmlScore" : {
         "pract1" : {
             "score" : 40,
@@ -56,28 +57,11 @@ content-type: application/json
     }
 }
 
-###
-POST http://localhost:3000/users/updateHTML HTTP/1.1
-content-type: application/json
 
-{
-    "id" : "63f865acb2600cd3891335d9",
-    "htmlScore" : {
-        "pract1" : 100,
-        "pract2" : 2
-    }
-}
 
 ###
 GET http://localhost:3000/users/student_list HTTP/1.1
 
-###
-GET http://localhost:3000/users/getStudent HTTP/1.1
 
-###
 
-PUT http://localhost:3000/users/updateAttendence HTTP/1.1
 
-###
-# Find Student By ID
-GET http://localhost:3000/teacher/fetchStudentData:123 HTTP/1.1

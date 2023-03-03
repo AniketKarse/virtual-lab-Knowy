@@ -45,3 +45,6 @@ th{
     text-align: center;
 }
 
+#studentData{
+    display: none;
+}
