@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     class: {
-        type: Number
+        type: String
     },
     age: {
         type: Number,
@@ -15,6 +15,9 @@ const userSchema = new mongoose.Schema({
                 throw new Error("Age cannot be -Ve")
             }
         },
+    },
+    studentID: {
+        type: String
     },
     email: {
         type: String,
@@ -26,67 +29,123 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String
     },
-    attendance : 
+    attendance:
         [
             {
                 type: String
             }
         ],
     htmlScore: {
-       
-            
-                pract1: {
-                    score: {
-                        type: Number
-                    },
-                    timeStamp:{
-                        type: String
-                    }
-                },
-            
-            
-                pract2: {
-                    score: {
-                        type: Number
-                    },
-                    timeStamp:{
-                        type: String
-                    }
-                },
-            
-            
-                pract3: {
-                    score: {
-                        type: Number
-                    },
-                    timeStamp:{
-                        type: String
-                    }
-                },
-            
-            
-                pract4: {
-                    score: {
-                        type: Number
-                    },
-                    timeStamp:{
-                        type: String
-                    }
-                },
-            
-            
-                pract5: {
-                    score: {
-                        type: Number
-                    },
-                    timeStamp:{
-                        type: String
-                    }
-                }
-            
 
-        
+
+        pract1: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+
+        pract2: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+
+        pract3: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+
+        pract4: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+
+        pract5: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        }
+
+
+
     },
+
+    physicsScore: {
+
+
+        pract1: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+
+        pract2: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+
+        pract3: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+
+        pract4: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+
+        pract5: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        }
+
+
+
+    }
 })
 
 

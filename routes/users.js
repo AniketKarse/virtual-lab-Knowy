@@ -60,14 +60,17 @@ router.get('/student_list', async (req, res) => {
 
 })
 
-// Get the single student by ID
-router.get('/getStudent', async (req, res) => {
+// Get the single student by studentID
+router.get('/getStudent:studentID', async (req, res) => {
 
   try {
 
-    const user = await User.findById("63fc95859ea17f3087262903")
+    const studentID = req.params.studentID
+    // const user = await User.findById("63fc95859ea17f3087262903")
+    // res.send(user)
+
+    const user = await User.find({studentID: studentID})
     res.send(user)
-    
 
   } catch (error) {
     res.send(500)

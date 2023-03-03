@@ -2,18 +2,58 @@ POST http://localhost:3000/users/saveUser HTTP/1.1
 content-type: application/json
 
 {
-    "name" : "Kshijit Deshmukh",
-    "age" : 20,
+    "name" : "Aniket Karse",
+    "age" : 23,
     "password" : "ABCD",
-    "email" : "kshijit@gmail.com",
+    "email" : "Aniket@gmail.com",
+    "class" : "10",
+    "studentID" : "19BE001",
     "htmlScore" : {
         "pract1" : {
-            "score" : 30,
+            "score" : 40,
             "timeStamp": "01-03-2023"
+        },
+        "pract2" : {
+            "score" : 20,
+            "timeStamp": "02-03-2023"
+        },
+        "pract3" : {
+            "score" : 60,
+            "timeStamp": "03-03-2023"
+        },
+        "pract4" : {
+            "score" : 100,
+            "timeStamp": "04-03-2023"
+        },
+        "pract5" : {
+            "score" : 80,
+            "timeStamp": "05-03-2023"
         }
         
     },
-    "attendance":["2023-02-01"]
+    "physicsScore" : {
+        "pract1" : {
+            "score" : 60,
+            "timeStamp": "01-03-2023"
+        },
+        "pract2" : {
+            "score" : 60,
+            "timeStamp": "02-03-2023"
+        },
+        "pract3" : {
+            "score" : 60,
+            "timeStamp": "03-03-2023"
+        },
+        "pract4" : {
+            "score" : 60,
+            "timeStamp": "04-03-2023"
+        },
+        "pract5" : {
+            "score" : 60,
+            "timeStamp": "05-03-2023"
+        }
+        
+    }
 }
 
 ###
@@ -37,3 +77,7 @@ GET http://localhost:3000/users/getStudent HTTP/1.1
 ###
 
 PUT http://localhost:3000/users/updateAttendence HTTP/1.1
+
+###
+# Find Student By ID
+GET http://localhost:3000/teacher/fetchStudentData:123 HTTP/1.1

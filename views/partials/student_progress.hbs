@@ -1,7 +1,7 @@
 <div id="student-progress-wrapper">
   <h4>Students Progress</h4>
   <br>
-  <form>
+  <form id="studentSearchForm">
     <input type="text" placeholder="Student ID" name="studentID">
     <button type="submit">Search</button>
   </form>
@@ -52,7 +52,7 @@
     <h5>Practical Progress</h5>
     <br>
 
-    <table class="table table-dark">
+    <table class="table table-dark" id="progressTable">
       <thead>
         <tr>
           <th scope="col">SUBJECT</th>
@@ -102,11 +102,11 @@
 
         <tr>
           <th scope="row">HTML</th>
-          <td>100%</td>
-          <td>100%</td>
-          <td>100%</td>
-          <td>100%</td>
-          <td>100%</td>
+          <td id="pract1"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
 
       </tbody>
@@ -297,3 +297,49 @@
   </script>
 
 
+<script>
+
+  form = document.getElementById("studentSearchForm")
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    var formData = new FormData(form)
+    var formDataJson = Object.fromEntries(formData)
+
+    console.log(formDataJson.studentID)
+
+    var studentID = formDataJson.studentID
+
+
+    fetch('/users/getStudent' + studentID)
+    .then((response) => response.json())
+    .then((data) => {
+      
+      {{!-- console.log(data[0].htmlScore) --}}
+      console.log(data)
+      const studentData = data
+
+       // To Update HTML Score
+      var x = document.getElementById("progressTable").rows[5].cells;
+      x[1].innerHTML = data[0].htmlScore.pract1.score + "<br>" + data[0].htmlScore.pract1.timeStamp;
+      x[2].innerHTML = data[0].htmlScore.pract2.score + "<br>" + data[0].htmlScore.pract2.timeStamp;
+      x[3].innerHTML = data[0].htmlScore.pract3.score + "<br>" + data[0].htmlScore.pract3.timeStamp;
+      x[4].innerHTML = data[0].htmlScore.pract4.score + "<br>" + data[0].htmlScore.pract4.timeStamp;
+      x[5].innerHTML = data[0].htmlScore.pract5.score + "<br>" + data[0].htmlScore.pract5.timeStamp;
+
+      // To Update PHYSICS Score
+      var x = document.getElementById("progressTable").rows[1].cells;
+      x[1].innerHTML = data[0].physicsScore.pract1.score + "<br>" + data[0].physicsScore.pract1.timeStamp;
+      x[2].innerHTML = data[0].physicsScore.pract2.score + "<br>" + data[0].physicsScore.pract2.timeStamp;
+      x[3].innerHTML = data[0].physicsScore.pract3.score + "<br>" + data[0].physicsScore.pract3.timeStamp;
+      x[4].innerHTML = data[0].physicsScore.pract4.score + "<br>" + data[0].physicsScore.pract4.timeStamp;
+      x[5].innerHTML = data[0].physicsScore.pract5.score + "<br>" + data[0].physicsScore.pract5.timeStamp;
+      
+    })
+
+  })
+
+  
+
+</script>
