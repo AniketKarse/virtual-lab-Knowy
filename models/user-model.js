@@ -98,7 +98,6 @@ const userSchema = new mongoose.Schema({
 
     physicsScore: {
 
-
         pract1: {
             score: {
                 type: Number
@@ -107,7 +106,6 @@ const userSchema = new mongoose.Schema({
                 type: String
             }
         },
-
 
         pract2: {
             score: {
@@ -118,7 +116,6 @@ const userSchema = new mongoose.Schema({
             }
         },
 
-
         pract3: {
             score: {
                 type: Number
@@ -127,7 +124,6 @@ const userSchema = new mongoose.Schema({
                 type: String
             }
         },
-
 
         pract4: {
             score: {
@@ -138,6 +134,54 @@ const userSchema = new mongoose.Schema({
             }
         },
 
+        pract5: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        }
+
+    },
+
+    chemistryScore: {
+
+        pract1: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract2: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract3: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract4: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
 
         pract5: {
             score: {
@@ -148,7 +192,103 @@ const userSchema = new mongoose.Schema({
             }
         }
 
+    },
 
+    biologyScore: {
+
+        pract1: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract2: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract3: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract4: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract5: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        }
+
+    },
+
+    cppScore: {
+
+        pract1: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract2: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract3: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract4: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        },
+
+        pract5: {
+            score: {
+                type: Number
+            },
+            timeStamp: {
+                type: String
+            }
+        }
 
     }
 })

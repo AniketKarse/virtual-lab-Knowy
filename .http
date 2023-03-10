@@ -12,46 +12,115 @@ content-type: application/json
     "htmlScore" : {
         "pract1" : {
             "score" : 40,
-            "timeStamp": "01-03-2023"
+            "timeStamp": "00-00-0000"
         },
         "pract2" : {
             "score" : 20,
-            "timeStamp": "02-03-2023"
+            "timeStamp": "00-00-0000"
         },
         "pract3" : {
             "score" : 60,
-            "timeStamp": "03-03-2023"
+            "timeStamp": "00-00-0000"
         },
         "pract4" : {
             "score" : 100,
-            "timeStamp": "04-03-2023"
+            "timeStamp": "00-00-0000"
         },
         "pract5" : {
             "score" : 80,
-            "timeStamp": "05-03-2023"
+            "timeStamp": "00-00-0000"
         }
         
     },
     "physicsScore" : {
         "pract1" : {
             "score" : 60,
-            "timeStamp": "01-03-2023"
+            "timeStamp": "00-00-0000"
         },
         "pract2" : {
             "score" : 60,
-            "timeStamp": "02-03-2023"
+            "timeStamp": "00-00-0000"
         },
         "pract3" : {
             "score" : 60,
-            "timeStamp": "03-03-2023"
+            "timeStamp": "00-00-0000"
         },
         "pract4" : {
             "score" : 60,
-            "timeStamp": "04-03-2023"
+            "timeStamp": "00-00-0000"
         },
         "pract5" : {
             "score" : 60,
-            "timeStamp": "05-03-2023"
+            "timeStamp": "00-00-0000"
+        }
+        
+    },
+    "chemistryScore" : {
+        "pract1" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract2" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract3" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract4" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract5" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        }
+        
+    },
+    "biologyScore" : {
+        "pract1" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract2" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract3" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract4" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract5" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        }
+        
+    },
+    "cppScore" : {
+        "pract1" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract2" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract3" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract4" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
+        },
+        "pract5" : {
+            "score" : 60,
+            "timeStamp": "00-00-0000"
         }
         
     }
@@ -73,5 +142,10 @@ Content-Type: application/json
 # TO UPDATE HTML SCORE
 GET http://localhost:3000/practScore/updateHtmlScore/100/pract5/19BE002 HTTP/1.1
 
+###
+# TO UPDATE PHYSICS SCORE
+GET http://localhost:3000/practScore/updatePhysicsScore/20/pract1/19BE002 HTTP/1.1
 
-
+###
+# TO UPDATE CHEMISTRY SCORE
+GET http://localhost:3000/practScore/updateChemistryScore/100/pract1/19BE002 HTTP/1.1
