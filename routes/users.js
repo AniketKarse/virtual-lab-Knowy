@@ -1,9 +1,20 @@
+// require('dotenv').config()
 var express = require('express');
 var moment = require('moment');
+const jwt = require('jsonwebtoken')
 var router = express.Router();
+
+
 const User = require('../models/user-model')
 
 
+// To Login User
+router.post('/login', (req, res) => {
+
+  
+
+
+})
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
@@ -37,7 +48,7 @@ router.get('/student_list', async (req, res) => {
     const filter = {};
     const all = await User.find(filter);
 
-    console.log(all)
+    // console.log(all)
     res.send(all)
     
   } catch (error) {
@@ -122,6 +133,12 @@ router.get('/me/html/pract-4', (req, res) => {
 
 router.get('/me/html/pract-5', (req, res) => {
   res.render('1html/html-5')
+})
+
+// C++
+
+router.get('/me/cpp/pract-1', (req, res) => {
+  res.render('3cpp/1')
 })
 
 

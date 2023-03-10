@@ -43,7 +43,8 @@ const userSchema = new mongoose.Schema({
                 type: Number
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: Date.now
             }
         },
 
@@ -53,7 +54,8 @@ const userSchema = new mongoose.Schema({
                 type: Number
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: Date.now
             }
         },
 
@@ -63,7 +65,8 @@ const userSchema = new mongoose.Schema({
                 type: Number
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: Date.now
             }
         },
 
@@ -73,7 +76,8 @@ const userSchema = new mongoose.Schema({
                 type: Number
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: Date.now
             }
         },
 
@@ -83,7 +87,8 @@ const userSchema = new mongoose.Schema({
                 type: Number
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: Date.now
             }
         }
 

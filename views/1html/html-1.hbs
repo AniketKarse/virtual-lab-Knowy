@@ -62,7 +62,7 @@
             <div id="test--wrapper">
                 <h5><span style="color: #FF842F;">QUESTIONS </span></h5>
                 <br>
-                
+
 
                 <form id="myForm">
 
@@ -226,10 +226,10 @@
                     </div>
                     <br>
 
-                   
 
 
-                    
+
+
                     <div>
                         <button type="submit" class="btn btn-success">SUBMIT</button>
                     </div>
@@ -294,6 +294,14 @@
 
         if(ansOfQ1.checked === true){
             alert("Congraluations Your Score is : " + progressCounter)
+
+         
+
+             fetch('/practScore/updateHtmlScore/80/pract1/19BE001')
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+            })
            
         }else{
             alert("Try again")
