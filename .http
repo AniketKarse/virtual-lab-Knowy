@@ -139,6 +139,12 @@ Content-Type: application/json
 }
 
 ###
+# UPDATE ATTENDANCE
+POST http://localhost:3000/users/updateAttendence/:19BE002
+
+
+
+###
 # TO UPDATE HTML SCORE
 GET http://localhost:3000/practScore/updateHtmlScore/100/pract5/19BE002 HTTP/1.1
 

@@ -8,6 +8,25 @@ var router = express.Router();
 const User = require('../models/user-model')
 
 
+function convertDate(){
+
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1;
+
+  var yyyy = today.getFullYear();
+  if (dd < 10) {
+      dd = '0' + dd;
+  }
+  if (mm < 10) {
+      mm = '0' + mm;
+  }
+  var today = yyyy + '-' + mm + '-' + dd;
+
+  return today
+
+}
+
 // To Login User
 router.post('/login', (req, res) => {
 
@@ -76,10 +95,13 @@ router.get('/getStudent:studentID', async (req, res) => {
 })
 
 // Update the attendence of user
-router.put('/updateAttendence', async (req, res) => {
+router.post('/updateAttendence/:studentID', async (req, res) => {
   
-  await User.findOneAndUpdate({_id : "63fc95859ea17f3087262903"},
-    {$push:{attendance: ["2023-02-02"]}}
+  var today = convertDate()
+  today = "2023-03-12"
+
+  await User.findOneAndUpdate({studentID : "19BE002"},
+    {$push:{attendance: [today]}}
   )
 
 })
