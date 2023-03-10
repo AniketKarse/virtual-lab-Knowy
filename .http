@@ -149,3 +149,11 @@ GET http://localhost:3000/practScore/updatePhysicsScore/20/pract1/19BE002 HTTP/1
 ###
 # TO UPDATE CHEMISTRY SCORE
 GET http://localhost:3000/practScore/updateChemistryScore/100/pract1/19BE002 HTTP/1.1
+
+###
+# TO UPDATE BIOLOGY SCORE
+GET http://localhost:3000/practScore/updateBiologyScore/100/pract1/19BE002 HTTP/1.1
+
+###
+# TO UPDATE CPP SCORE
+GET http://localhost:3000/practScore/updateCppScore/100/pract1/19BE002 HTTP/1.1

@@ -239,6 +239,149 @@ router.get('/updateChemistryScore/:score/:practNo/:studentID', async (req, res) 
 })
 
 
+router.get('/updateBiologyScore/:score/:practNo/:studentID', async (req, res) => {
+
+    console.log(req.params)
+
+    const practNo = req.params.practNo
+
+    try {
+
+        const filter = { studentID: req.params.studentID }
+      
+        var update
+
+        today = convertDate()
+
+        
+
+        if(practNo == "pract1"){
+
+            update = {"$set": {
+                "biologyScore.pract1.score" : Number(req.params.score),
+                "biologyScore.pract1.timeStamp" : today
+             }}
+
+        }
+
+        if(practNo == "pract2"){
+
+            update = {"$set": {
+                "biologyScore.pract2.score" : Number(req.params.score),
+                "biologyScore.pract2.timeStamp" : today
+             }}
+
+        }
+
+        if(practNo == "pract3"){
+
+            update = {"$set": {
+                "biologyScore.pract3.score" : Number(req.params.score),
+                "biologyScore.pract3.timeStamp" : today
+             }}
+
+        }
+
+        if(practNo == "pract4"){
+
+            update = {"$set": {
+                "biologyScore.pract4.score" : Number(req.params.score),
+                "biologyScore.pract4.timeStamp" : today
+             }}
+
+        }
+
+        if(practNo == "pract5"){
+
+            update = {"$set": {
+                "biologyScore.pract5.score" : Number(req.params.score),
+                "biologyScore.pract5.timeStamp" : today
+             }}
+
+        }
+
+        let doc = await User.findOneAndUpdate(filter, update,  {new: true, setDefaultsOnInsert: true} )
+
+        console.log(doc)
+
+    } catch (error) {
+    console.log(error)
+}
+
+})
+
+
+router.get('/updateCppScore/:score/:practNo/:studentID', async (req, res) => {
+
+    console.log(req.params)
+
+    const practNo = req.params.practNo
+
+    try {
+
+        const filter = { studentID: req.params.studentID }
+      
+        var update
+
+        today = convertDate()
+
+        
+
+        if(practNo == "pract1"){
+
+            update = {"$set": {
+                "cppScore.pract1.score" : Number(req.params.score),
+                "cppScore.pract1.timeStamp" : today
+             }}
+
+        }
+
+        if(practNo == "pract2"){
+
+            update = {"$set": {
+                "cppScore.pract2.score" : Number(req.params.score),
+                "cppScore.pract2.timeStamp" : today
+             }}
+
+        }
+
+        if(practNo == "pract3"){
+
+            update = {"$set": {
+                "cppScore.pract3.score" : Number(req.params.score),
+                "cppScore.pract3.timeStamp" : today
+             }}
+
+        }
+
+        if(practNo == "pract4"){
+
+            update = {"$set": {
+                "cppScore.pract4.score" : Number(req.params.score),
+                "cppScore.pract4.timeStamp" : today
+             }}
+
+        }
+
+        if(practNo == "pract5"){
+
+            update = {"$set": {
+                "cppScore.pract5.score" : Number(req.params.score),
+                "cppScore.pract5.timeStamp" : today
+             }}
+
+        }
+
+        let doc = await User.findOneAndUpdate(filter, update,  {new: true, setDefaultsOnInsert: true} )
+
+        console.log(doc)
+
+    } catch (error) {
+    console.log(error)
+}
+
+})
+
 
 
 
