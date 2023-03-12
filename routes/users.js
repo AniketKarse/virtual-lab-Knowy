@@ -30,9 +30,6 @@ function convertDate(){
 // To Login User
 router.post('/login', (req, res) => {
 
-  
-
-
 })
 
 /* GET users listing. */
@@ -98,11 +95,18 @@ router.get('/getStudent:studentID', async (req, res) => {
 router.post('/updateAttendence/:studentID', async (req, res) => {
   
   var today = convertDate()
-  today = "2023-03-12"
+  today = "2023-03-14"
 
-  await User.findOneAndUpdate({studentID : "19BE002"},
-    {$push:{attendance: [today]}}
-  )
+  const studentID = req.params.studentID
+
+  try {
+    await User.findOneAndUpdate({studentID : studentID},
+      {$push:{attendance: [today]}}
+    )
+  } catch (error) {
+    res.send(error)
+  }
+  
 
 })
 
@@ -161,6 +165,16 @@ router.get('/me/html/pract-5', (req, res) => {
 
 router.get('/me/cpp/pract-1', (req, res) => {
   res.render('3cpp/1')
+})
+
+// BIOLOGY
+
+router.get('/me/biology', (req, res) => {
+  res.render('3biology/biologyPract')
+} )
+
+router.get('/me/biology/pract-1', (req, res) => {
+  res.render('3biology/1')
 })
 
 

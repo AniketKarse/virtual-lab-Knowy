@@ -140,9 +140,7 @@ Content-Type: application/json
 
 ###
 # UPDATE ATTENDANCE
-POST http://localhost:3000/users/updateAttendence/:19BE002
-
-
+POST http://localhost:3000/users/updateAttendence/19BE002
 
 ###
 # TO UPDATE HTML SCORE

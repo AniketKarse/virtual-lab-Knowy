@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
             if (value < 0) {
                 throw new Error("Age cannot be -Ve")
             }
-        },
+        }
     },
     studentID: {
         type: String

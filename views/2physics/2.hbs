@@ -7,7 +7,8 @@
             <p class="card-title" id="practical--heading">
                 Subject : Physics <br>
                 Practical No : 2 <br>
-                Progress : 0%
+                Progress : 
+                <span id="progress">0</span>%
             </p>
 
 
@@ -385,27 +386,35 @@
         var progressCounter = 0
 
         if(ansOfQ1.checked === true){
-            progressCounter = progressCounter + 1
+            progressCounter = progressCounter + 20
         }
 
         if(ansOfQ2.checked === true){
-           progressCounter = progressCounter + 1
+           progressCounter = progressCounter + 20
         }
 
         if(ansOfQ3.checked === true){
-            progressCounter = progressCounter + 1
+            progressCounter = progressCounter + 20
         }
 
         if(ansOfQ4.checked === true){
-            progressCounter = progressCounter + 1
+            progressCounter = progressCounter + 20
         }
 
         if(ansOfQ5.checked === true){
-            progressCounter = progressCounter + 1
+            progressCounter = progressCounter + 20
         }
 
         if(true){
             alert("Congraluations Your Score is : " + progressCounter)
+
+            fetch(`/practScore/updatePhysicsScore/${progressCounter}/pract2/19BE002`)
+            .then((response) => response.json())
+            .then((data) => {
+                {{!-- console.log(data.physicsScore.pract2.score) --}}
+
+                document.getElementById("progress").innerHTML = data.physicsScore.pract2.score
+            })
            
         }
 
