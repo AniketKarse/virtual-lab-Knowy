@@ -305,7 +305,7 @@ router.get('/updateBiologyScore/:score/:practNo/:studentID', async (req, res) =>
         let doc = await User.findOneAndUpdate(filter, update,  {new: true, setDefaultsOnInsert: true} )
 
         console.log(doc)
-
+        res.send(doc)
     } catch (error) {
     console.log(error)
 }
