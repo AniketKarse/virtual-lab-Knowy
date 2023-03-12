@@ -177,6 +177,10 @@ router.get('/me/biology/pract-1', (req, res) => {
   res.render('3biology/1')
 })
 
+router.get('/me/biology/pract-2', (req, res) => {
+  res.render('3biology/2')
+})
+
 
 // COMPILER
 router.get('/me/compiler', (req, res) => {
