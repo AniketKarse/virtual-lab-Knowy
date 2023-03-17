@@ -1,3 +1,4 @@
+
 {{>internalNabBar}}
 
 <div id="practical--wrapper">
@@ -400,7 +401,6 @@
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
-
                 document.getElementById("progress").innerHTML = data.physicsScore.pract1.score
             })
            
@@ -410,3 +410,5 @@
 
 
 </script>
+
+{{>checkIfLoggedInOrNot}}
