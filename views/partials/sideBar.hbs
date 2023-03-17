@@ -3,7 +3,7 @@
 
     <div id="sidebar--profile--container">
         <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-        <h5>SHREYASH TALOLE</h5>
+        <h5 id="userName">Student Name</h5>
     </div>
 
 
@@ -15,4 +15,10 @@
     </div>
     
 </div>
+
+
+
+<script>
+    document.getElementById("userName").innerHTML = JSON.parse(localStorage.getItem("user")).name
+</script>
 

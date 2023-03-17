@@ -1,0 +1,24 @@
+.login-form-wrapper{
+    padding: 20px;
+    max-width: 300px;
+    border: 1px dashed gray;
+    margin: 0px auto;
+    margin-top: 30%;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+#login-col-1{
+    border: 1px solid red;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+#login-col-2{
+    border: 1px solid red;
+    height: 100vh;
+    background-image: url('/images/loginIMG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

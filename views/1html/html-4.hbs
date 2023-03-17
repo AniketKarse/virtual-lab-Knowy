@@ -370,27 +370,34 @@
         var progressCounter = 0
 
         if(ansOfQ1.checked === true){
-            progressCounter = progressCounter + 1
+            progressCounter = progressCounter + 20
         }
 
         if(ansOfQ2.checked === true){
-           progressCounter = progressCounter + 1
+           progressCounter = progressCounter + 20
         }
 
         if(ansOfQ3.checked === true){
-            progressCounter = progressCounter + 1
+            progressCounter = progressCounter + 20
         }
 
         if(ansOfQ4.checked === true){
-            progressCounter = progressCounter + 1
+            progressCounter = progressCounter + 20
         }
 
         if(ansOfQ5.checked === true){
-            progressCounter = progressCounter + 1
+            progressCounter = progressCounter + 20
         }
 
-        if(ansOfQ1.checked === true){
+        if(true){
             alert("Congraluations Your Score is : " + progressCounter)
+
+            fetch(`/practScore/updateHtmlScore/${progressCounter}/pract4/${JSON.parse(localStorage.getItem("user")).studentID}`)
+            .then((response) => response.json())
+            .then((data) => {
+                {{!-- console.log(data) --}}
+                document.getElementById("progress").innerHTML = data.htmlScore.pract2.score
+            })
            
         }else{
             alert("Try again")

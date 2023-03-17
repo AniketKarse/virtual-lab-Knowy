@@ -394,7 +394,9 @@
         if(true){
             alert("Congraluations Your Score is : " + progressCounter)
 
-            fetch(`/practScore/updatePhysicsScore/${progressCounter}/pract1/19BE002`)
+            
+
+            fetch(`/practScore/updatePhysicsScore/${progressCounter}/pract1/${JSON.parse(localStorage.getItem("user")).studentID}`)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)

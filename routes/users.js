@@ -4,11 +4,14 @@ var moment = require('moment');
 const jwt = require('jsonwebtoken')
 var router = express.Router();
 
+require('../middleware/verify')
 
-const User = require('../models/user-model')
+
+const User = require('../models/user-model');
+const verifyToken = require('../middleware/verify');
 
 
-function convertDate(){
+function convertDate() {
 
   var today = new Date();
   var dd = today.getDate();
@@ -16,10 +19,10 @@ function convertDate(){
 
   var yyyy = today.getFullYear();
   if (dd < 10) {
-      dd = '0' + dd;
+    dd = '0' + dd;
   }
   if (mm < 10) {
-      mm = '0' + mm;
+    mm = '0' + mm;
   }
   var today = yyyy + '-' + mm + '-' + dd;
 
@@ -28,12 +31,28 @@ function convertDate(){
 }
 
 // To Login User
-router.post('/login', (req, res) => {
+// router.post('/login', (req, res) => {
 
-})
+//   const user = {
+//     name: "Shreyash",
+//     id: "19BE007"
+//   }
+
+//   jwt.sign({ user }, "THIS IS SECREAT", (err, token) => {
+//     res.send(token)
+//   })
+
+// })
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
+router.post('/', verifyToken, function (req, res, next) {
+  jwt.verify(req.token, "THIS IS SECREAT", (err, authData) => {
+    if (err) {
+      res.send({ Result: "invalid Token" })
+    }else{
+      res.send({ Result: "Good to GO" })
+    }
+  })
   res.send('respond with a resource');
 });
 
@@ -57,7 +76,7 @@ router.post('/saveUser', async (req, res) => {
 
 
 // Get the list of students
-router.get('/student_list', async (req, res) => {
+router.get('/student_list', verifyToken, async (req, res) => {
 
   try {
 
@@ -66,9 +85,9 @@ router.get('/student_list', async (req, res) => {
 
     // console.log(all)
     res.send(all)
-    
+
   } catch (error) {
-    res.send(500)
+    res.sendStatus(500)
   }
 
 })
@@ -82,7 +101,7 @@ router.get('/getStudent:studentID', async (req, res) => {
     // const user = await User.findById("63fc95859ea17f3087262903")
     // res.send(user)
 
-    const user = await User.find({studentID: studentID})
+    const user = await User.find({ studentID: studentID })
     res.send(user)
 
   } catch (error) {
@@ -93,20 +112,20 @@ router.get('/getStudent:studentID', async (req, res) => {
 
 // Update the attendence of user
 router.post('/updateAttendence/:studentID', async (req, res) => {
-  
+
   var today = convertDate()
   today = "2023-03-14"
 
   const studentID = req.params.studentID
 
   try {
-    await User.findOneAndUpdate({studentID : studentID},
-      {$push:{attendance: [today]}}
+    await User.findOneAndUpdate({ studentID: studentID },
+      { $push: { attendance: [today] } }
     )
   } catch (error) {
     res.send(error)
   }
-  
+
 
 })
 
@@ -171,7 +190,7 @@ router.get('/me/cpp/pract-1', (req, res) => {
 
 router.get('/me/biology', (req, res) => {
   res.render('3biology/biologyPract')
-} )
+})
 
 router.get('/me/biology/pract-1', (req, res) => {
   res.render('3biology/1')
@@ -179,6 +198,10 @@ router.get('/me/biology/pract-1', (req, res) => {
 
 router.get('/me/biology/pract-2', (req, res) => {
   res.render('3biology/2')
+})
+
+router.get('/me/biology/pract-3', (req, res) => {
+  res.render('3biology/3')
 })
 
 
