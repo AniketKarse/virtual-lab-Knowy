@@ -368,6 +368,13 @@
 
 
 </script>
+
+<script>
+    const user = JSON.parse(localStorage.getItem("user"))
+    document.getElementById("progress").innerHTML = user.physicsScore.pract2.score
+</script>  
+
+
 <script>
 
     const form = document.getElementById("myForm")
@@ -415,6 +422,7 @@
                 {{!-- console.log(data.physicsScore.pract2.score) --}}
 
                 document.getElementById("progress").innerHTML = data.physicsScore.pract2.score
+                localStorage.setItem('user', JSON.stringify(data))
             })
            
         }

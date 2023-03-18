@@ -355,6 +355,11 @@
 </script>
 
 <script>
+    const user = JSON.parse(localStorage.getItem("user"))
+    document.getElementById("progress").innerHTML = user.physicsScore.pract1.score
+</script>    
+
+<script>
 
     const form = document.getElementById("myForm")
 
@@ -402,6 +407,7 @@
             .then((data) => {
                 console.log(data)
                 document.getElementById("progress").innerHTML = data.physicsScore.pract1.score
+                localStorage.setItem('user', JSON.stringify(data))
             })
            
         }
