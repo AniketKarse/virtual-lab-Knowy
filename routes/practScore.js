@@ -352,6 +352,7 @@ router.get('/updateBiologyScore/:score/:practNo/:studentID', async (req, res) =>
 
         console.log(doc)
         res.send(doc)
+        
     } catch (error) {
     console.log(error)
 }
