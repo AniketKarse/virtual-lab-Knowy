@@ -470,7 +470,7 @@
         if (true) {
             alert("Congraluations Your Score is : " + progressCounter)
 
-            fetch(`/practScore/updateBiologyScore/${progressCounter}/pract1/${JSON.parse(localStorage.getItem("user")).studentID}`)
+            fetch(`/practScore/updateBiologyScore/${progressCounter}/pract2/${JSON.parse(localStorage.getItem("user")).studentID}`)
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(data)
