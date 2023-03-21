@@ -3,123 +3,124 @@ POST http://localhost:3000/users/saveUser HTTP/1.1
 content-type: application/json
 
 {
-    "name" : "Nachiket Yawalkar",
-    "age" : 23,
+    "name" : "Shreyash Talole",
+    "age" : 22,
     "password" : "ABCD",
-    "email" : "Nachiket@gmail.com",
+    "email" : "Shreyash@gmail.com",
     "class" : "10",
-    "studentID" : "19BE002",
+    "studentID" : "19BE001",
+    "totalScore": 0,
     "htmlScore" : {
         "pract1" : {
-            "score" : 40,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract2" : {
-            "score" : 20,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract3" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract4" : {
-            "score" : 100,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract5" : {
-            "score" : 80,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         }
         
     },
     "physicsScore" : {
         "pract1" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract2" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract3" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract4" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract5" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         }
         
     },
     "chemistryScore" : {
         "pract1" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract2" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract3" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract4" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract5" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         }
         
     },
     "biologyScore" : {
         "pract1" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract2" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract3" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract4" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract5" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         }
         
     },
     "cppScore" : {
         "pract1" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract2" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract3" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract4" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         },
         "pract5" : {
-            "score" : 60,
+            "score" : 0,
             "timeStamp": "00-00-0000"
         }
         

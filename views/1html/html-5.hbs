@@ -358,6 +358,7 @@
             .then((data) => {
                 {{!-- console.log(data) --}}
                 document.getElementById("progress").innerHTML = data.htmlScore.pract2.score
+            localStorage.setItem('user', JSON.stringify(data))
             })
            
         }else{

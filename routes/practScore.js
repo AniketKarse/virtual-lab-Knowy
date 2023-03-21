@@ -23,12 +23,52 @@ function convertDate(){
 
 }
 
+// This function updates the total score of student
+async function findUserandUpdateTotalScore(studentID, practNo, score, subject) {
+    
+    const filter = {studentID: studentID}
+
+    const user = await User.findOne(filter)
+
+    var differenceInScores = 0
+
+    var currentScore = score
+    var previousScore = user[subject][practNo].score
+
+    var newTotalScore = 0
+    var previousTotalScore = user.totalScore
+
+    differenceInScores = currentScore - previousScore
+
+    newTotalScore = previousTotalScore + differenceInScores
+    
+
+    console.log("Difference in subject score "+differenceInScores)
+
+    console.log("Previous Total Score "+previousTotalScore)
+
+    console.log("New Total Score "+newTotalScore)
+
+    if(previousScore == currentScore){
+        return
+    }
+
+    update = {totalScore: newTotalScore}
+
+     await User.findOneAndUpdate(filter, update,  {new: true, setDefaultsOnInsert: true} )
+    
+
+
+}
+
 
 router.get('/updateHtmlScore/:score/:practNo/:studentID', async (req, res) => {
 
     console.log(req.params)
 
     const practNo = req.params.practNo
+
+    await findUserandUpdateTotalScore(req.params.studentID, req.params.practNo, req.params.score, 'htmlScore')
 
     try {
 
@@ -101,6 +141,8 @@ router.get('/updatePhysicsScore/:score/:practNo/:studentID', async (req, res) =>
     console.log(req.params)
 
     const practNo = req.params.practNo
+
+    await findUserandUpdateTotalScore(req.params.studentID, req.params.practNo, req.params.score, 'physicsScore')
 
     try {
 
@@ -175,6 +217,8 @@ router.get('/updateChemistryScore/:score/:practNo/:studentID', async (req, res) 
 
     const practNo = req.params.practNo
 
+    await findUserandUpdateTotalScore(req.params.studentID, req.params.practNo, req.params.score, 'chemistryScore')
+
     try {
 
         const filter = { studentID: req.params.studentID }
@@ -247,6 +291,8 @@ router.get('/updateBiologyScore/:score/:practNo/:studentID', async (req, res) =>
 
     const practNo = req.params.practNo
 
+    await findUserandUpdateTotalScore(req.params.studentID, req.params.practNo, req.params.score, 'biologyScore')
+
     try {
 
         const filter = { studentID: req.params.studentID }
@@ -318,6 +364,8 @@ router.get('/updateCppScore/:score/:practNo/:studentID', async (req, res) => {
     console.log(req.params)
 
     const practNo = req.params.practNo
+
+    await findUserandUpdateTotalScore(req.params.studentID, req.params.practNo, req.params.score, 'cppScore')
 
     try {
 

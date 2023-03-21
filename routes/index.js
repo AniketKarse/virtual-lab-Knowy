@@ -21,8 +21,11 @@ router.post('/login', async (req, res) => {
   }
 
   // console.log(req.body)
-  const filter = {id : req.body.studentID};
+  const filter = {studentID : req.body.studentID};
   const user = await User.findOne(filter);
+  
+
+  // console.log(req.body.studentID)
 
   if(user.password != req.body.password){
     res.json({error: "Invalid Password"});

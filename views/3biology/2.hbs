@@ -476,6 +476,7 @@
                     console.log(data)
 
                     document.getElementById("progress").innerHTML = data.biologyScore.pract1.score
+                    localStorage.setItem('user', JSON.stringify(data))
                 })
 
         }

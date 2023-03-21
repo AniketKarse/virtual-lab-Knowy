@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     totalScore: {
-        type: String
+        type: Number
     },
     password: {
         type: String

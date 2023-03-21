@@ -10,7 +10,7 @@
 
     <div id="sidebar--score">
         <h4 style="color: aliceblue;">
-            <i class="fa fa-star" aria-hidden="true"></i> SCORE = 340
+            <i class="fa fa-star" aria-hidden="true"></i> SCORE =  <span id="totalScore">340</span>
         </h4>
     </div>
     
@@ -20,5 +20,11 @@
 
 <script>
     document.getElementById("userName").innerHTML = JSON.parse(localStorage.getItem("user")).name
+    document.getElementById("totalScore").innerHTML = JSON.parse(localStorage.getItem("user")).totalScore
+
+    {{!-- This event refresh the page when there is change in localstorage --}}
+    window.addEventListener('storage', () => {
+        window.location.reload(true)
+    });
 </script>
 
