@@ -68,11 +68,21 @@ body {
 
 }
 
+.dashboard--card img{
+  object-fit: cover; 
+  height:100%;
+}
+
 
 
 .dashboard--card p{
   text-align: justify;
   font-size: small;
+}
+
+
+.gc-and-compiler-card{
+  height: 120px !important;
 }
 
 

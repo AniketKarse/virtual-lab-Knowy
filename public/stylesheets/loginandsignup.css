@@ -10,13 +10,13 @@
 }
 
 #login-col-1{
-    border: 1px solid red;
+
     height: 100vh;
     background-color: antiquewhite;
 }
 
 #login-col-2{
-    border: 1px solid red;
+
     height: 100vh;
     background-image: url('/images/loginIMG.jpg');
     background-repeat: no-repeat;
