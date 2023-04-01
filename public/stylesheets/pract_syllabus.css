@@ -22,12 +22,14 @@ body {
 #leaderboard--wrapper {
   margin-top: 30px;
   max-width: 350px;
+
   height: 450px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 20px;
   position: fixed;
-  padding: 10px;
+  padding: 15px;
   margin-top: -20px;
+  background-color: #FAFAD2;
 }
 
 @media all and (max-width: 800px) {
@@ -50,13 +52,40 @@ body {
   /* width: 100%; */
   /* border: 1px solid gray; */
   background-color: #FF842F;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   padding: 10px;
   margin-bottom: 10px;
   color: white;
+  overflow-x:hidden;
+  overflow-y: overflow;
+  height: 300px;
 }
 
 .practicals--card{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-top: 20px;
+}
+
+
+/* ---------------------- */
+/* SCROLL BAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

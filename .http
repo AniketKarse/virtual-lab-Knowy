@@ -3,12 +3,12 @@ POST http://localhost:3000/users/saveUser HTTP/1.1
 content-type: application/json
 
 {
-    "name" : "Shreyash Talole",
+    "name" : "Kakashi Hatake",
     "age" : 22,
     "password" : "ABCD",
-    "email" : "Shreyash@gmail.com",
+    "email" : "Kakashi@gmail.com",
     "class" : "10",
-    "studentID" : "19BE001",
+    "studentID" : "19BE006",
     "totalScore": 0,
     "htmlScore" : {
         "pract1" : {
@@ -174,3 +174,7 @@ GET http://localhost:3000/practScore/updateBiologyScore/100/pract1/19BE002 HTTP/
 ###
 # TO UPDATE CPP SCORE
 GET http://localhost:3000/practScore/updateCppScore/100/pract1/19BE002 HTTP/1.1
+
+###
+# Get the user list
+GET http://localhost:3000/leaderBoard/getListOfScore HTTP/1.1

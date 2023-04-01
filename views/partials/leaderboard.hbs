@@ -8,84 +8,44 @@
 
     <div id="user--wrapper">
 
-        <div class="row">
+        <div class="row std" id="wrp">
 
-            <div class="col-sm-2 d-flex justify-content-center
-                align-self-center">
-                <img class="img-fluid"
-                    src="https://smaabacus.com/themes/user/assets/img/avatar/male.png"
-                    style="width: 40px;border-radius:100%;">
 
-            </div>
-            <div class="col-sm-6 align-self-center">
-                <h6>Shreyash Talole</h6>
-            </div>
-            <div class="col-sm-1 align-self-center">
-                <h5>#1</h5>
-            </div>
-            <div class="col-sm-3 d-flex justify-content-center
-                align-self-center">
-                <h5>360</h5>
-            </div>
 
         </div>
 
-    </div>
-
-    <div id="user--wrapper">
-        <div class="row">
-
-            <div class="col-sm-2 d-flex justify-content-center
-                align-self-center">
-                <img class="img-fluid"
-                    src="https://smaabacus.com/themes/user/assets/img/avatar/male.png"
-                    style="width: 40px;border-radius:100%;">
-
-            </div>
-            <div class="col-sm-6 align-self-center">
-                <h6>Shreyash Talole</h6>
-            </div>
-            <div class="col-sm-1 align-self-center">
-                <h5>#2</h5>
-            </div>
-            <div class="col-sm-3 d-flex justify-content-center
-                align-self-center">
-                <h5>320</h5>
-            </div>
-
-        </div>
-    </div>
-
-    <div id="user--wrapper">
-        <div class="row">
-
-            <div class="col-sm-2 d-flex justify-content-center
-                align-self-center">
-                <img class="img-fluid"
-                    src="https://smaabacus.com/themes/user/assets/img/avatar/male.png"
-                    style="width: 40px;border-radius:100%;">
-
-            </div>
-            <div class="col-sm-6 align-self-center">
-                <h6>Shreyash Talole</h6>
-            </div>
-            <div class="col-sm-1 align-self-center">
-                <h5>#3</h5>
-            </div>
-            <div class="col-sm-3 d-flex justify-content-center
-                align-self-center">
-                <h5>100</h5>
-            </div>
-
-        </div>
-    </div>
-
-    <div id="user--wrapper">
+     
 
     </div>
 
-    <div id="user--wrapper">
-
-    </div>
 
 </div>
+
+
+<script>
+
+    fetch('../../leaderBoard/getListOfScore')
+    .then((response) => response.json())
+    .then((studentListWithScore) => {
+            {{!-- console.log(studentListWithScore) --}}
+
+            let studentName = Object.keys(studentListWithScore);
+            console.log(studentName)
+
+            let rank = 1;
+            studentName.forEach((student) => {
+
+
+                {{!-- var mylist = document.getElementsByClassName('std');
+                mylist.insertAdjacentHTML('afterend', '<div class="col-sm-6 align-self-center"><h6>Shreyash Talole</h6></div><div class="col-sm-1 align-self-center"><h5>#1</h5></div><div class="col-sm-3 d-flex justify-content-centeralign-self-center"><h5>360</h5></div>'); --}}
+
+                let h2 = document.getElementById("wrp");
+                let html = `<div class="row std" id="wrp"> <div class="col-sm-6 align-self-center"><h6>${student}</h6></div><div class="col-sm-1 align-self-center"><h5>${rank}</h5></div><div class="col-sm-3  align-self-center" style="text-align:right;"><h5>${studentListWithScore[student]}</h5></div></div> <br><br><hr>`;
+                h2.insertAdjacentHTML("beforeend", html);
+
+                rank = rank + 1;
+
+            })
+    })
+
+</script>
