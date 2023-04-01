@@ -182,6 +182,10 @@ router.get('/me/html/pract-5', (req, res) => {
 
 // C++
 
+router.get('/me/cpp', (req, res) => {
+  res.render('3cpp/cppPract')
+})
+
 router.get('/me/cpp/pract-1', (req, res) => {
   res.render('3cpp/1')
 })
@@ -206,8 +210,16 @@ router.get('/me/biology/pract-3', (req, res) => {
 
 
 // COMPILER
-router.get('/me/compiler', (req, res) => {
-  res.render('compiler/compiler')
+router.get('/me/compiler/cpp', (req, res) => {
+  res.render('compiler/cpp')
+})
+
+router.get('/me/compiler/java', (req, res) => {
+  res.render('compiler/java')
+})
+
+router.get('/me/compiler/python', (req, res) => {
+  res.render('compiler/python')
 })
 
 router.post('/sendForm', (req, res, next) => {

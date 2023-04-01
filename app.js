@@ -15,7 +15,7 @@ const User = require('./models/user-model')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var teacherRouter = require('./routes/teacher')
-var compilerRouter = require('./routes/compiler');
+// var compilerRouter = require('./routes/compiler');
 var practScoreRouter = require('./routes/practScore');
 var leaderBoardRouter = require('./routes/leaderboard')
 
@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/compiler', compilerRouter);
+// app.use('/compiler', compilerRouter);
 app.use('/teacher', teacherRouter);
 app.use('/practScore', practScoreRouter);
 app.use('/leaderBoard', leaderBoardRouter);
