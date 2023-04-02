@@ -1,5 +1,6 @@
 var express = require('express');
 const User = require('../models/user-model')
+const Teacher = require('../models/teacher-model');
 var router = express.Router();
 
 router.get('', (req, res) => {
@@ -23,6 +24,16 @@ router.get('/fetchStudentData:id', async (req, res) => {
     }
 
 })
+
+// To SAVE TEACHER
+router.post('/saveTeacher', async (req, res) => {
+
+    const teacher = new Teacher(req.body)
+
+    await teacher.save()
+
+})
+
 
 
 

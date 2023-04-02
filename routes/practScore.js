@@ -4,24 +4,43 @@ const User = require('../models/user-model')
 
 
  /* This code convert javascript standard date to simple dd/mm/yyyy format */
-function convertDate(){
+// function convertDate(){
 
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1;
+//         var today = new Date();
+//         var dd = today.getDate();
+//         var mm = today.getMonth() + 1;
   
-        var yyyy = today.getFullYear();
-        if (dd < 10) {
-            dd = '0' + dd;
-        }
-        if (mm < 10) {
-            mm = '0' + mm;
-        }
-        var today = dd + '/' + mm + '/' + yyyy;
+//         var yyyy = today.getFullYear();
+//         if (dd < 10) {
+//             dd = '0' + dd;
+//         }
+//         if (mm < 10) {
+//             mm = '0' + mm;
+//         }
+//         var today = dd + '/' + mm + '/' + yyyy;
 
-        return today
+//         return today
 
-}
+// }
+
+function convertDate() {
+
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+  
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+      dd = '0' + dd;
+    }
+    if (mm < 10) {
+      mm = '0' + mm;
+    }
+    var today = yyyy + '-' + mm + '-' + dd;
+  
+    return today
+  
+  }
 
 // This function updates the total score of student
 async function findUserandUpdateTotalScore(studentID, practNo, score, subject) {
@@ -60,7 +79,6 @@ async function findUserandUpdateTotalScore(studentID, practNo, score, subject) {
 
 
 }
-
 
 router.get('/updateHtmlScore/:score/:practNo/:studentID', async (req, res) => {
 
@@ -126,6 +144,11 @@ router.get('/updateHtmlScore/:score/:practNo/:studentID', async (req, res) => {
         }
 
         let doc = await User.findOneAndUpdate(filter, update,  {new: true, setDefaultsOnInsert: true} )
+        
+        const studentID = req.params.studentID
+        await User.findOneAndUpdate({ studentID: studentID },
+            { $push: { attendance: [today] } }
+        )
 
         console.log(doc)
         res.send(doc)
@@ -201,6 +224,12 @@ router.get('/updatePhysicsScore/:score/:practNo/:studentID', async (req, res) =>
 
         let doc = await User.findOneAndUpdate(filter, update,  {new: true, setDefaultsOnInsert: true} )
 
+        const studentID = req.params.studentID
+
+        await User.findOneAndUpdate({ studentID: studentID },
+            { $push: { attendance: [today] } }
+          )
+
         console.log(doc)
         res.send(doc)
 
@@ -209,7 +238,6 @@ router.get('/updatePhysicsScore/:score/:practNo/:studentID', async (req, res) =>
 }
 
 })
-
 
 router.get('/updateChemistryScore/:score/:practNo/:studentID', async (req, res) => {
 
@@ -276,6 +304,11 @@ router.get('/updateChemistryScore/:score/:practNo/:studentID', async (req, res) 
 
         let doc = await User.findOneAndUpdate(filter, update,  {new: true, setDefaultsOnInsert: true} )
 
+        const studentID = req.params.studentID
+        await User.findOneAndUpdate({ studentID: studentID },
+            { $push: { attendance: [today] } }
+          )
+
         console.log(doc)
 
     } catch (error) {
@@ -283,7 +316,6 @@ router.get('/updateChemistryScore/:score/:practNo/:studentID', async (req, res) 
 }
 
 })
-
 
 router.get('/updateBiologyScore/:score/:practNo/:studentID', async (req, res) => {
 
@@ -350,6 +382,11 @@ router.get('/updateBiologyScore/:score/:practNo/:studentID', async (req, res) =>
 
         let doc = await User.findOneAndUpdate(filter, update,  {new: true, setDefaultsOnInsert: true} )
 
+        const studentID = req.params.studentID
+        await User.findOneAndUpdate({ studentID: studentID },
+            { $push: { attendance: [today] } }
+        )
+
         console.log(doc)
         res.send(doc)
         
@@ -358,7 +395,6 @@ router.get('/updateBiologyScore/:score/:practNo/:studentID', async (req, res) =>
 }
 
 })
-
 
 router.get('/updateCppScore/:score/:practNo/:studentID', async (req, res) => {
 
@@ -424,7 +460,12 @@ router.get('/updateCppScore/:score/:practNo/:studentID', async (req, res) => {
         }
 
         let doc = await User.findOneAndUpdate(filter, update,  {new: true, setDefaultsOnInsert: true} )
-
+        
+        const studentID = req.params.studentID
+        await User.findOneAndUpdate({ studentID: studentID },
+            { $push: { attendance: [today] } }
+        )
+        
         console.log(doc)
 
     } catch (error) {
