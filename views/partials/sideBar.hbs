@@ -1,19 +1,33 @@
-<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" id="sidebar">
-    <button style="color: white;" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"
+    id="sidebar">
+    <button style="color: white;" class="w3-bar-item w3-button w3-large
+        w3-hide-large" onclick="w3_close()">Close &times;</button>
 
     <div id="sidebar--profile--container">
-        <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+        <img class="img-fluid"
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
         <h5 id="userName">Student Name</h5>
+
+        <form  enctype="multipart/form-data" method="post" id="profileForm">
+            <div class="form-group">
+                <input type="file" class="form-control-file"
+                    name="uploaded_file">
+                
+                <input type="submit" value="Get me the stats!">
+            </div>
+        </form>
+
     </div>
 
 
 
     <div id="sidebar--score">
         <h4 style="color: aliceblue;">
-            <i class="fa fa-star" aria-hidden="true"></i> SCORE =  <span id="totalScore">340</span>
+            <i class="fa fa-star" aria-hidden="true"></i> SCORE = <span
+                id="totalScore">340</span>
         </h4>
     </div>
-    
+
 </div>
 
 
@@ -28,3 +42,24 @@
     });
 </script>
 
+<script>
+
+    form = document.getElementById("profileForm")
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+
+        
+       const studentID = JSON.parse(localStorage.getItem("user")).studentID
+
+        fetch(`/users/upload`)
+        .then((response) => response.json())
+        .then((data) => {
+
+        })
+
+
+    })
+
+</script>

@@ -2,7 +2,7 @@
 <div class="container-fluid" id="wrapper">
 
     <div>
-    <h4 class="card-title" id="practicals--heading">C++ PRACTICALS</h4>
+    <h4 class="card-title" id="practicals--heading">C PRACTICALS</h4>
 
     </div>
         
@@ -23,7 +23,8 @@
                             <p class="card-text">
                                Aim : 
                             </p>
-                            <p class="card-text"><small class="text-muted">40% Completed</small></p>
+                            <p class="card-text"><small class="text-muted"
+                                    id="pract1Score">0</small>% Completed</p>
                         </div>
                     </div>
                 </div>
@@ -42,7 +43,8 @@
                             <p class="card-text">Aim : 
 
                             </p>
-                            <p class="card-text"><small class="text-muted">100% Completed</small></p>
+                            <p class="card-text"><small class="text-muted"
+                                    id="pract2Score">0</small>% Completed</p>
                         </div>
                     </div>
                 </div>
@@ -61,7 +63,8 @@
                             <p class="card-text">Aim : 
 
                             </p>
-                            <p class="card-text"><small class="text-muted">100% Completed</small></p>
+                            <p class="card-text"><small class="text-muted"
+                                    id="pract3Score">0</small>% Completed</p>
                         </div>
                     </div>
                 </div>
@@ -80,7 +83,8 @@
                             <p class="card-text">Aim : 
 
                             </p>
-                            <p class="card-text"><small class="text-muted">100% Completed</small></p>
+                            <p class="card-text"><small class="text-muted"
+                                    id="pract4Score">0</small>% Completed</p>
                         </div>
                     </div>
                 </div>
@@ -99,7 +103,8 @@
                             <p class="card-text">Aim : 
 
                             </p>
-                            <p class="card-text"><small class="text-muted">100% Completed</small></p>
+                            <p class="card-text"><small class="text-muted"
+                                    id="pract5Score">0</small>% Completed</p>
                         </div>
                     </div>
                 </div>
@@ -130,3 +135,23 @@
 </div>
 
 {{>checkIfLoggedInOrNot}}
+
+
+<script>
+
+    {{!-- This event refresh the page when there is change in localstorage --}}
+    window.addEventListener('storage', () => {
+        window.location.reload(true)
+    });
+
+    const user = JSON.parse(localStorage.getItem("user"))
+    
+    document.getElementById("pract1Score").innerHTML = user.cppScore.pract1.score
+    document.getElementById("pract2Score").innerHTML = user.cppScore.pract2.score
+    document.getElementById("pract3Score").innerHTML = user.cppScore.pract3.score
+    document.getElementById("pract4Score").innerHTML = user.cppScore.pract4.score
+    document.getElementById("pract5Score").innerHTML = user.cppScore.pract5.score
+
+
+
+</script>

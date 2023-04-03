@@ -5,27 +5,169 @@
         <div class="col-sm-6" id="clm1">
             <br>
             <p class="card-title" id="practical--heading">
-                Subject : C++ <br>
+                Subject : C Programming <br>
                 Practical No : 1 <br>
-                Progress : 0%
+                Progress :
+                <span id="progress">0</span>%
             </p>
 
 
 
             <div id="practicalData--wrapper">
-                <h5> <span style="color: #FF842F;">AIM </span> <br>Learn About
-                    Html Elements</h5>
+                <h5> <span style="color: #FF842F;">AIM </span> <br>BASIC SYNTAX
+                    FOR printf & scanf</h5>
                 <br>
                 <div id="theory--wrapper">
                     <h5><span style="color: #FF842F;">THEORY </span></h5>
-                    <p>
+                    <ul>
 
-                        {{!-- Write your code here --}}
-                      
+
+                        <p>
+                            <li>
+                                In C, there are many different ways for a
+                                program to communicate with the user. Amazingly,
+                                the most
+                                simple
+                                methods usually taught to beginning programmers
+                                may also be the most powerful. In the "Hello,
+                                World"
+                                example
+                                at the beginning of this text, we were
+                                introduced to a Standard Library file stdio.h,
+                                and one of its
+                                functions, printf(). Here we discuss more of the
+                                functions that stdio.h gives us. You have seen
+                                that
+                                to use
+                                printf() one puts text, surrounded by quotes, in
+                                between the parentheses.
+                                We call the text surrounded by quotes a literal
+                                string (or just a string), and we call that
+                                string
+                                an
+                                argument to printf.
+                            </li>
+                            <br>
+                            <br>
+                            PROGRAM <br>
+                            <code>
+                                #include<stdio.h>
+                                    {
+                                    <br>
+                                    /* My first C Program */
+                                    <br>
+                                    printf("hello, world");
+                                    <br>
+                                    }
+
+                                </code>
+                            <br>
+                            <br>
+                        <p>
+                            <li>Like the previous example we are now
+                                trying to print the numbers using a C
+                                program.Numbers
+                                are of
+                                different types. To print different
+                                numbers we can use different
+                                "placeholders".The
+                                placeholder
+                                %d
+                                literally "holds the place" for the
+                                actual number.These placeholders are
+                                called format
+                                specifiers.
+                                Many other format specifiers work with
+                                printf. If we have a floating-point
+                                number, we can
+                                use %f
+                                to
+                                print out a floating-point number,
+                                decimal point and all. Other format
+                                specifiers are:
+                                <br>
+                                * %i - int (same as %d)
+                                <br>
+                                * %f - float
+                                <br>
+                                * %lf - double
+                                <br>
+                                * %x - hexadecimal
+                                <br>
+                                <br>
+                                PROGRAM
+                                <br>
+                                <code>
+                                            #include<stdio.h>
+                                                main()
+                                                <br>
+                                                {
+                                                <br>
+                                                int a=5;
+                                                <br>
+                                                printf("%d",a);
+                                                <br>
+                                                }
+                                            </code>
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                The scanf() function is the input
+                                method equivalent to the printf()
+                                output function - simple
+                                yet powerful. In its simplest
+                                invocation, the scanf format string
+                                holds a single placeholder
+                                representing the type of value that
+                                will be entered by the user. These
+                                placeholders are
+                                exactly the same as the printf()
+                                function - %d for ints, %f for
+                                floats, and %lf for doubles.
+                                There is, however, one variation to
+                                scanf() as compared to printf(). The
+                                scanf() function
+                                requires the memory address of the
+                                variable to which you want to save
+                                the input value. While
+                                pointers are possible here, this is
+                                a concept that won't be approached
+                                until later in the
+                                text. Instead, the simple technique
+                                is to use the address-of operator,
+                                "&". For now it may
+                                be best to consider this "magic"
+                                before we discuss pointers. A
+                                typical application might be
+                                like this:
+                                <br>
+                                <br>
+                                PROGRAM
+                                <br>
+                                <code>
+                                                #include <stdio.h>
+                                                    int main(void)
+                                                    {
+                                                    <br>
+                                                    int a; <br>
+                                                    printf("Please input an
+                                                    integer
+                                                    value: "); <br>
+                                                    scanf("%d", &a); <br>
+                                                    printf("You entered: %d\n",
+                                                    a);
+                                                    <br>
+                                                    return 0; <Br>
+                                                    }
+                                                </code>
+                            </li>
+                        </p>
+                    </ul>
+
                     </p>
 
                 </div>
-
 
             </div>
 
@@ -38,31 +180,28 @@
                 <form id="myForm">
 
                     {{!-- Question 1 --}}
-                    <h6>Q1. Which of the following is not a HTML tag ?</h6>
+                    <h6>Q1. Which of the following is not a HTML tag
+                        ?</h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="1"
-                            id="1.1" name="q1">
+                        <input class="form-check-input" type="radio" value="1" id="1.1" name="q1">
                         <label class="form-check-label" for="flexCheckDefault">
                             &lt;h1&gt; &lt;/h1&gt;
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="2"
-                            id="1.2" name="q1">
+                        <input class="form-check-input" type="radio" value="2" id="1.2" name="q1">
                         <label class="form-check-label" for="flexCheckDefault">
                             &lt;h7&gt; &lt;/h7&gt;
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="3"
-                            id="1.3" name="q1">
+                        <input class="form-check-input" type="radio" value="3" id="1.3" name="q1">
                         <label class="form-check-label" for="flexCheckDefault">
                             &lt;p&gt; &lt;p&gt;
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="4"
-                            id="1.4" name="q1">
+                        <input class="form-check-input" type="radio" value="4" id="1.4" name="q1">
                         <label class="form-check-label" for="flexCheckDefault">
                             &lt;marquee&gt; &lt;/marquee&gt;
                         </label>
@@ -72,29 +211,25 @@
                     {{!-- Question 2 --}}
                     <h6>QUESTION</h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="1"
-                            id="2.1" name="q2">
+                        <input class="form-check-input" type="radio" value="1" id="2.1" name="q2">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="2"
-                            id="2.2" name="q2">
+                        <input class="form-check-input" type="radio" value="2" id="2.2" name="q2">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="3"
-                            id="2.3" name="q2">
+                        <input class="form-check-input" type="radio" value="3" id="2.3" name="q2">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="4"
-                            id="2.4" name="q2">
+                        <input class="form-check-input" type="radio" value="4" id="2.4" name="q2">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
@@ -104,29 +239,25 @@
                     {{!-- Question 3 --}}
                     <h6>QUESTION</h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="1"
-                            id="3.1" name="q3">
+                        <input class="form-check-input" type="radio" value="1" id="3.1" name="q3">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="2"
-                            id="3.2" name="q3">
+                        <input class="form-check-input" type="radio" value="2" id="3.2" name="q3">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="3"
-                            id="3.3" name="q3">
+                        <input class="form-check-input" type="radio" value="3" id="3.3" name="q3">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="4"
-                            id="3.4" name="q3">
+                        <input class="form-check-input" type="radio" value="4" id="3.4" name="q3">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
@@ -136,29 +267,25 @@
                     {{!-- Question 4 --}}
                     <h6>QUESTION</h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="1"
-                            id="4.1" name="q4">
+                        <input class="form-check-input" type="radio" value="1" id="4.1" name="q4">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="2"
-                            id="4.2" name="q4">
+                        <input class="form-check-input" type="radio" value="2" id="4.2" name="q4">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="3"
-                            id="4.3" name="q4">
+                        <input class="form-check-input" type="radio" value="3" id="4.3" name="q4">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="4"
-                            id="4.4" name="q4">
+                        <input class="form-check-input" type="radio" value="4" id="4.4" name="q4">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
@@ -168,29 +295,25 @@
                     {{!-- Question 5 --}}
                     <h6>QUESTION</h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="1"
-                            id="5.1" name="q5">
+                        <input class="form-check-input" type="radio" value="1" id="5.1" name="q5">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="2"
-                            id="5.2" name="q5">
+                        <input class="form-check-input" type="radio" value="2" id="5.2" name="q5">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="3"
-                            id="5.3" name="q5">
+                        <input class="form-check-input" type="radio" value="3" id="5.3" name="q5">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="4"
-                            id="5.4" name="q5">
+                        <input class="form-check-input" type="radio" value="4" id="5.4" name="q5">
                         <label class="form-check-label" for="flexCheckDefault">
                             OPTION1
                         </label>
@@ -202,29 +325,30 @@
 
 
                     <div>
-                        <button type="submit" class="btn btn-success">SUBMIT</button>
+                        <button type="submit" class="btn
+                                        btn-success">SUBMIT</button>
                     </div>
                 </form>
 
             </div>
 
         </div>
-        <div class="col-sm-6" id="clm2">
+        <div class="col-sm-6" id="clm2" >
 
 
-
-            <iframe style='max-width:100%; border: none; height: 375px; width:
-                700px;' height=375 width=700
-                src=https://www.interviewbit.com/embed/snippet/fc6321f65326e73f493a
-                title='Interviewbit Ide snippet/fc6321f65326e73f493a'
-                loading="lazy" allow="clipboard-write" allowfullscreen
+            <div id="Container">
+            <iframe style='max-width:100%; border: none; height:
+                            375px; width:
+                            700px;' height=375 width=700
+                src=https://www.interviewbit.com/embed/snippet/fc6321f65326e73f493a title='Interviewbit Ide
+                            snippet/fc6321f65326e73f493a' loading="lazy" allow="clipboard-write" allowfullscreen
                 referrerpolicy="unsafe-url" sandbox="allow-scripts
-                allow-same-origin allow-popups
-                allow-top-navigation-by-user-activation
-                allow-popups-to-escape-sandbox"></iframe>
+                            allow-same-origin allow-popups
+                            allow-top-navigation-by-user-activation
+                            allow-popups-to-escape-sandbox"></iframe>
 
 
-
+</div>
 
 
 
@@ -233,6 +357,10 @@
     </div>
 </div>
 
+<script>
+    const user = JSON.parse(localStorage.getItem("user"))
+    document.getElementById("progress").innerHTML = user.cppScore.pract1.score
+</script>
 <script>
 
     const form = document.getElementById("myForm")
@@ -243,7 +371,7 @@
     const ansOfQ4 = document.getElementById("4.4")
     const ansOfQ5 = document.getElementById("5.4")
 
-    
+
     form.addEventListener('submit', (e) => {
         e.preventDefault()
 
@@ -251,38 +379,48 @@
 
         var progressCounter = 0
 
-        if(ansOfQ1.checked === true){
-            progressCounter = progressCounter + 1
+        if (ansOfQ1.checked === true) {
+            progressCounter = progressCounter + 20
         }
 
-        if(ansOfQ2.checked === true){
-           progressCounter = progressCounter + 1
+        if (ansOfQ2.checked === true) {
+            progressCounter = progressCounter + 20
         }
 
-        if(ansOfQ3.checked === true){
-            progressCounter = progressCounter + 1
+        if (ansOfQ3.checked === true) {
+            progressCounter = progressCounter + 20
         }
 
-        if(ansOfQ4.checked === true){
-            progressCounter = progressCounter + 1
+        if (ansOfQ4.checked === true) {
+            progressCounter = progressCounter + 20
         }
 
-        if(ansOfQ5.checked === true){
-            progressCounter = progressCounter + 1
+        if (ansOfQ5.checked === true) {
+            progressCounter = progressCounter + 20
         }
 
-        if(ansOfQ1.checked === true){
+        if (true) {
             alert("Congraluations Your Score is : " + progressCounter)
-           
-        }else{
+
+            fetch(`/practScore/updateCppScore/${progressCounter}/pract1/${JSON.parse(localStorage.getItem("user")).studentID}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    { { !--console.log(data) --} }
+                    document.getElementById("progress").innerHTML = data.cppScore.pract1.score
+                    localStorage.setItem('user', JSON.stringify(data))
+                })
+
+        } else {
             alert("Try again")
         }
 
-       
-      
+
+
 
 
     })
 
 
 </script>
+
+{{>checkIfLoggedInOrNot}}

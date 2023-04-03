@@ -2,6 +2,8 @@
 var express = require('express');
 var moment = require('moment');
 const jwt = require('jsonwebtoken')
+const multer  = require('multer')
+const upload = multer({ dest: './public/profileUploads/' })
 var router = express.Router();
 
 require('../middleware/verify')
@@ -128,6 +130,28 @@ router.post('/updateAttendence/:studentID', async (req, res) => {
 
 
 })
+
+// Upload Profile Picture
+router.post('/upload', upload.single('uploaded_file'),  (req, res) => {
+  
+  console.log(req.file, req.body)
+
+  const update = {profilePic: req.body.filename}
+
+
+  // const studentID = req.params.studentID
+  // console.log(studentID)
+  // try {
+  //   await User.findOneAndUpdate({ studentID: studentID },{update})
+  // } catch (error) {
+  //   res.send(error)
+  // }
+
+
+
+
+
+});
 
 
 // PHYSICS

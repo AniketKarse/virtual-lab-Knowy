@@ -35,6 +35,9 @@ const userSchema = new mongoose.Schema({
                 type: String
             }
         ],
+    profilePic:{
+        type: String
+    },
     htmlScore: {
 
 
