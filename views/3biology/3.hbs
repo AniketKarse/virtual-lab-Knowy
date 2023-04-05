@@ -286,9 +286,9 @@
                 <br>
                 <div>
                     <form id="practForm" >
-                        <span style="font-weight: 700">1 </span> <input type="text" name="first" id="first" > <br>
-                        <span style="font-weight: 700">2 </span> <input type="text" name="second" id="second" > <br>
-                        <span style="font-weight: 700">3 </span> <input type="text" name="third" id="third" > <br>
+                        <span style="font-weight: 700"  >1 </span> <input type="text" name="first" id="first" > <span id="1"></span> <br>
+                        <span style="font-weight: 700" >2 </span> <input type="text" name="second" id="second" > <span id="2"></span> <br>
+                        <span style="font-weight: 700" >3 </span> <input type="text" name="third" id="third" > <span id="3"></span> <br>
                         <div>
                             <br>
                         <button type="submit" >CHECK</button>
@@ -404,7 +404,7 @@
                 .then((data) => {
                     console.log(data)
 
-                    document.getElementById("progress").innerHTML = data.biologyScore.pract1.score
+                    document.getElementById("progress").innerHTML = data.biologyScore.pract3.score
                     localStorage.setItem('user', JSON.stringify(data))
                 })
 
@@ -423,27 +423,38 @@
 
     
     var first = document.getElementById("first")
-
     var second = document.getElementById("second")
     var third = document.getElementById("third")
 
-    const answer1 = "Wrong"
-    const answer2 = "Wrong"
-    const answer3 = "Wrong"
 
+       
 
         if(first.value.toLowerCase() === 'cell wall'){
-            answer1 = "Correct"
+            document.getElementById("1").innerHTML = "&#x2713;"
+            document.getElementById("1").style.color = "green"
+        }else{
+            document.getElementById("1").innerHTML = "&#10008;"
+            document.getElementById("1").style.color = "red"
         }
 
-        if(second.value.toLowerCase() == 'vacuole'){
-            answer2 = "Correct"
-        }
-        if(third.value.toLowerCase() == 'nucleus'){
-            answer3 = "Correct"
+        if(second.value.toLowerCase() === 'vacuole'){
+            document.getElementById("2").innerHTML = "&#x2713;"
+            document.getElementById("2").style.color = "green"
+        }else{
+            document.getElementById("2").innerHTML = "&#10008;"
+            document.getElementById("2").style.color = "red"
         }
 
-        alert('1. ' + answer1 + ' \n2. '+  answer2   +'\n3. '+ answer3)
+
+        if(third.value.toLowerCase() === 'nucleus'){
+            document.getElementById("3").innerHTML = "&#x2713;"
+            document.getElementById("3").style.color = "green"
+        }else{
+            document.getElementById("3").innerHTML = "&#10008;"
+            document.getElementById("3").style.color = "red"
+        }
+
+       
        
         
     })
