@@ -7,121 +7,143 @@
             <br>
             <p class="card-title" id="practical--heading">
                 Subject : C Programming <br>
-                Practical No : 1 <br>
+                Practical No : 2 <br>
                 Progress :
                 <span id="progress">0</span>%
             </p>
 
 
 
-            
-<div id="practicalData--wrapper">
-    <h5> <span style="color: #FF842F;">AIM </span> <br>BASIC SYNTAX FOR printf & scanf</h5>
-    <br>
-    <div id="theory--wrapper">
-        <h5><span style="color: #FF842F;">THEORY </span></h5>
-        <ul>
-
-
-            <p>
-                <li>
-                    In C, there are many different ways for a program to communicate with the user. Amazingly, the most
-                    simple
-                    methods usually taught to beginning programmers may also be the most powerful. In the "Hello, World"
-                    example
-                    at the beginning of this text, we were introduced to a Standard Library file stdio.h, and one of its
-                    functions, printf(). Here we discuss more of the functions that stdio.h gives us. You have seen that
-                    to use
-                    printf() one puts text, surrounded by quotes, in between the parentheses.
-                    We call the text surrounded by quotes a literal string (or just a string), and we call that string
-                    an
-                    argument to printf.
-                </li>
+            <div id="practicalData--wrapper">
+                <h5> <span style="color: #FF842F;">AIM </span> <br>TO STUDY
+                    DIFFERNT DATE TYPES</h5>
                 <br>
-                <br>
-                PROGRAM <br>
+                <div id="theory--wrapper">
+                    <h5><span style="color: #FF842F;">THEORY </span></h5>
+                    <p>C has a concept of 'data types' which are used to define
+                        a variable before its use. A programming language is
+                        proposed to help programmer to process certain kinds of
+                        data and to provide useful output. The task of data
+                        processing is accomplished by executing series of
+                        commands called program. A program usually contains
+                        different types of data types (integer, float, character
+                        etc.) and need to store the values being used in
+                        the program. C language is rich of data types. A C
+                        programmer has to employ proper data type as per his
+                        requirement.
 
-                #include<stdio.h>
-                    {
-                    <br>
-                    /* My first C Program */
-                    <br>
-                    printf("hello, world");
-                    }
-                    <br>
-                    <br>
-                    <p>
-                        <li>Like the previous example we are now trying to print the numbers using a C program.Numbers
-                            are of
-                            different types. To print different numbers we can use different "placeholders".The
-                            placeholder
-                            %d
-                            literally "holds the place" for the actual number.These placeholders are called format
-                            specifiers.
-                            Many other format specifiers work with printf. If we have a floating-point number, we can
-                            use %f
-                            to
-                            print out a floating-point number, decimal point and all. Other format specifiers are:
+                        <br>
+                        <br>
+                        <h5>Basic Data Types</h5>
+                        The data type specifies the size and type of information
+                        the variable will store.<br>
+                        The following table shows the data type with its size
+                        and description.
+                        <br>
+                        <table>
+                            <tr>
+                                <th>Data type</th>
+                                <th>Size</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>int </td>
+                                <td>2 or 4 bytes</td>
+                                <td>Stores whole numbers, without decimals</td>
+                            </tr>
+                            <tr>
+                                <td>float</td>
+                                <td>4 bytes</td>
+                                <td>Stores fractional numbers, containing one or
+                                    more decimals. Sufficient for storing 6-7
+                                    decimal
+                                    digits</td>
+                            </tr>
+                            <tr>
+                                <td>double </td>
+                                <td>8 bytes</td>
+                                <td>Stores fractional numbers, containing one or
+                                    more decimals. Sufficient for storing 15
+                                    decimal digits
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>char </td>
+                                <td>1 byte</td>
+                                <td>Stores whole numbers, without decimals</td>
+                            </tr>
+                        </table>
+
+
+
+
+                        <br>
+                        <br>
+                        <h5>Basic Format Specifiers</h5>
+                        There are different format specifiers for each data
+                        type. Here are some of them:
+                        <br>
+                        <table>
+                            <tr>
+                                <th>Format Specifier</th>
+                                <th> Data Type</th>
+
+                            </tr>
+                            <tr>
+                                <td>%d or %i</td>
+                                <td> int</td>
+
+                            </tr>
+                            <tr>
+                                <td>%f</td>
+                                <td>float</td>
+
+                            </tr>
+                            <tr>
+                                <td>%lf</td>
+                                <td>double</td>
+
+                            </tr>
+                            <tr>
+                                <td>%c</td>
+                                <td>char</td>
+
+                            </tr>
+                            <tr>
+                                <td>%s</td>
+                                <td>Used for strings (text)</td>
+
+                            </tr>
+                        </table>
+                        <br>
+                        example
+                        <br>
+                        <code>
+                            // Create variables <br>
+                            int myNum = 5; // Integer (whole number)<br>
+                            float myFloatNum = 5.99; // Floating point number
                             <br>
-                            * %i - int (same as %d)
+                            char myLetter = 'D'; // Character <br>
+
+                            // Print variables <br>
+                            printf("%d\n", myNum); <br>
+                            printf("%f\n", myFloatNum); <br>
+                            printf("%c\n", myLetter); <br>
                             <br>
-                            * %f - float
-                            <br>
-                            * %lf - double
-                            <br>
-                            * %x - hexadecimal
-                            <br>
-                            <br>
-                            PROGRAM
-                            <br>
-                            #include<stdio.h>
-                                main()
-                                <br>
-                                {
-                                <br>
-                                int a=5;
-                                <br>
-                                printf("%d",a);
-                                <br>
-                                }
-                        </li>
+
+                            Output <br>
+                            5 <br>
+                            5.990000 <br>
+                            D <br>
+
+                        </code>
                     </p>
-                    <p>
-                        <li>
-                            The scanf() function is the input method equivalent to the printf() output function - simple
-                            yet powerful. In its simplest invocation, the scanf format string holds a single placeholder
-                            representing the type of value that will be entered by the user. These placeholders are
-                            exactly the same as the printf() function - %d for ints, %f for floats, and %lf for doubles.
-                            There is, however, one variation to scanf() as compared to printf(). The scanf() function
-                            requires the memory address of the variable to which you want to save the input value. While
-                            pointers are possible here, this is a concept that won't be approached until later in the
-                            text. Instead, the simple technique is to use the address-of operator, "&". For now it may
-                            be best to consider this "magic" before we discuss pointers. A typical application might be
-                            like this:
-<br>
-<br>
-PROGRAM
-<br>
-#include <stdio.h>
-    int main(void) 
-    {
-        <br>
-       int a; <br>
-       printf("Please input an integer value: "); <br>
-       scanf("%d", &a); <br>
-       printf("You entered: %d\n", a); <br>
-       return 0; <Br>
-     }
 
-                        </li>
-                    </p>
-        </ul>
+                </div>
 
-        </p>
+            </div>
 
-    </div>
-
-</div>
 
             <div id="test--wrapper">
                 <h5><span style="color: #FF842F;">QUESTIONS </span></h5>
@@ -330,7 +352,7 @@ PROGRAM
 
 <script>
     const user = JSON.parse(localStorage.getItem("user"))
-    document.getElementById("progress").innerHTML = user.cppScore.pract1.score
+    document.getElementById("progress").innerHTML = user.cppScore.pract2.score
 </script>
 <script>
 
@@ -375,7 +397,7 @@ PROGRAM
 
          
 
-             fetch(`/practScore/updateCppScore/${progressCounter}/pract1/${JSON.parse(localStorage.getItem("user")).studentID}`)
+             fetch(`/practScore/updateCppScore/${progressCounter}/pract2/${JSON.parse(localStorage.getItem("user")).studentID}`)
             .then((response) => response.json())
             .then((data) => {
                 {{!-- console.log(data) --}}

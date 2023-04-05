@@ -149,7 +149,7 @@ router.get('/updateHtmlScore/:score/:practNo/:studentID', async (req, res) => {
         await User.findOneAndUpdate({ studentID: studentID },
             { $push: { attendance: [today] } }
         )
-
+        doc.password = null
         console.log(doc)
         res.send(doc)
 
@@ -229,7 +229,7 @@ router.get('/updatePhysicsScore/:score/:practNo/:studentID', async (req, res) =>
         await User.findOneAndUpdate({ studentID: studentID },
             { $push: { attendance: [today] } }
           )
-
+          doc.password = null
         console.log(doc)
         res.send(doc)
 
@@ -308,8 +308,9 @@ router.get('/updateChemistryScore/:score/:practNo/:studentID', async (req, res) 
         await User.findOneAndUpdate({ studentID: studentID },
             { $push: { attendance: [today] } }
           )
-
+          doc.password = null
         console.log(doc)
+        res.send(doc)
 
     } catch (error) {
     console.log(error)
@@ -386,7 +387,7 @@ router.get('/updateBiologyScore/:score/:practNo/:studentID', async (req, res) =>
         await User.findOneAndUpdate({ studentID: studentID },
             { $push: { attendance: [today] } }
         )
-
+        doc.password = null
         console.log(doc)
         res.send(doc)
         
@@ -465,7 +466,7 @@ router.get('/updateCppScore/:score/:practNo/:studentID', async (req, res) => {
         await User.findOneAndUpdate({ studentID: studentID },
             { $push: { attendance: [today] } }
         )
-        
+        doc.password = null
         console.log(doc)
         res.send(doc)
 

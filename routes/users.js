@@ -204,7 +204,7 @@ router.get('/me/html/pract-5', (req, res) => {
   res.render('1html/html-5')
 })
 
-// C++
+// C
 
 router.get('/me/cpp', (req, res) => {
   res.render('3cpp/cppPract')
@@ -212,6 +212,10 @@ router.get('/me/cpp', (req, res) => {
 
 router.get('/me/cpp/pract-1', (req, res) => {
   res.render('3cpp/1')
+})
+
+router.get('/me/cpp/pract-2', (req, res) => {
+  res.render('3cpp/2')
 })
 
 // BIOLOGY

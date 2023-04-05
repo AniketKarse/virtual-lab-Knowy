@@ -32,6 +32,8 @@ router.post('/login', async (req, res) => {
     return
   }
 
+  user.password = null
+
   // console.log(user)
 
   jwt.sign({ user }, "THIS IS SECREAT", (err, token) => {
