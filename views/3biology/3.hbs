@@ -286,9 +286,9 @@
                 <br>
                 <div>
                     <form id="practForm" >
-                        <span style="font-weight: 700">1 </span> <input type="text" name="first" id="first" required> <br>
-                        <span style="font-weight: 700">2 </span> <input type="text" name="second" id="second" required> <br>
-                        <span style="font-weight: 700">3 </span> <input type="text" name="third" id="third" required> <br>
+                        <span style="font-weight: 700">1 </span> <input type="text" name="first" id="first" > <br>
+                        <span style="font-weight: 700">2 </span> <input type="text" name="second" id="second" > <br>
+                        <span style="font-weight: 700">3 </span> <input type="text" name="third" id="third" > <br>
                         <div>
                             <br>
                         <button type="submit" >CHECK</button>
@@ -416,31 +416,34 @@
 </script>
 <script>
 
-    const formm = document.getElementById("practForm")
-    var first = document.getElementById("first")
-    var second = document.getElementById("second")
-    var third = document.getElementById("third")
+    
 
     document.getElementById("practForm").addEventListener('submit', (e) => {
         e.preventDefault()
 
-        if(first.value.toLowerCase() == 'cell wall'){
-            first.style.backgroundColor = "green"
-        }else{
-            first.style.backgroundColor = "red"
+    
+    var first = document.getElementById("first")
+
+    var second = document.getElementById("second")
+    var third = document.getElementById("third")
+
+    const answer1 = "Wrong"
+    const answer2 = "Wrong"
+    const answer3 = "Wrong"
+
+
+        if(first.value.toLowerCase() === 'cell wall'){
+            answer1 = "Correct"
         }
 
         if(second.value.toLowerCase() == 'vacuole'){
-            second.style.backgroundColor = "green"
-        }else{
-            second.style.backgroundColor = "red"
+            answer2 = "Correct"
+        }
+        if(third.value.toLowerCase() == 'nucleus'){
+            answer3 = "Correct"
         }
 
-        if(third.value.toLowerCase() == 'nucleus'){
-            third.style.backgroundColor = "green"
-        }else{
-            third.style.backgroundColor = "red"
-        }
+        alert('1. ' + answer1 + ' \n2. '+  answer2   +'\n3. '+ answer3)
        
         
     })

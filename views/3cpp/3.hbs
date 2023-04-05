@@ -1,0 +1,454 @@
+
+{{>internalNabBar}}
+
+<div id="practical--wrapper">
+    <div class="row">
+        <div class="col-sm-6" id="clm1">
+            <br>
+            <p class="card-title" id="practical--heading">
+                Subject : C Programming <br>
+                Practical No : 2 <br>
+                Progress :
+                <span id="progress">0</span>%
+            </p>
+
+
+
+
+            <div id="practicalData--wrapper">
+                <h5> <span style="color: #FF842F;">AIM </span> <br>Learn About Loops in C</h5>
+                <br>
+                <div id="theory--wrapper">
+                    <h5><span style="color: #FF842F;">THEORY </span></h5>
+                    <p>
+                        <h5>if statement</h5>
+                        The if statement allows you to control if a program
+                        enters a section of code or not based on whether a given
+                        condition is true or false. One of the important
+                        functions of the if statement is that it allows the
+                        program
+                        to select an action based upon the user's input. For
+                        example, by using an if statement to check a user
+                        entered password, your program can decide whether a user
+                        is allowed access to the program. Before discussing
+                        the actual structure of the if statement, let us examine
+                        the meaning of TRUE and FALSE in computer
+                        terminology. A true statement is one that evaluates to a
+                        nonzero number. A false statement evaluates to
+                        zero. When you perform comparison with the relational
+                        operators, the operator will return 1 if the
+                        comparison is true, or 0 if the comparison is false.
+                        <br>
+
+
+                        <br>
+                        Basic if syntax <br>
+                        <code>
+                            if ( TRUE ) { <br>
+                            Execute all statements inside the braces <br>
+                            } <br>
+                        </code>
+                        <br> <br>
+                        Else <br>
+                        Else condition executes when "if condition" do not
+                        satisfy. <br>
+                        <code>
+                            if ( TRUE ) { <br>
+                            // Execute these statements if TRUE <br>
+                            } <br>
+                            else { <br>
+                            // Execute these statements if FALSE <br>
+                            } <br>
+                        </code> <br> <br>
+                        Else If <br>
+                        Else if condition executes when if condition is false &
+                        else if condition is true
+                        <br>
+                        <code>
+                            if ( ) { <br>
+                            // Execute these statements if is TRUE <br>
+                            } <br>
+                            else if ( ) { <br>
+                            // Execute these statements if is TRUE and <br>
+                            // is FALSE <br>
+                            } <br> <br>
+
+                        </code>
+                        <h5>switch statement</h5>
+
+                        This is another form of the multi way decision. It is
+                        well structured, but can only be used in certain cases
+                        where; <br>
+                        * Only one variable is tested, all branches must depend
+                        on the value of that variable. The variable must be
+                        an integral type. (int, long, short or char). <br>
+                        * Each possible value of the variable can control a
+                        single branch. <br>
+                        A final, catch all, default branch may optionally be
+                        used to trap all unspecified cases.
+                        <br>
+                        <code>
+                            switch( expression ) <br>
+                            { <br>
+                            [case constant-expression1: statements1;] <br>
+                            [case constant-expression2: statements2;] <br>
+                            [case constant-expression3: statements3;] <br>
+                            [default : statements4;] <br>
+                            }
+                        </code> <br>
+                        Each interesting case is listed with a corresponding
+                        action. The break statement prevents any further
+                        statements
+                        from being executed by leaving the switch. <br>
+                        Both if and switch constructs allow the programmer to
+                        make a selection from a number of possible actions.
+                        <br>
+
+                        <h5>LOOPS</h5>
+                        Loops provide a way to repeat commands and control and
+                        select how many times they are repeated. C provides a
+                        number of looping way. <br>
+                        1.for loop.<br>
+                        2.while loop.<br>
+                        3.do while loop.<br> <br>
+                        1. for loop <br>
+                        * "for" statements are often used to proccess lists such
+                        a range of numbers: <br>
+                        Basic syntax of for loop is as
+                        follows: <br>
+                        <code>
+                            for( expression1; expression2; expression3) <br>
+                            { <br>
+                            Single statement <br>
+                            or <br>
+                            Block of statements; <br>
+                            } <br>
+                        </code>
+                        <br>
+                        In the above syntax: <br>
+                        * expression1 - Initialisese variables. <br>
+                        * expression2 - Condtional expression, as long as this
+                        condition is true, loop will keep executing. <br>
+                        * expression3 - expression3 is the modifier which may be
+                        simple increment of a variable. <br>
+                        <br>
+                        <br>
+                        2. While loop <br>
+                        The most basic loop in C is the while loop.A while
+                        statement is like a repeating if statement. Like an If
+                        statement, if the test condition is true: the statments
+                        get executed. The difference is that after the
+                        statements have been executed, the test condition is
+                        checked again. If it is still true the statements get
+                        executed again. This cycle repeats until the test
+                        condition evaluates to false. <br>
+                        Basic syntax of while loop is as follows: <br>
+                        <code>
+                            while ( expression ) <br>
+                            { <br>
+                            Single statement <br>
+                            or <br>
+                            Block of statements; <br>
+                            } <br>
+                        </code>
+                        <br>
+                        3. do...while loop <br>
+                        do ... while is just like a while loop except that the
+                        test condition is checked at the end of the loop rather
+                        than the start. This has the effect that the content of
+                        the loop are always executed at least once. <br>
+                        Basic syntax of do...while loop is as follows:
+                        <br>
+                        <code>
+                            do <br>
+                            { <br>
+                            Single statement <br>
+                            or <br>
+                            Block of statements; <br>
+                            }while(expression); <br>
+                        </code>
+
+
+
+
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="test--wrapper">
+                <h5><span style="color: #FF842F;">QUESTIONS </span></h5>
+                <br>
+
+
+                <form id="myForm">
+
+                    {{!-- Question 1 --}}
+                    <h6>Q1. Which of the following is not a HTML tag ?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="1.1" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;h1&gt; &lt;/h1&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="1.2" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;h7&gt; &lt;/h7&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="1.3" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;p&gt; &lt;p&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="1.4" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            &lt;marquee&gt; &lt;/marquee&gt;
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 2 --}}
+                    <h6>QUESTION</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="2.1" name="q2">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="2.2" name="q2">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="2.3" name="q2">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="2.4" name="q2">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 3 --}}
+                    <h6>QUESTION</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="3.1" name="q3">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="3.2" name="q3">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="3.3" name="q3">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="3.4" name="q3">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 4 --}}
+                    <h6>QUESTION</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="4.1" name="q4">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="4.2" name="q4">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="4.3" name="q4">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="4.4" name="q4">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 5 --}}
+                    <h6>QUESTION</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="5.1" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="5.2" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="5.3" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="5.4" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <br>
+
+
+
+
+
+                    <div>
+                        <button type="submit" class="btn btn-success">SUBMIT</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="col-sm-6" id="clm2">
+
+            <dvi id="Container">
+                <iframe style='max-width:100%; border: none; height:
+                    375px; width:
+                    700px;' height=375 width=700
+                    src=https://www.interviewbit.com/embed/snippet/fc6321f65326e73f493a
+                    title='Interviewbit Ide
+                    snippet/fc6321f65326e73f493a' loading="lazy"
+                    allow="clipboard-write" allowfullscreen
+                    referrerpolicy="unsafe-url" sandbox="allow-scripts
+                    allow-same-origin allow-popups
+                    allow-top-navigation-by-user-activation
+                    allow-popups-to-escape-sandbox"></iframe>
+
+            </dvi>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const user = JSON.parse(localStorage.getItem("user"))
+    document.getElementById("progress").innerHTML = user.cppScore.pract3.score
+</script>
+<script>
+
+    const form = document.getElementById("myForm")
+
+    const ansOfQ1 = document.getElementById("1.1")
+    const ansOfQ2 = document.getElementById("2.2")
+    const ansOfQ3 = document.getElementById("3.3")
+    const ansOfQ4 = document.getElementById("4.4")
+    const ansOfQ5 = document.getElementById("5.4")
+
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        console.log(ansOfQ1.checked)
+
+        var progressCounter = 0
+
+        if(ansOfQ1.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ2.checked === true){
+           progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ3.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ4.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ5.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(true){
+            alert("Congraluations Your Score is : " + progressCounter)
+
+         
+
+             fetch(`/practScore/updateCppScore/${progressCounter}/pract3/${JSON.parse(localStorage.getItem("user")).studentID}`)
+            .then((response) => response.json())
+            .then((data) => {
+                {{!-- console.log(data) --}}
+                document.getElementById("progress").innerHTML = data.htmlScore.pract1.score
+            localStorage.setItem('user', JSON.stringify(data))
+            })
+           
+        }else{
+            alert("Try again")
+        }
+
+       
+      
+
+
+    })
+
+
+</script>
+{{>checkIfLoggedInOrNot}}

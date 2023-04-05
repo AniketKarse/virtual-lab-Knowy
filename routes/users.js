@@ -218,6 +218,10 @@ router.get('/me/cpp/pract-2', (req, res) => {
   res.render('3cpp/2')
 })
 
+router.get('/me/cpp/pract-3', (req, res) => {
+  res.render('3cpp/3')
+})
+
 // BIOLOGY
 
 router.get('/me/biology', (req, res) => {
