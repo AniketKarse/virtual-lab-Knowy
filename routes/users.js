@@ -248,6 +248,14 @@ router.get('/me/biology/pract-3', (req, res) => {
   res.render('3biology/3')
 })
 
+router.get('/me/biology/pract-4', (req, res) => {
+  res.render('3biology/4')
+})
+
+router.get('/me/biology/pract-5', (req, res) => {
+  res.render('3biology/5')
+})
+
 
 // COMPILER
 router.get('/me/compiler/cpp', (req, res) => {
