@@ -9,21 +9,21 @@ router.get('', (req, res) => {
 
 })
 
-router.get('/fetchStudentData:id', async (req, res) => {
+// router.get('/fetchStudentData:id', async (req, res) => {
 
-    console.log(req.params)
+//     console.log(req.params)
     
-    try {
+//     try {
         
-        const studentData = await User.findById("63ff774197c5042ce469d31d")
-        console.log(studentData)
-        res.send(studentData)
+//         const studentData = await User.findById("63ff774197c5042ce469d31d")
+//         console.log(studentData)
+//         res.send(studentData)
 
-    } catch (error) {
-        res.send(error)
-    }
+//     } catch (error) {
+//         res.send(error)
+//     }
 
-})
+// })
 
 // To SAVE TEACHER
 router.post('/saveTeacher', async (req, res) => {
