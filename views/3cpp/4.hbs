@@ -1,0 +1,465 @@
+
+{{>internalNabBar}}
+
+<div id="practical--wrapper">
+    <div class="row">
+        <div class="col-sm-6" id="clm1">
+            <br>
+            <p class="card-title" id="practical--heading">
+                Subject : C Programming <br>
+                Practical No : 4 <br>
+                Progress :
+                <span id="progress">0</span>%
+            </p>
+
+
+
+
+
+            <div id="practicalData--wrapper">
+                <h5> <span style="color: #FF842F;">AIM </span> <br>To study
+                    string in C</h5>
+                <br>
+                <div id="theory--wrapper">
+                    <h5><span style="color: #FF842F;">THEORY </span></h5>
+                    <p>String in C programming is a sequence of characters
+                        terminated with a null character ‘\0’. Strings are
+                        defined as an array of characters. The difference
+                        between a character array and a string is the string is
+                        terminated with a unique character '\0'.
+                        <br><br>
+                        * Declaration of Strings :
+                        <br>
+                        Declaring a string is as simple as declaring a
+                        one-dimensional array. Below is the basic syntax for
+                        declaring a string.
+                        <br> <br>
+                        char str_name[size];
+                        <br>
+                        In the above syntax str_name is any name given to the
+                        string variable and size is used to define the length
+                        of the string, i.e the number of characters strings will
+                        store. <br> <br>
+                        Note: There is an extra terminating character which is
+                        the Null character ('\0') used to indicate the
+                        termination of a string that differs strings from normal
+                        character arrays. When a Sequence of characters
+                        enclosed in the double quotation marks is encountered by
+                        the compiler, a null character '\0' is appended at
+                        the end of the string by default.
+                        <br> <br>
+                        * Example of C String:
+                        <br> <br>
+                        <code>
+                            char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+                        </code>
+                        <br>
+                        If you follow the rule of array initialization then you
+                        can write the above statement as follows : <br>
+                        <code>
+                            char greeting[] = "Hello";
+                        </code>
+                        <br> <br>
+                        <img
+                            src="https://www.tutorialspoint.com/cprogramming/images/string_representation.jpg"
+                            alt="string">
+                        <br>
+                        Actually, you do not place the null character at the end
+                        of a string constant. The C compiler automatically
+                        places the '\0' at the end of the string when it
+                        initializes the array.
+                        <br>
+                        Let us try to print the above mentioned string -
+                        <br> <br>
+                        <code>
+                            #include <stdio.h><br>
+
+                                int main () { <br>
+
+                                char greeting[6] = {'H', 'e', 'l', 'l', 'o',
+                                '\0'}; <br>
+                                printf("Greeting message: %s\n", greeting );
+                                <br>
+                                return 0; <br>
+                                } <br>
+                            </code>
+                            When the above code is compiled and executed, it
+                            produces the following result - <br>
+                            Greeting message: Hello
+                            <br>
+                            <br>
+                            * C supports a wide range of functions that
+                            manipulate null-terminated strings :
+                            <br>
+
+
+
+
+
+                            <br>
+                            The following program uses some of the
+                            above-mentioned functions :
+                            <br>
+                            <code> <br>
+                                #include <stdio.h> <br>
+                                    #include <string.h> <br>
+
+
+                                        int main () { <br>
+
+                                        char str1[12] = "Hello"; <br>
+                                        char str2[12] = "World"; <br>
+                                        char str3[12]; <br>
+                                        int len ;<br>
+
+                                        /* copy str1 into str3 */ <br>
+                                        strcpy(str3, str1);<br>
+                                        printf("strcpy( str3, str1) : %s\n",
+                                        str3 ); <br>
+
+                                        /* concatenates str1 and str2 */ <br>
+                                        strcat( str1, str2); <br>
+                                        printf("strcat( str1, str2): %s\n", str1
+                                        ); <br>
+
+                                        /* total lenghth of str1 after
+                                        concatenation */ <br>
+                                        len = strlen(str1); <br>
+                                        printf("strlen(str1) : %d\n", len );
+                                        <br>
+
+                                        return 0; <br>
+                                        }<br>
+                                    </code>
+                                    <br>
+                                    When the above code is compiled and
+                                    executed, it produces the following result :
+                                    <br>
+                                    strcpy( str3, str1) : Hello <br>
+                                    strcat( str1, str2): HelloWorld <br>
+                                    strlen(str1) : 10 <br>
+
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div id="test--wrapper">
+                            <h5><span style="color: #FF842F;">QUESTIONS </span></h5>
+                            <br>
+
+
+                            <form id="myForm">
+
+                                {{!-- Question 1 --}}
+                                <h6>Q1. Which of the following is not a HTML tag
+                                    ?</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="1"
+                                        id="1.1" name="q1">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        &lt;h1&gt; &lt;/h1&gt;
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="2"
+                                        id="1.2" name="q1">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        &lt;h7&gt; &lt;/h7&gt;
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="3"
+                                        id="1.3" name="q1">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        &lt;p&gt; &lt;p&gt;
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="4"
+                                        id="1.4" name="q1">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        &lt;marquee&gt; &lt;/marquee&gt;
+                                    </label>
+                                </div>
+                                <br>
+
+                                {{!-- Question 2 --}}
+                                <h6>QUESTION</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="1"
+                                        id="2.1" name="q2">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="2"
+                                        id="2.2" name="q2">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="3"
+                                        id="2.3" name="q2">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="4"
+                                        id="2.4" name="q2">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <br>
+
+                                {{!-- Question 3 --}}
+                                <h6>QUESTION</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="1"
+                                        id="3.1" name="q3">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="2"
+                                        id="3.2" name="q3">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="3"
+                                        id="3.3" name="q3">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="4"
+                                        id="3.4" name="q3">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <br>
+
+                                {{!-- Question 4 --}}
+                                <h6>QUESTION</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="1"
+                                        id="4.1" name="q4">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="2"
+                                        id="4.2" name="q4">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="3"
+                                        id="4.3" name="q4">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="4"
+                                        id="4.4" name="q4">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <br>
+
+                                {{!-- Question 5 --}}
+                                <h6>QUESTION</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="1"
+                                        id="5.1" name="q5">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="2"
+                                        id="5.2" name="q5">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="3"
+                                        id="5.3" name="q5">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio"
+                                        value="4"
+                                        id="5.4" name="q5">
+                                    <label class="form-check-label"
+                                        for="flexCheckDefault">
+                                        OPTION1
+                                    </label>
+                                </div>
+                                <br>
+
+
+
+
+
+                                <div>
+                                    <button type="submit" class="btn
+                                        btn-success">SUBMIT</button>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6" id="clm2">
+
+                        <dvi id="Container">
+                            <iframe style='max-width:100%; border: none; height:
+                                375px; width:
+                                700px;' height=375 width=700
+                                src=https://www.interviewbit.com/embed/snippet/fc6321f65326e73f493a
+                                title='Interviewbit Ide
+                                snippet/fc6321f65326e73f493a' loading="lazy"
+                                allow="clipboard-write" allowfullscreen
+                                referrerpolicy="unsafe-url"
+                                sandbox="allow-scripts
+                                allow-same-origin allow-popups
+                                allow-top-navigation-by-user-activation
+                                allow-popups-to-escape-sandbox"></iframe>
+
+                        </dvi>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <script>
+    const user = JSON.parse(localStorage.getItem("user"))
+    document.getElementById("progress").innerHTML = user.cppScore.pract4.score
+</script>
+            <script>
+
+    const form = document.getElementById("myForm")
+
+    const ansOfQ1 = document.getElementById("1.1")
+    const ansOfQ2 = document.getElementById("2.2")
+    const ansOfQ3 = document.getElementById("3.3")
+    const ansOfQ4 = document.getElementById("4.4")
+    const ansOfQ5 = document.getElementById("5.4")
+
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        console.log(ansOfQ1.checked)
+
+        var progressCounter = 0
+
+        if(ansOfQ1.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ2.checked === true){
+           progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ3.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ4.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ5.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(true){
+            alert("Congraluations Your Score is : " + progressCounter)
+
+         
+
+             fetch(`/practScore/updateCppScore/${progressCounter}/pract4/${JSON.parse(localStorage.getItem("user")).studentID}`)
+            .then((response) => response.json())
+            .then((data) => {
+                {{!-- console.log(data) --}}
+                document.getElementById("progress").innerHTML = data.cppScore.pract4.score
+            localStorage.setItem('user', JSON.stringify(data))
+            })
+           
+        }else{
+            alert("Try again")
+        }
+
+       
+      
+
+
+    })
+
+
+</script>
+            {{>checkIfLoggedInOrNot}}

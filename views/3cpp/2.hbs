@@ -401,7 +401,7 @@
             .then((response) => response.json())
             .then((data) => {
                 {{!-- console.log(data) --}}
-                document.getElementById("progress").innerHTML = data.htmlScore.pract1.score
+                document.getElementById("progress").innerHTML = data.cppScore.pract1.score
             localStorage.setItem('user', JSON.stringify(data))
             })
            

@@ -222,6 +222,14 @@ router.get('/me/cpp/pract-3', (req, res) => {
   res.render('3cpp/3')
 })
 
+router.get('/me/cpp/pract-4', (req, res) => {
+  res.render('3cpp/4')
+})
+
+router.get('/me/cpp/pract-5', (req, res) => {
+  res.render('3cpp/5')
+})
+
 // BIOLOGY
 
 router.get('/me/biology', (req, res) => {

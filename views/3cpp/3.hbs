@@ -7,7 +7,7 @@
             <br>
             <p class="card-title" id="practical--heading">
                 Subject : C Programming <br>
-                Practical No : 2 <br>
+                Practical No : 3 <br>
                 Progress :
                 <span id="progress">0</span>%
             </p>
@@ -435,7 +435,7 @@
             .then((response) => response.json())
             .then((data) => {
                 {{!-- console.log(data) --}}
-                document.getElementById("progress").innerHTML = data.htmlScore.pract1.score
+                document.getElementById("progress").innerHTML = data.cppScore.pract1.score
             localStorage.setItem('user', JSON.stringify(data))
             })
            

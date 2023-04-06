@@ -1,0 +1,491 @@
+
+{{>internalNabBar}}
+
+<div id="practical--wrapper">
+    <div class="row">
+        <div class="col-sm-6" id="clm1">
+            <br>
+            <p class="card-title" id="practical--heading">
+                Subject : C Programming <br>
+                Practical No : 5 <br>
+                Progress :
+                <span id="progress">0</span>%
+            </p>
+
+
+
+
+
+
+            <div id="practicalData--wrapper">
+                <h5> <span style="color: #FF842F;">AIM </span> <br>To study
+                    functions in c</h5>
+                <br>
+                <div id="theory--wrapper">
+                    <h5><span style="color: #FF842F;">THEORY </span></h5>
+                    <p>Function in C allows performing a certain action, which
+                        is important for reusing code. Within a function,
+                        there are a number of programming statements enclosed by
+                        {}, having certain meanings and performing certain
+                        operations.
+                        <br>
+                        <img
+                            src="https://media.geeksforgeeks.org/wp-content/uploads/20230227121756/Functions-in-C-(1)-768.png"
+                            alt="Function Declaration" width="368"> <br> <br>
+                        What is a function in C?
+                        <br>
+
+                        Functions are sets of statements that take inputs,
+                        perform some operations, and produce results. The
+                        operation of a function occurs only when it is called.
+                        Rather than writing the same code for different
+                        inputs repeatedly, we can call the function instead of
+                        writing the same code over and over again.
+                        <br>
+                        <br>
+                        Syntax of Functions in C <br>
+                        <code>
+                            int sum(int a, int b);
+                        </code>
+                        <br> <br>
+                        Function Declarations :
+                        <br>
+                        Function declarations tell the compiler how many
+                        parameters a function takes, what kinds of parameters it
+                        returns, and what types of data it takes. Function
+                        declarations do not need to include parameter names, but
+                        definitions must.
+                        <br> <br>
+                        Function Arguments and Return values:
+                        <Br>
+                        A function is all dependent upon what value it will
+                        return and what arguments are been passed.
+                        <br>
+                        Syntax: <br>
+                        <Code>
+                            return_type name_of_the_function (parameter_1,
+                            parameter_2);
+                        </Code>
+                        <br> <br>
+                        1. Function Return Type <br>
+                        Function return type tells what type of value is
+                        returned after all function is executed. <Br>
+                        Example: <br>
+                        <code>
+                            int func(parameter_1,parameter_2);
+                        </code>
+                        it will return an integer value after running statements
+                        inside the function. <br> <br>
+
+                        2. Function Arguments : <br>
+                        Function Arguments or Function Parameters are the data
+                        that is passed to a function so that it operates over
+                        that data inside a function. <br>
+
+                        Example: <br>
+                        <Code>
+                            int sum(int, int);
+                        </Code> <br> <br>
+
+                        Function Definition :
+                        <br>
+                        A function definition consists function header and a
+                        function body. <br>
+                        <Code>
+                            return_type function_name (parameters) <br>
+                            { <br>
+                            //body of the function <br>
+                            } <br>
+                        </Code>
+                        * Return_type: The function always starts with a return
+                        type of the function. But if there is no return
+                        value
+                        then the void keyword is used as the return type of the
+                        function. <br>
+                        * Function_Name: Name of the function which should be
+                        unique. <br>
+                        * Parameters: Values that are passed during the function
+                        call. <br>
+                        <br>
+                        Types of Functions: <br> <br>
+                        1. User Defined Function: <br>
+                        Functions that the programmer creates are known as
+                        User-Defined functions or “tailor-made functions”.
+                        User-defined functions can be improved and modified
+                        according to the need of the programmer. Whenever we
+                        write a function that is case-specific and is not
+                        defined in any header file, we need to declare and
+                        define
+                        our own functions according to the syntax. <br> <br>
+                        Advantages of User-Defined functions: <br>
+                        * Changeable functions can be modified as per need. <br>
+                        * The Code of these functions is reusable in other
+                        programs . <br>
+                        * These functions are easy to understand, debug and
+                        maintain. <br>
+                        <br>
+                        2. Library Function: <br>
+                        A library function is also referred to as a "built-in
+                        function". A compiler package already exists that
+                        contains these functions, each of which has a specific
+                        meaning and is included in the package. Built-in
+                        functions have the advantage of being directly usable
+                        without being defined, whereas user-defined functions
+                        must be declared and defined before being used. <br>
+
+                        For Example: <br>
+                        <code>
+                            pow(), sqrt(), strcmp(), strcpy() etc.
+                        </code>
+                        <br> <br>
+                        Advantages of C library functions: <br>
+                        C Library functions are easy to use and optimized for
+                        better performance. <br>
+                        C library functions save a lot of time i.e, function
+                        development time. <br>
+                        C library functions are convenient as they always work.
+                        <br>
+                        <br>
+                        Passing Parameters to Functions: <br>
+                        <br>
+                        1. Pass by Value: <br>
+                        Parameter passing in this method copies values from
+                        actual parameters into formal function parameters. As a
+                        result, any changes made inside the functions do not
+                        reflect in the caller's parameters. <br>
+                        <br>
+                        2. Pass by Reference; <br>
+                        The caller's actual parameters and the function's actual
+                        parameters refer to the same locations, so any
+                        changes made inside the function are reflected in the
+                        caller's actual parameters.
+
+
+
+
+
+
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="test--wrapper">
+                <h5><span style="color: #FF842F;">QUESTIONS </span></h5>
+                <br>
+
+
+                <form id="myForm">
+
+                    {{!-- Question 1 --}}
+                    <h6>Q1. Which of the following is not a HTML tag
+                        ?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="1"
+                            id="1.1" name="q1">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            &lt;h1&gt; &lt;/h1&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="2"
+                            id="1.2" name="q1">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            &lt;h7&gt; &lt;/h7&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="3"
+                            id="1.3" name="q1">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            &lt;p&gt; &lt;p&gt;
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="4"
+                            id="1.4" name="q1">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            &lt;marquee&gt; &lt;/marquee&gt;
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 2 --}}
+                    <h6>QUESTION</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="1"
+                            id="2.1" name="q2">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="2"
+                            id="2.2" name="q2">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="3"
+                            id="2.3" name="q2">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="4"
+                            id="2.4" name="q2">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 3 --}}
+                    <h6>QUESTION</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="1"
+                            id="3.1" name="q3">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="2"
+                            id="3.2" name="q3">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="3"
+                            id="3.3" name="q3">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="4"
+                            id="3.4" name="q3">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 4 --}}
+                    <h6>QUESTION</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="1"
+                            id="4.1" name="q4">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="2"
+                            id="4.2" name="q4">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="3"
+                            id="4.3" name="q4">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="4"
+                            id="4.4" name="q4">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 5 --}}
+                    <h6>QUESTION</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="1"
+                            id="5.1" name="q5">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="2"
+                            id="5.2" name="q5">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="3"
+                            id="5.3" name="q5">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            value="4"
+                            id="5.4" name="q5">
+                        <label class="form-check-label"
+                            for="flexCheckDefault">
+                            OPTION1
+                        </label>
+                    </div>
+                    <br>
+
+
+
+
+
+                    <div>
+                        <button type="submit" class="btn
+                            btn-success">SUBMIT</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="col-sm-6" id="clm2">
+
+            <dvi id="Container">
+                <iframe style='max-width:100%; border: none; height:
+                    375px; width:
+                    700px;' height=375 width=700
+                    src=https://www.interviewbit.com/embed/snippet/fc6321f65326e73f493a
+                    title='Interviewbit Ide
+                    snippet/fc6321f65326e73f493a' loading="lazy"
+                    allow="clipboard-write" allowfullscreen
+                    referrerpolicy="unsafe-url"
+                    sandbox="allow-scripts
+                    allow-same-origin allow-popups
+                    allow-top-navigation-by-user-activation
+                    allow-popups-to-escape-sandbox"></iframe>
+
+            </dvi>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const user = JSON.parse(localStorage.getItem("user"))
+    document.getElementById("progress").innerHTML = user.cppScore.pract5.score
+</script>
+<script>
+
+    const form = document.getElementById("myForm")
+
+    const ansOfQ1 = document.getElementById("1.1")
+    const ansOfQ2 = document.getElementById("2.2")
+    const ansOfQ3 = document.getElementById("3.3")
+    const ansOfQ4 = document.getElementById("4.4")
+    const ansOfQ5 = document.getElementById("5.4")
+
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        console.log(ansOfQ1.checked)
+
+        var progressCounter = 0
+
+        if(ansOfQ1.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ2.checked === true){
+           progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ3.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ4.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(ansOfQ5.checked === true){
+            progressCounter = progressCounter + 20
+        }
+
+        if(true){
+            alert("Congraluations Your Score is : " + progressCounter)
+
+         
+
+             fetch(`/practScore/updateCppScore/${progressCounter}/pract5/${JSON.parse(localStorage.getItem("user")).studentID}`)
+            .then((response) => response.json())
+            .then((data) => {
+                {{!-- console.log(data) --}}
+                document.getElementById("progress").innerHTML = data.cppScore.pract5.score
+            localStorage.setItem('user', JSON.stringify(data))
+            })
+           
+        }else{
+            alert("Try again")
+        }
+
+       
+      
+
+
+    })
+
+
+</script>
+{{>checkIfLoggedInOrNot}}
