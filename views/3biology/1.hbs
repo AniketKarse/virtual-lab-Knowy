@@ -359,6 +359,11 @@
 </div>
 
 <script>
+    const user = JSON.parse(localStorage.getItem("user"))
+    document.getElementById("progress").innerHTML = user.biologyScore.pract1.score
+</script> 
+
+<script>
 
     var videoContainer = document.getElementById("video--Container")
     var animationContainer = document.getElementById("animation--Container")

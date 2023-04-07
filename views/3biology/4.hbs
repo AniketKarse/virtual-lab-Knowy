@@ -298,7 +298,7 @@
                 <div id="video--Container" style="text-align:center;">
 
                     <div class="sketchfab-embed-wrapper"> <iframe title="Human
-                            Skeleton" frameborder="0" allowfullscreen
+                            Skeleton" frameborder="0"  allowfullscreen
                             mozallowfullscreen="true"
                             webkitallowfullscreen="true" allow="autoplay;
                             fullscreen; xr-spatial-tracking" xr-spatial-tracking
@@ -306,7 +306,8 @@
                             execution-while-not-rendered web-share width="600"
                             height="350"
                             src="https://sketchfab.com/models/acf6b25134d945f8b0bc8ae5e04861df/embed?autospin=1&autostart=1&ui_theme=dark&dnt=1">
-                        </iframe> </div>
+                        </iframe> 
+                    </div>
 
                 </div>
                 <br>
@@ -324,6 +325,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    const user = JSON.parse(localStorage.getItem("user"))
+    document.getElementById("progress").innerHTML = user.biologyScore.pract4.score
+</script>    
 
 <script>
 

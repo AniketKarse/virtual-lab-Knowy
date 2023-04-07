@@ -1,4 +1,13 @@
+
+
+
 {{>internalNabBar}}
+
+<style>
+    input {
+        width: 300px;
+    }
+</style>
 
 <div id="practical--wrapper">
     <div class="row flex-column-reverse flex-lg-row">
@@ -6,7 +15,7 @@
             <br>
             <p class="card-title" id="practical--heading">
                 Subject : BIOLOGY <br>
-                Practical No : 1 <br>
+                Practical No : 5 <br>
                 Progress :
                 <span id="progress">0</span>%
             </p>
@@ -14,8 +23,7 @@
 
             <div id="practicalData--wrapper">
                 <h5> <span style="color: #FF842F;">AIM </span> <br>
-                    Experiment to Prove Carbon dioxide is essential for
-                    Photosynthesis
+                    Binary Fission in Amoeba
                 </h5>
                 <br>
                 <div id="theory--wrapper">
@@ -65,7 +73,7 @@
                             carbon dioxide
                         </p>
 
-                      
+
 
                     </p>
 
@@ -273,11 +281,6 @@
             </div>
 
 
-
-
-
-
-
         </div>
         <div class="col-sm-6" id="clm2">
 
@@ -287,86 +290,14 @@
             </nav>
 
             <div style="margin-top: 50px;" id="Container">
-                <div id="video--Container">
+                <div id="video--Container" style="text-align:center;">
 
-                    <img class="img-fluid"
-                        src="/videos\biology-pract-2/bioPract2Thumbnail.png"
-                        id="thumbnail" style="display:block;border:1px dashed
-                        black; border-radius:5px;width:600px; ">
-
-                    <video width="600" autoplay muted id="viode1"
-                        class="animation-container" style="display:none">
-                        <source src="/videos\biology-pract-2\1.mp4"
-                            type="video/mp4">
-                    </video>
-
-                    <video width="600" autoplay muted id="viode2"
-                        class="animation-container" style="display:none">
-                        <source src="/videos\biology-pract-2\2.mp4"
-                            type="video/mp4">
-                    </video>
-
-                    <video width="600" autoplay muted id="viode3"
-                        class="animation-container" style="display:none">
-                        <source src="/videos\biology-pract-2\3.mp4"
-                            type="video/mp4">
-                    </video>
-
-                    <video width="600" autoplay muted id="viode4"
-                        class="animation-container" style="display:none">
-                        <source src="/videos\biology-pract-2\4.mp4"
-                            type="video/mp4">
-                    </video>
-
-                    <video width="600" autoplay muted id="viode5"
-                        class="animation-container" style="display:none">
-                        <source src="/videos\biology-pract-2\5.mp4"
-                            type="video/mp4">
-                    </video>
-
-                    <video width="600" autoplay muted id="viode6"
-                        class="animation-container" style="display:none">
-                        <source src="/videos\biology-pract-2\6.mp4"
-                            type="video/mp4">
-                    </video>
-
-                    <video width="600" autoplay muted id="viode7"
-                        class="animation-container" style="display:none">
-                        <source src="/videos\biology-pract-2\7.mp4"
-                            type="video/mp4">
-                    </video>
-
-                    <video width="600" autoplay muted id="viode8"
-                        class="animation-container" style="display:none">
-                        <source src="/videos\biology-pract-2\8.mp4"
-                            type="video/mp4">
-                    </video>
-
-                    <br>
-
-                    <button onclick="playVideo1()">STEP 1</button>
-                    <button onclick="playVideo2()">STEP 2</button>
-                    <button onclick="playVideo3()">STEP 3</button>
-                    <button onclick="playVideo4()">STEP 4</button>
-                    <button onclick="playVideo5()">STEP 5</button>
-                    <button onclick="playVideo6()">STEP 6</button>
-                    <button onclick="playVideo7()">STEP 7</button>
-                    <button onclick="playVideo8()">STEP 8</button>
-
-
-                    <div id="text" style="margin-top:
-                        20px;background-color:white;padding:20px;border-radius:10px">
-                    </div>
-
+                    <img style="border-radius: 10px;" class="img-fluid" src="/images/Binary_fission_anim.gif">
 
                 </div>
-
-                <div id="animation--Container">
-
+                <br>
 
 
-
-                </div>
 
                 <div id="test--Container">
                     Test
@@ -382,7 +313,7 @@
 
 <script>
     const user = JSON.parse(localStorage.getItem("user"))
-    document.getElementById("progress").innerHTML = user.biologyScore.pract2.score
+    document.getElementById("progress").innerHTML = user.biologyScore.pract5.score
 </script> 
 
 <script>
@@ -475,175 +406,18 @@
         if (true) {
             alert("Congraluations Your Score is : " + progressCounter)
 
-            fetch(`/practScore/updateBiologyScore/${progressCounter}/pract2/${JSON.parse(localStorage.getItem("user")).studentID}`)
+            fetch(`/practScore/updateBiologyScore/${progressCounter}/pract5/${JSON.parse(localStorage.getItem("user")).studentID}`)
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(data)
 
-                    document.getElementById("progress").innerHTML = data.biologyScore.pract1.score
+                    document.getElementById("progress").innerHTML = data.biologyScore.pract5.score
                     localStorage.setItem('user', JSON.stringify(data))
                 })
 
         }
 
     })
-
-
-</script>
-<script>
-
-    const video1 = document.getElementById("viode1")
-    const video2 = document.getElementById("viode2")
-    const video3 = document.getElementById("viode3")
-    const video4 = document.getElementById("viode4")
-    const video5 = document.getElementById("viode5")
-    const video6 = document.getElementById("viode6")
-    const video7 = document.getElementById("viode7")
-    const video8 = document.getElementById("viode8")
-
-    const thumbnail = document.getElementById("thumbnail")
-    const text = document.getElementById("text")
-
-    function playVideo1() {
-        video1.style.display = "block"
-        video2.style.display = "none"
-        video3.style.display = "none"
-        video4.style.display = "none"
-        video5.style.display = "none"
-        video6.style.display = "none"
-        video7.style.display = "none"
-        video8.style.display = "none"
-
-        thumbnail.style.display = "none"
-
-        video1.currentTime = 0;
-        video1.play();
-
-        text.innerHTML = "1. Select a healthy potted plant."
-    }
-
-    function playVideo2() {
-        video1.style.display = "none"
-        video2.style.display = "block"
-        video3.style.display = "none"
-        video4.style.display = "none"
-        video5.style.display = "none"
-        video6.style.display = "none"
-        video7.style.display = "none"
-        video8.style.display = "none"
-        thumbnail.style.display = "none"
-
-        video2.currentTime = 0;
-        video2.play();
-
-        text.innerHTML = "2. Place it in the darkroom for two to three days to ensure the leaves are free from starch."
-    }
-
-    function playVideo3() {
-        video1.style.display = "none"
-        video2.style.display = "none"
-        video3.style.display = "block"
-        video4.style.display = "none"
-        video5.style.display = "none"
-        video6.style.display = "none"
-        video7.style.display = "none"
-        video8.style.display = "none"
-        thumbnail.style.display = "none"
-
-        video3.currentTime = 0;
-        video3.play();
-
-        text.innerHTML = "3. In a wide-mouthed glass bottle, add 10-15 ml of potassium hydroxide solution."
-    }
-
-    function playVideo4() {
-        video1.style.display = "none"
-        video2.style.display = "none"
-        video3.style.display = "none"
-        video4.style.display = "block"
-        video5.style.display = "none"
-        video6.style.display = "none"
-        video7.style.display = "none"
-        video8.style.display = "none"
-        thumbnail.style.display = "none"
-
-        video4.currentTime = 0;
-        video4.play();
-
-        text.innerHTML = "4. Now carefully insert half part of a leaf into a glass bottle through the split cork and the other half exposed to air."
-    }
-
-    function playVideo5() {
-        video1.style.display = "none"
-        video2.style.display = "none"
-        video3.style.display = "none"
-        video4.style.display = "none"
-        video5.style.display = "block"
-        video6.style.display = "none"
-        video7.style.display = "none"
-        video8.style.display = "none"
-        thumbnail.style.display = "none"
-
-        video5.currentTime = 0;
-        video5.play();
-
-        text.innerHTML = "5. Place the complete unit undisturbed in sunlight for about 3 – 4 hours."
-    }
-
-    function playVideo6() {
-        video1.style.display = "none"
-        video2.style.display = "none"
-        video3.style.display = "none"
-        video4.style.display = "none"
-        video5.style.display = "none"
-        video6.style.display = "block"
-        video7.style.display = "none"
-        video8.style.display = "none"
-        thumbnail.style.display = "none"
-
-        video6.currentTime = 0;
-        video6.play();
-
-        text.innerHTML = "6.  After 4 hours, detach the leaf from the plant and slowly remove it from the bottle."
-    }
-
-    function playVideo7() {
-        video1.style.display = "none"
-        video2.style.display = "none"
-        video3.style.display = "none"
-        video4.style.display = "none"
-        video5.style.display = "none"
-        video6.style.display = "none"
-        video7.style.display = "block"
-        video8.style.display = "none"
-        thumbnail.style.display = "none"
-
-        video7.currentTime = 0;
-        video7.play();
-
-        text.innerHTML = "7. Test it with the starch solution. "
-    }
-
-    function playVideo8() {
-        video1.style.display = "none"
-        video2.style.display = "none"
-        video3.style.display = "none"
-        video4.style.display = "none"
-        video5.style.display = "none"
-        video6.style.display = "none"
-        video7.style.display = "none"
-        video8.style.display = "block"
-        thumbnail.style.display = "none"
-
-        video8.currentTime = 0;
-        video8.play();
-
-        text.innerHTML = "8. We can observe that the half part leaf which was inside the glass bottle (KOH solution) did not show any colour change, but the other half part exposed to the surroundings turned its colour to dark brown, indicating the presence of starch in it."
-    }
-
-
-
-
 
 
 </script>
