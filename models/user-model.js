@@ -32,7 +32,8 @@ const userSchema = new mongoose.Schema({
     attendance:
         [
             {
-                type: String
+                type: String,
+                unique: true
             }
         ],
     profilePic:{

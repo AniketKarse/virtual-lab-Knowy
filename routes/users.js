@@ -122,7 +122,7 @@ router.post('/updateAttendence/:studentID', async (req, res) => {
 
   try {
     await User.findOneAndUpdate({ studentID: studentID },
-      { $push: { attendance: [today] } }
+      { $push: { attendance: [today] } }, {new: true, setDefaultsOnInsert: true}
     )
   } catch (error) {
     res.send(error)
