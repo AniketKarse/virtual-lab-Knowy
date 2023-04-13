@@ -24,7 +24,8 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     totalScore: {
-        type: Number
+        type: Number,
+        default: 0
     },
     password: {
         type: String
@@ -44,55 +45,60 @@ const userSchema = new mongoose.Schema({
 
         pract1: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
                 type: String,
-                default: Date.now
+                default: "00-00-0000"
             }
         },
 
 
         pract2: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
                 type: String,
-                default: Date.now
+                default: "00-00-0000"
             }
         },
 
 
         pract3: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
                 type: String,
-                default: Date.now
+                default: "00-00-0000"
             }
         },
 
 
         pract4: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
                 type: String,
-                default: Date.now
+                default: "00-00-0000"
             }
         },
 
 
         pract5: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
                 type: String,
-                default: Date.now
+                default: "00-00-0000"
             }
         }
 
@@ -104,46 +110,56 @@ const userSchema = new mongoose.Schema({
 
         pract1: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract2: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract3: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract4: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract5: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         }
 
@@ -153,46 +169,56 @@ const userSchema = new mongoose.Schema({
 
         pract1: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract2: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract3: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract4: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract5: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         }
 
@@ -202,46 +228,56 @@ const userSchema = new mongoose.Schema({
 
         pract1: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract2: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract3: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract4: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract5: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         }
 
@@ -251,46 +287,56 @@ const userSchema = new mongoose.Schema({
 
         pract1: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract2: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract3: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract4: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         },
 
         pract5: {
             score: {
-                type: Number
+                type: Number,
+                default: 0
             },
             timeStamp: {
-                type: String
+                type: String,
+                default: "00-00-0000"
             }
         }
 

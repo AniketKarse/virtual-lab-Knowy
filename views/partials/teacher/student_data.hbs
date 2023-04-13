@@ -1,0 +1,99 @@
+
+
+<div id="student-list-wrapper">
+    <h4>Students List</h4>
+    <br>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search
+ for names.." title="Type in a name"> <br><br>
+    <table class="table table-light " id="myTable">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NAME</th>
+                <th scope="col">CLASS</th>
+                <th scope="col">SCORE</th>
+
+            </tr>
+        </thead>
+        <tbody>
+       
+
+
+
+        </tbody>
+    </table>
+
+</div>
+
+{{!-- To Filter table data by name --}}
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+
+{{!-- This script fetch all student data from database --}}
+<script>
+
+  let table = document.getElementById("myTable");
+
+  console.log("bearer " + localStorage.getItem("jwt"))
+
+  fetch('/users/student_list', {
+    headers: {
+      authorization : "bearer "+localStorage.getItem("jwt")
+    }
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    {{!-- console.log(data[0].htmlScore.pract1) --}}
+
+    for(var i=0; i<data.length; i++){
+
+      console.log(data[i]._id)
+
+      let row = table.insertRow(-1);
+
+      let c1 = row.insertCell(0);
+      let c2 = row.insertCell(1);
+      let c3 = row.insertCell(2);
+      let c4 = row.insertCell(3);
+
+
+      c1.innerText = data[i].studentID
+      c2.innerText = data[i].name
+      c3.innerText = data[i].class
+      c4.innerText = data[i].totalScore
+
+      row.appendChild(c1);
+      row.appendChild(c2);
+      row.appendChild(c3);
+      row.appendChild(c4);
+
+
+    }
+
+
+  });
+
+  
+
+
+
+</script>

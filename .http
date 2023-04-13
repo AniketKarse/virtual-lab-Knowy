@@ -182,7 +182,7 @@ POST http://localhost:3000/teacher/saveTeacher HTTP/1.1
 content-type: application/json
 
 {
-    "name": "P. P. Kharche",
+    "name": "H. C. Verma",
     "subject": "PHYSICS",
     "teacherID": "101",
     "password": "ABCD"

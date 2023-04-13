@@ -1,44 +1,60 @@
-<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" id="sidebar">
-    <button style="color: white;" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+<style>
+  a{
+    width: 100%;
+  }
+</style>
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"
+  id="sidebar">
+  <button style="color: white;" class="w3-bar-item w3-button w3-large
+    w3-hide-large" onclick="w3_close()">Close &times;</button>
 
-    <div id="teacher-sidebar-profile-container">
-        <h5>Teacher Name</h5>
-        
-            <p id="teacher-sidebar-profile-container-subject">SUBJECT</p>
-        
-    </div>
+  <div id="teacher-sidebar-profile-container">
+    <h5 id="teacherName">Teacher Name</h5>
 
-    <div id="teacher-sidebar-navigation">
+    <p id="teacher-sidebar-profile-container-subject">SUBJECT</p>
 
-            <h5 onclick="showStudentList()" style="cursor: pointer;">Students List</h5>
-            <hr>
-            <h5 onclick="showStudentProgress()" style="cursor: pointer;">Students Progress</h5>
-            <hr>    
-            <a class="btn btn-light" id="teacherLogOut" style="cursor: pointer;">Log Out</a>
-            <hr>
+  </div>
 
-    </div>
+  <div id="teacher-sidebar-navigation">
+
+    <a class="btn btn-light" onclick="showStudentList()" style="cursor:
+      pointer;">Students List</a>
+    <hr>
+    <a class="btn btn-light" onclick="showStudentProgress()" style="cursor:
+      pointer;">Students Progress</a>
+    <hr>
+    <a class="btn btn-light" onclick="showCreateStudent()" style="cursor:
+      pointer;">Create Student</a>
+      <hr>
+    <a class="btn btn-light" id="teacherLogOut" style="cursor: pointer;">Log Out</a>
+    <hr>
+
+  </div>
 
 
 
 
-    
+
 </div>
 
 
 <div id="mainview">
- 
- <div id="student_data" style="display:none;">
-  {{>student_data}}
- </div>
 
- <div id="student_progress" style="display: block;">
-{{>student_progress}}
- </div>
+  <div id="student_data" style="display:none;">
+    {{>teacher/student_data}}
+  </div>
+
+  <div id="student_progress" style="display: block;">
+    {{>teacher/student_progress}}
+  </div>
+
+  <div id="create_student" style="display: none;">
+    {{>teacher/createStudent}}
+  </div>
 
 
 
-  
+
 </div>
 
 
@@ -51,25 +67,37 @@
       document.getElementById("sidebar").style.display = "none";
     }
   </script>
-
-
-  <script>
+<script>
 
     const student_list = document.getElementById("student_data")
     const student_progress = document.getElementById("student_progress")
+    const create_student = document.getElementById("create_student")
 
 
     function showStudentList(){
       student_list.style.display = "block"
       student_progress.style.display = "none"
+      create_student.style.display = "none"
     }
 
     function showStudentProgress(){
       student_list.style.display = "none"
       student_progress.style.display = "block"
+      create_student.style.display = "none"
+    }
+
+    function showCreateStudent(){
+      student_list.style.display = "none"
+      student_progress.style.display = "none"
+      create_student.style.display = "block"
     }
 
   </script>
+<script>
+  const teacherName = document.getElementById("teacherName")
+  const subject = document.getElementById("teacher-sidebar-profile-container-subject")
+  teacherName.innerHTML = JSON.parse(localStorage.getItem("teacher")).name
+  subject.innerHTML = JSON.parse(localStorage.getItem("teacher")).subject
 
-
-  {{>checkIfTeacherLoggedInOrNot}}
+</script>
+{{>checkIfTeacherLoggedInOrNot}}
