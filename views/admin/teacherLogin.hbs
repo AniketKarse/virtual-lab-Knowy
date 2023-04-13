@@ -1,0 +1,66 @@
+<style>
+    #login-col-2{
+        background-image: url('/images/teacherLoginIMG.jpg');
+    }
+</style>
+<div class="row">
+    <div class="col-sm-4" id="login-col-1">
+
+        <div class="login-form-wrapper">
+            <h3 style="text-align: center;font-family: 'Poppins', sans-serif;">Login</h3>
+            <br />
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Teacher
+                        Id</label>
+                    <input type="text" class="form-control" id="studentID"
+                        name="teacherID" />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password"
+                        name="password" />
+                </div>
+                
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <div id="error" style="color:red"></div>
+            </form>
+
+        </div>
+    </div>
+    <div class="col-sm-8" id="login-col-2"></div>
+</div>
+
+<script>
+
+    const form = document.getElementById("loginForm")
+    form.addEventListener('submit', (e) => {
+        e.preventDefault() 
+        var formData1 = Object.fromEntries(new FormData(form)) 
+            fetch('login', {
+                method: "POST",
+                headers: { 
+                    "Content-Type": "application/json", 
+                },
+                body: JSON.stringify(formData1),
+            }).then((response) => response.json()
+            ).then((data) => { 
+                console.log(data) 
+
+                if(data.error != null){
+                    document.getElementById("error").innerHTML = data.error
+                }else{
+
+                    localStorage.setItem('jwt', data.token)
+                    localStorage.setItem('isLoggedInTeacher', true)
+                    localStorage.setItem('teacher', JSON.stringify(data.teacher))
+
+                    window.location.href = "/teacher"
+
+                }
+
+            }) 
+    })
+
+</script>

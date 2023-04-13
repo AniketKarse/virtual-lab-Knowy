@@ -1,0 +1,21 @@
+<script>
+    console.log(localStorage.getItem('isLoggedInTeacher'))
+    if(localStorage.getItem('isLoggedInTeacher') !== 'true'){
+        window.location.href = "teacher/login"
+    }
+</script>
+
+<script>
+
+    const logout =  document.getElementById("teacherLogOut")
+    logout.addEventListener('click', (e) => {
+
+        {{!-- localStorage.clear(); --}}
+        localStorage.removeItem("teacher");
+        localStorage.removeItem("isLoggedInTeacher");
+        localStorage.removeItem("jwt");
+         window.location.href = "teacher/login"
+
+    })
+    
+</script>
