@@ -1,0 +1,41 @@
+<br>
+<div class="container" id="remove_student_wrapper">
+<form id="removeStudentForm">
+        <div class="mb-3">
+            <label class="form-label">Student ID</label>
+            <input type="text" class="form-control" name="studentID">
+        </div>
+
+      
+        <button type="submit" class="btn btn-primary">REMOVE</button>
+    </form>
+</div>
+
+<script>
+
+    const removeStudentForm = document.getElementById("removeStudentForm")
+
+    removeStudentForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        
+        var studentFormData = Object.fromEntries(new FormData(removeStudentForm)) 
+        console.log(studentFormData)
+
+         fetch('/users/removeUser', {
+            method: "POST",
+            headers: { 
+                    "Content-Type": "application/json", 
+                },
+                body: JSON.stringify(studentFormData)
+        }).then((response) => response.json()
+        ).then((data) => { 
+                console.log(data) 
+                alert("Student Deleted Successfully")
+
+        }) 
+
+
+    })
+
+</script>
+

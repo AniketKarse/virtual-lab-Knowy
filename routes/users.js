@@ -76,6 +76,21 @@ router.post('/saveUser', async (req, res) => {
   }
 })
 
+// To remove USER
+router.post('/removeUser', async (req, res) => {
+
+  console.log(req.body)
+
+  try {
+    const user = await User.findOneAndDelete({studentID: req.body.studentID})
+    res.status(201).json(user)
+  } catch (e) {
+    console.log(e)
+    res.status(400).send(e)
+  }
+
+})
+
 
 // Get the list of students
 router.get('/student_list', verifyToken, async (req, res) => {

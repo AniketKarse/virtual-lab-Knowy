@@ -25,7 +25,10 @@
     <hr>
     <a class="btn btn-light" onclick="showCreateStudent()" style="cursor:
       pointer;">Create Student</a>
-      <hr>
+    <hr>
+    <a class="btn btn-light" onclick="showRemoveStudent()" style="cursor:
+      pointer;">Remove Student</a>
+    <hr>
     <a class="btn btn-light" id="teacherLogOut" style="cursor: pointer;">Log Out</a>
     <hr>
 
@@ -40,16 +43,20 @@
 
 <div id="mainview">
 
-  <div id="student_data" style="display:none;">
+  <div id="student_data" style="display:block;">
     {{>teacher/student_data}}
   </div>
 
-  <div id="student_progress" style="display: block;">
+  <div id="student_progress" style="display: none;">
     {{>teacher/student_progress}}
   </div>
 
   <div id="create_student" style="display: none;">
     {{>teacher/createStudent}}
+  </div>
+
+  <div id="remove_student" style="display: none;">
+    {{>teacher/deleteStudent}}
   </div>
 
 
@@ -72,24 +79,36 @@
     const student_list = document.getElementById("student_data")
     const student_progress = document.getElementById("student_progress")
     const create_student = document.getElementById("create_student")
+    const remove_student = document.getElementById("remove_student")
+
 
 
     function showStudentList(){
       student_list.style.display = "block"
       student_progress.style.display = "none"
       create_student.style.display = "none"
+      remove_student.style.display = "none"
     }
 
     function showStudentProgress(){
       student_list.style.display = "none"
       student_progress.style.display = "block"
       create_student.style.display = "none"
+      remove_student.style.display = "none"
     }
 
     function showCreateStudent(){
       student_list.style.display = "none"
       student_progress.style.display = "none"
       create_student.style.display = "block"
+      remove_student.style.display = "none"
+    }
+
+    function showRemoveStudent(){
+      student_list.style.display = "none"
+      student_progress.style.display = "none"
+      create_student.style.display = "none"
+      remove_student.style.display = "block"
     }
 
   </script>
