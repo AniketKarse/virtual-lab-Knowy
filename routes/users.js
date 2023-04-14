@@ -271,6 +271,37 @@ router.get('/me/biology/pract-5', (req, res) => {
   res.render('3biology/5')
 })
 
+// CHEMISTRY
+
+router.get('/me/chemistry', (req, res) => {
+  res.render('4chemistry/chemistryPract')
+})
+
+router.get('/me/chemistry/pract-1', (req, res) => {
+  res.render('4chemistry/1')
+})
+
+router.get('/me/chemistry/pract-2', (req, res) => {
+  res.render('4chemistry/2')
+})
+
+
+router.get('/me/chemistry/pract-3', (req, res) => {
+  res.render('4chemistry/3')
+})
+
+
+router.get('/me/chemistry/pract-4', (req, res) => {
+  res.render('4chemistry/4')
+})
+
+
+router.get('/me/chemistry/pract-5', (req, res) => {
+  res.render('4chemistry/5')
+})
+
+
+
 
 // COMPILER
 router.get('/me/compiler/cpp', (req, res) => {

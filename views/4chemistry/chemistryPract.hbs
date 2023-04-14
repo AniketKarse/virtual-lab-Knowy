@@ -1,0 +1,157 @@
+{{>internalNabBar}}
+<div class="container-fluid" id="wrapper">
+
+    <div>
+    <h4 class="card-title" id="practicals--heading">CHEMISTRY PRACTICALS</h4>
+
+    </div>
+        
+    <div class="row">
+        
+        <div class="col-sm-6">
+
+            <div class="card mb-3 practicals--card" style="max-width: 540px;" onclick="location.href='/users/me/chemistry/pract-1';">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img
+                            src="https://www.myjigyasa.com/images/How_It_Works_3.jpg"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">PRACTICAL 1</h5>
+                            <p class="card-text">
+                               Aim : 
+                            </p>
+                            <p class="card-text"><small class="text-muted"
+                                    id="pract1Score">0</small>% Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 practicals--card" style="max-width: 540px;" onclick="location.href='/users/me/chemistry/pract-2';">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img
+                            src="https://www.myjigyasa.com/images/How_It_Works_3.jpg"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">PRACTICAL 2</h5>
+                            <p class="card-text">Aim : 
+
+                            </p>
+                            <p class="card-text"><small class="text-muted"
+                                    id="pract2Score">0</small>% Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 practicals--card" style="max-width: 540px;" onclick="location.href='/users/me/chemistry/pract-3';">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img
+                            src="https://www.myjigyasa.com/images/How_It_Works_3.jpg"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">PRACTICAL 3</h5>
+                            <p class="card-text">Aim : 
+
+                            </p>
+                            <p class="card-text"><small class="text-muted"
+                                    id="pract3Score">0</small>% Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 practicals--card" style="max-width: 540px;" onclick="location.href='/users/me/chemistry/pract-4';">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img
+                            src="https://www.myjigyasa.com/images/How_It_Works_3.jpg"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">PRACTICAL 4</h5>
+                            <p class="card-text">Aim : 
+
+                            </p>
+                            <p class="card-text"><small class="text-muted"
+                                    id="pract4Score">0</small>% Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 practicals--card" style="max-width: 540px;" onclick="location.href='/users/me/chemistry/pract-5';">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img
+                            src="https://www.myjigyasa.com/images/How_It_Works_3.jpg"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">PRACTICAL 5</h5>
+                            <p class="card-text">Aim : 
+
+                            </p>
+                            <p class="card-text"><small class="text-muted"
+                                    id="pract5Score">0</small>% Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+
+
+        </div>
+
+
+
+        <div class="col-sm-6 d-flex justify-content-center" >
+
+            {{>leaderboard}}
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+
+{{>checkIfLoggedInOrNot}}
+
+
+<script>
+
+    {{!-- This event refresh the page when there is change in localstorage --}}
+    window.addEventListener('storage', () => {
+        window.location.reload(true)
+    });
+
+    const user = JSON.parse(localStorage.getItem("user"))
+    
+    document.getElementById("pract1Score").innerHTML = user.chemistryScore.pract1.score
+    document.getElementById("pract2Score").innerHTML = user.chemistryScore.pract2.score
+    document.getElementById("pract3Score").innerHTML = user.chemistryScore.pract3.score
+    document.getElementById("pract4Score").innerHTML = user.chemistryScore.pract4.score
+    document.getElementById("pract5Score").innerHTML = user.chemistryScore.pract5.score
+
+
+
+</script>
