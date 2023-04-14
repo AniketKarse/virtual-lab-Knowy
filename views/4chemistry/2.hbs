@@ -1,0 +1,535 @@
+
+{{>internalNabBar}}
+
+<style>
+    input {
+        width: 300px;
+    }
+</style>
+
+<div id="practical--wrapper">
+    <div class="row flex-column-reverse flex-lg-row">
+        <div class="col-sm-6" id="clm1">
+            <br>
+            <p class="card-title" id="practical--heading">
+                Subject : CHEMISTRY <br>
+                Practical No : 2 <br>
+                Progress :
+                <span id="progress">0</span>%
+            </p>
+
+
+            <div id="practicalData--wrapper">
+                <h5> <span style="color: #FF842F;">AIM </span> <br>Testing the
+                    presence of starch in food</h5>
+                <br>
+                <div id="theory--wrapper">
+                    <h5><span style="color: #FF842F;">THEORY </span></h5>
+                    <p>
+                        In this practical, students learn how to test for the
+                        presence of starch in food using iodine solution.
+                        They can test a variety of food samples like potatoes,
+                        rice, bread, etc. <br> <br>
+                        Materials required: <br>
+                        • Iodine solution <br>
+                        • Test tubes <br>
+                        • Dropper <br>
+                        • Food samples (potatoes, rice, bread, etc.) <br> <br>
+                        Procedure: <br>
+                        1. Crush a small amount of the food sample in a mortar
+                        and pestle to release starch. <br>
+                        2. Add a few drops of iodine solution to the crushed
+                        food sample. <br>
+                        3. Observe the color change in the mixture. If the
+                        mixture turns blue-black, it indicates the presence of
+                        starch. <br> <br>
+                        Observations: <br>
+                        • The iodine solution reacts with starch to produce a
+                        blue-black color. <br>
+                        • If there is no starch present, there will be no color
+                        change. <br> <br>
+                        Result: <br>
+                        • The presence of starch in food samples can be detected
+                        using iodine solution, which can be useful in
+                        identifying the composition of various food products.
+                        <br>
+
+
+
+
+
+
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div id="test--wrapper">
+                <h5><span style="color: #FF842F;" id="questions">QUESTIONS
+                    </span></h5>
+                <br>
+
+
+                <form id="myForm">
+
+                    {{!-- Question 1 --}}
+                    <h6>Q1. What is the purpose of this practical?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="1.1" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            To measure the amount of lime water in exhaled air
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="1.2" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            To measure the amount of carbon dioxide in exhaled
+                            air
+
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="1.3" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            To measure the amount of oxygen in exhaled air
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="1.4" name="q1">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            To measure the amount of water vapor in exhaled air
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 2 --}}
+                    <h6>Q.2 What happens to the lime water when exhaled air is
+                        blown into it?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="2.1" name="q2">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The lime water becomes more clear
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="2.2" name="q2">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The lime water turns blue
+
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="2.3" name="q2">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The lime water turns cloudy or milky
+
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="2.4" name="q2">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The lime water produces a strong smell
+
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 3 --}}
+                    <h6>Q.3 What causes the cloudiness or milkiness of the lime
+                        water in this experiment?</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="3.1" name="q3">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The oxygen in the exhaled air
+
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="3.2" name="q3">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The nitrogen in the exhaled air
+
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="3.3" name="q3">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The carbon dioxide in the exhaled air
+
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="3.4" name="q3">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The water vapor in the exhaled air
+
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 4 --}}
+                    <h6>Q.4Why is a straw used in this experiment?
+                    </h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="4.1" name="q4">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            To cool the exhaled air
+
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="4.2" name="q4">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            To filter the exhaled air
+
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="4.3" name="q4">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            To direct the exhaled air into the lime water
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="4.4" name="q4">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            To prevent the exhaled air from entering the
+                            experimenter's mouth
+
+                        </label>
+                    </div>
+                    <br>
+
+                    {{!-- Question 5 --}}
+                    <h6>Q.5 What does the formation of the white precipitate in
+                        the lime water confirm?
+                    </h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="1"
+                            id="5.1" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The presence of carbon monoxide in the exhaled air
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="2"
+                            id="5.2" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The presence of oxygen in the exhaled air
+
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="3"
+                            id="5.3" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The presence of carbon dioxide in the exhaled air
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="4"
+                            id="5.4" name="q5">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            The presence of water vapor in the exhaled air
+                        </label>
+                    </div>
+                    <br>
+
+
+
+
+
+                    <div>
+                        <button type="submit" class="btn btn-success">SUBMIT</button>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+        <div class="col-sm-6" id="clm2">
+
+            <nav class="nav">
+                <a class="btn btn-primary" href="#" onclick="displayVideo()">Simulation</a>
+                <a class="btn btn-primary" href="#questions">Test</a>
+            </nav>
+
+            <div style="margin-top: 50px;" id="Container">
+                <div id="video--Container" style="text-align:center;">
+
+                    <div style="margin-top: 50px;" id="Container">
+                        <div id="video--Container">
+
+                            {{!-- <img class="img-fluid"
+                                src="/videos\biology-pract-1/bioPract1Thumbnail.png"
+                                id="thumbnail" style="display:block;border:1px
+                                dashed black; border-radius:5px;width:600px; ">
+                            --}}
+
+                            <video width="600" autoplay muted id="viode1"
+                                class="animation-container"
+                                style="display:none">
+                                <source src="/videos\chemistry-pract-2\1.mp4"
+                                    type="video/mp4">
+                            </video>
+
+                            <video width="600" autoplay muted id="viode2"
+                                class="animation-container"
+                                style="display:none">
+                                <source src="/videos\chemistry-pract-2\2.mp4"
+                                    type="video/mp4">
+                            </video>
+
+                            <video width="600" autoplay muted id="viode3"
+                                class="animation-container"
+                                style="display:none">
+                                <source src="/videos\chemistry-pract-2\3.mp4"
+                                    type="video/mp4">
+                            </video>
+
+                            <video width="600" autoplay muted id="viode4"
+                                class="animation-container"
+                                style="display:none">
+                                <source src="/videos\chemistry-pract-2\4.mp4"
+                                    type="video/mp4">
+                            </video>
+
+
+                            <br>
+
+                            <button onclick="playVideo1()">STEP 1</button>
+                            <button onclick="playVideo2()">STEP 2</button>
+                            <button onclick="playVideo3()">STEP 3</button>
+                            <button onclick="playVideo4()">STEP 4</button>
+                            {{!-- <button onclick="playVideo5()">STEP 5</button>
+                            --}}
+
+
+                        </div>
+
+                        <div id="test--Container">
+                            Test
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+    const user = JSON.parse(localStorage.getItem("user"))
+    document.getElementById("progress").innerHTML = user.chemistryScore.pract2.score
+</script>
+        <script>
+
+    var videoContainer = document.getElementById("video--Container")
+    var animationContainer = document.getElementById("animation--Container")
+    var testContainer = document.getElementById("test--Container")
+
+    function displayVideo() {
+        if (window.getComputedStyle(videoContainer).display == "none") {
+            videoContainer.style.display = "block"
+            animationContainer.style.display = "none"
+            testContainer.style.display = "none"
+        }
+    }
+
+    function displayAnimation() {
+        if (window.getComputedStyle(animationContainer).display == "none") {
+            videoContainer.style.display = "none"
+            animationContainer.style.display = "block"
+            testContainer.style.display = "none"
+        }
+    }
+
+    function displayTest() {
+        if (window.getComputedStyle(animationContainer).display == "none") {
+            videoContainer.style.display = "none"
+            animationContainer.style.display = "block"
+            testContainer.style.display = "none"
+        }
+    }
+
+    var animation1 = document.getElementById("animation1")
+    function run() {
+
+        alert("ABCD")
+
+        animation1.style.display = "none"
+        animation2.style.display = "block"
+
+
+
+
+    }
+
+
+
+
+
+</script>
+        {{!-- SCRIPT FOR QUESTIONS --}}
+        <script>
+
+    const form = document.getElementById("myForm")
+
+    const ansOfQ1 = document.getElementById("1.2")
+    const ansOfQ2 = document.getElementById("2.3")
+    const ansOfQ3 = document.getElementById("3.3")
+    const ansOfQ4 = document.getElementById("4.3")
+    const ansOfQ5 = document.getElementById("5.3")
+
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        console.log(ansOfQ1.checked)
+
+        var progressCounter = 0
+
+        if (ansOfQ1.checked === true) {
+            progressCounter = progressCounter + 20
+        }
+
+        if (ansOfQ2.checked === true) {
+            progressCounter = progressCounter + 20
+        }
+
+        if (ansOfQ3.checked === true) {
+            progressCounter = progressCounter + 20
+        }
+
+        if (ansOfQ4.checked === true) {
+            progressCounter = progressCounter + 20
+        }
+
+        if (ansOfQ5.checked === true) {
+            progressCounter = progressCounter + 20
+        }
+
+        if (true) {
+            alert("Congraluations Your Score is : " + progressCounter)
+
+            fetch(`/practScore/updateChemistryScore/${progressCounter}/pract2/${JSON.parse(localStorage.getItem("user")).studentID}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data)
+
+                    document.getElementById("progress").innerHTML = data.chemistryScore.pract2.score
+                    localStorage.setItem('user', JSON.stringify(data))
+                })
+        }
+
+    })
+
+
+</script>
+        <script>
+
+    const video1 = document.getElementById("viode1")
+    const video2 = document.getElementById("viode2")
+    const video3 = document.getElementById("viode3")
+    const video4 = document.getElementById("viode4")
+    const video5 = document.getElementById("viode5")
+    const thumbnail = document.getElementById("thumbnail")
+    const text = document.getElementById("text")
+
+    function playVideo1(){
+        video1.style.display = "block"
+        video2.style.display = "none"
+        video3.style.display = "none"
+        video4.style.display = "none"
+        video5.style.display = "none"
+        thumbnail.style.display = "none"
+        
+        video1.currentTime = 0;
+        video1.play();
+
+        text.innerHTML = "1. Take two test tubes A and B"
+    }
+
+    function playVideo2(){
+        video1.style.display = "none"
+        video2.style.display = "block"
+        video3.style.display = "none"
+        video4.style.display = "none"
+        video5.style.display = "none"
+        thumbnail.style.display = "none"
+ 
+        video2.currentTime = 0;
+        video2.play();
+
+         text.innerHTML = "2. Pour the freshly prepared lime water into two test tubes labelled A and B."
+    }
+
+    function playVideo3(){
+        video1.style.display = "none"
+        video2.style.display = "none"
+        video3.style.display = "block"
+        video4.style.display = "none"
+        video5.style.display = "none"
+        thumbnail.style.display = "none"
+ 
+        video3.currentTime = 0;
+        video3.play();
+
+        text.innerHTML = "3. With the help of a glass tube, blow air in the test tube labelled B."
+    }
+
+    function playVideo4(){
+        video1.style.display = "none"
+        video2.style.display = "none"
+        video3.style.display = "none"
+        video4.style.display = "block"
+        video5.style.display = "none"
+        thumbnail.style.display = "none"
+ 
+        video4.currentTime = 0;
+        video4.play();
+
+        text.innerHTML = "4. Using a syringe or pichkari fitted with a rubber tube, pass air through the lime water in the test tube labelled A."
+    }
+
+    function playVideo5(){
+        video1.style.display = "none"
+        video2.style.display = "none"
+        video3.style.display = "none"
+        video4.style.display = "none"
+        video5.style.display = "block"
+        thumbnail.style.display = "none"
+ 
+        video5.currentTime = 0;
+        video5.play();
+
+        text.innerHTML = "5. Note down the difference in the time it takes for the lime water to turn milky."
+    }
+
+
+
+
+
+
+</script>
+        {{>checkIfLoggedInOrNot}}
