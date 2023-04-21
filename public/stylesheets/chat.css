@@ -1,0 +1,43 @@
+/* STUDENT SIDE */
+#chatClm_1{
+  /* background-color:aliceblue; */
+  height: 100vh;
+}
+
+#chatClm_1 .card{
+    margin-top: 20px;
+}
+
+#myQuestions{
+    position: fixed;
+    z-index:100;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px 0 rgba(151, 182, 251, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    
+  
+}
+
+#myQuestions button{
+    margin: 0px !important;
+}
+
+#chatClm_2{
+   
+}
+
+#chatClm_2 .card{
+    
+    box-shadow: 0 4px 8px 0 rgba(151, 182, 251, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
+    width: 500px;
+    margin: 0px auto;
+    margin-top: 100px;
+    margin-left: 20px;
+
+}
+
+#chatClm_2 .card label{
+    font-weight: 700;
+}

@@ -1,0 +1,97 @@
+{{>internalNabBar}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6" id="chatClm_1">
+            <br>
+            <div class="card-header" id="myQuestions">
+                <button class="btn btn-secondary" type="button">All</button>
+                <button class="btn btn-secondary" type="button">My</button>
+                <button class="btn btn-secondary" type="button">PHYSICS</button>
+                <button class="btn btn-secondary" type="button">CHEMISTRY</button>
+                <button class="btn btn-secondary" type="button">BIOLOGY</button>
+                <button class="btn btn-secondary" type="button">C PROG</button>
+                <button class="btn btn-secondary" type="button">HTML</button>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div id="chatArea">
+
+                {{!-- <div class="card">
+                    <div class="card-header" id="studentName">
+                        <h6 style="margin: 0px;">Shreyash Talole <span
+                                class="badge
+                                bg-success">PHYSICS</span></h6>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="chat_question">What do you
+                            think
+                            the meaning of life is?</h5>
+                        <p class="card-text" id="chat_answer">Your question is
+                            under
+                            review</p>
+                    </div>
+                </div> --}}
+
+            </div>
+
+
+
+        </div>
+        <div class="col-sm-6" id="chatClm_2">
+
+            <div class="card">
+                <div class="card-header">
+                    Ask Your Doubt
+                </div>
+                <div class="card-body">
+
+                    <form id="questionForm">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">QUESTION</label>
+                            <input type="text" class="form-control"
+                                id="question" name="question" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="Default
+                                select example" name="subject">
+                                <option selected>SUBJECT</option>
+                                <option value="PHYSICS">PHYSICS</option>
+                                <option value="CHEMISTRY">CHEMISTRY</option>
+                                <option value="BIOLOGY">BIOLOGY</option>
+                                <option value="C PROGRAMMING">C PROGRAMMING</option>
+                                <option value="HTML">HTML</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{>checkIfLoggedInOrNot}}

@@ -320,4 +320,10 @@ router.post('/sendForm', (req, res, next) => {
   console.log(req.body)
 })
 
+
+// CHAT
+router.get('/chat', (req, res) => {
+  res.render('chat')
+})
+
 module.exports = router;
