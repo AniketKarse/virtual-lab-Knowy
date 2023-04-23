@@ -182,8 +182,19 @@ POST http://localhost:3000/teacher/saveTeacher HTTP/1.1
 content-type: application/json
 
 {
-    "name": "H. C. Verma",
-    "subject": "PHYSICS",
-    "teacherID": "101",
+    "name": "Dr. Sachin Kapur",
+    "subject": "CHEMISTRY",
+    "teacherID": "102",
     "password": "ABCD"
+}
+
+###
+POST https://virtuallab-chat-api.onrender.com/chat/createChat HTTP/1.1
+content-type: application/json
+
+{
+    
+"studentName": "Shreyash Talole",
+"subject" : "CHEMISTRY",
+"question": "What is this ?"
 }

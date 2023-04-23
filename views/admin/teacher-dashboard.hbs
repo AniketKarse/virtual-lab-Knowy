@@ -29,6 +29,9 @@
     <a class="btn btn-light" onclick="showRemoveStudent()" style="cursor:
       pointer;">Remove Student</a>
     <hr>
+    <a class="btn btn-light" onclick="showStudentDoubts()" style="cursor:
+      pointer;">Student Doubts</a>
+    <hr>
     <a class="btn btn-light" id="teacherLogOut" style="cursor: pointer;">Log Out</a>
     <hr>
 
@@ -59,6 +62,10 @@
     {{>teacher/deleteStudent}}
   </div>
 
+  <div id="student_doubts" style="display: none;">
+    {{>teacher/chat}}
+  </div>
+
 
 
 
@@ -80,6 +87,7 @@
     const student_progress = document.getElementById("student_progress")
     const create_student = document.getElementById("create_student")
     const remove_student = document.getElementById("remove_student")
+    const student_doubts = document.getElementById("student_doubts")
 
 
 
@@ -88,6 +96,7 @@
       student_progress.style.display = "none"
       create_student.style.display = "none"
       remove_student.style.display = "none"
+      student_doubts.style.display = "none"
     }
 
     function showStudentProgress(){
@@ -95,6 +104,8 @@
       student_progress.style.display = "block"
       create_student.style.display = "none"
       remove_student.style.display = "none"
+      student_doubts.style.display = "none"
+
     }
 
     function showCreateStudent(){
@@ -102,6 +113,8 @@
       student_progress.style.display = "none"
       create_student.style.display = "block"
       remove_student.style.display = "none"
+      student_doubts.style.display = "none"
+
     }
 
     function showRemoveStudent(){
@@ -109,6 +122,17 @@
       student_progress.style.display = "none"
       create_student.style.display = "none"
       remove_student.style.display = "block"
+      student_doubts.style.display = "none"
+
+    }
+
+     function showStudentDoubts(){
+      student_list.style.display = "none"
+      student_progress.style.display = "none"
+      create_student.style.display = "none"
+      remove_student.style.display = "none"
+      student_doubts.style.display = "block"
+
     }
 
   </script>

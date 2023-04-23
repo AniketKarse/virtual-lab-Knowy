@@ -1,0 +1,92 @@
+<div class="container">
+
+    <div id="teacherChatArea">
+        <div id="loading" style="text-align:
+            center;margin-top:50px;color:red;font-weight:700;"></div>
+
+    </div>
+
+
+
+
+</div>
+
+
+<script>
+    const chatArea = document.querySelector("#teacherChatArea");
+    // This function append chats to the chat area
+    function appendChat(data) {
+        let mainDiv = document.createElement('div');
+        mainDiv.classList.add('card');
+
+        let markup = `
+    <form id="${data._id}">
+        <div class="card-header" id="studentName">
+            <h6 style="margin: 0px;">${data.studentName} <span class="badge
+                bg-success">${data.subject}</span></h6>
+        </div>
+      
+        <div class="card-body">
+            <h5 class="card-title" id="chat_question">${data.question}</h5>
+            <textarea style="width='200%'" class="card-text" id="chat_answer" name="answer">${data.answer}</textarea>
+        </div>
+        <div>
+            <button type="button" onclick="updateAnswer('${data._id}')" class="btn btn-dark">SUBMIT</button>
+        </div>
+    </form>
+
+    `
+        mainDiv.innerHTML = markup
+        chatArea.appendChild(mainDiv)
+    }
+
+    // Fetch student chat subject wise
+    window.addEventListener('load', () => {
+
+        const loading = document.getElementById("loading")
+        loading.innerHTML = "LOADING..."
+
+        fetch(`https://virtuallab-chat-api.onrender.com/chat/getChats/${JSON.parse(localStorage.getItem('teacher')).subject}`)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                loading.style.display = "none"
+                let chatArrayLength = data.length
+                while (chatArrayLength--) {
+                    appendChat(data[chatArrayLength])
+                }
+            });
+
+    })
+
+
+    // THis function updates the answer
+    function updateAnswer(id) {
+        alert("Answer Updated Successfully!")
+        {{!-- console.log("This is ID " + id) --}}
+
+        var answerFomr = document.getElementById(id)
+        var answerFomrData = Object.fromEntries(new FormData(answerFomr))
+        answerFomrData.teacherName = JSON.parse(localStorage.getItem('teacher')).name
+        console.log(JSON.stringify(answerFomrData))
+
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(answerFomrData)
+        }
+
+        fetch(`https://virtuallab-chat-api.onrender.com/chat/updateReply/${id}`, options)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+
+            });
+
+
+    }
+
+
+</script>

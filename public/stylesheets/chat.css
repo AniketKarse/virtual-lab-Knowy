@@ -6,6 +6,7 @@
 
 #chatClm_1 .card{
     margin-top: 20px;
+    text-align: justify;
 }
 
 #myQuestions{
@@ -40,4 +41,16 @@
 
 #chatClm_2 .card label{
     font-weight: 700;
+}
+
+/* -----------------------------------
+TEACHER CHAT BOARD */
+
+#teacherChatArea{
+    padding: 20px;
+}
+
+#teacherChatArea .card{
+    margin-bottom: 20px;
+    max-width: 500px;
 }
