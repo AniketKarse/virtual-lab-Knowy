@@ -17,7 +17,8 @@ const userSchema = new mongoose.Schema({
         }
     },
     studentID: {
-        type: String
+        type: String,
+        unique: true
     },
     email: {
         type: String,

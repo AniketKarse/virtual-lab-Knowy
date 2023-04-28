@@ -1,2 +1,246 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+ <style>
+
+
+#nevbar-wrapper{
+    background-color: #FDF8F7;
+}
+
+.nav-link{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500 !important;
+    color: #15295F !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    margin-left: 20px;
+    font-size: 18px !important;
+}
+#hiremeBtn{
+    background-color: #FD6E0A;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 5px;
+}
+
+/* ---------- */
+
+#home-wrapper{
+    background-color: #FDF8F7;
+    /* height: 0vh; */
+}
+#home-clm-1{
+    padding-top: 100px;
+}
+
+#home-clm-1 h5{
+    font-size: 150%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #FD6E0A
+}
+
+#home-clm-1 h1{
+    font-size: 400%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #15295F
+}
+
+#home-clm-1 h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #15295F;
+    margin-top: 5px;
+}
+
+#home-clm-1 p{
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    color: gray;
+    font-weight: 400;
+}
+
+#home-clm-1 a{
+    background-color: #FD6E0A;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#home-clm-2{
+    text-align: center;
+}
+
+.heading{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.card{
+    margin-top: 30px;
+}
+
+
+ </style>
+<!-- ======================================================== -->
+<!-- NAV BAR -->
+<!-- ======================================================== -->
+<div class="container-fluid sticky-top" id="nevbar-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">VL</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+
+                    </ul>
+
+                    <a class="btn" id="hiremeBtn">Student</a>
+                    <a class="btn" id="hiremeBtn">Teacher</a>
+                    <a class="btn" id="hiremeBtn">Admin</a>
+
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- ======================================================== -->
+<!-- HOME -->
+<!-- ======================================================== -->
+
+<div class="container-fluid" id="home-wrapper">
+
+    <div class="container">
+        <div class="row">
+            <div class="col" id="home-clm-1">
+
+                {{!-- <h5>Hi, I'm</h5> --}}
+                <h1>Virtual Lab</h1>
+                {{!-- <h4>Web Developer</h4> --}}
+
+                <p>
+                    A virtual lab project is an innovative approach to
+                    laboratory-based education. It aims to provide a simulated
+                    laboratory environment that allows students to conduct
+                    experiments safely and cost-effectively. With the increasing
+                    complexity and cost of traditional laboratory experiments,
+                    virtual labs offer a practical solution for schools and
+                    universities to provide a hands-on learning experience to
+                    their students.
+                </p>
+
+                <br>
+                {{!-- <a class="btn">Download Resume</a> --}}
+                <a class="btn">Contact</a>
+
+
+
+            </div>
+            <div class="col" id="home-clm-2">
+                <img class="img-fluid"
+                    src="https://dora-react.vercel.app/images/hero-person-img.png">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ======================================================== -->
+<!-- SUBJECTS -->
+<!-- ======================================================== -->
+
+<div class="container-fluid">
+  <h2 data-aos="fade-up" class="heading">SUBJECTS</h2>
+    <div class="row">
+
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 15rem;">
+                <img src="/images/physics.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the
+                        card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 15rem;">
+                <img src="/images/physics.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the
+                        card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 15rem;">
+                <img src="/images/physics.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the
+                        card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 15rem;">
+                <img src="/images/physics.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the
+                        card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 15rem;">
+                <img src="/images/physics.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the
+                        card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<div style="margin-top: 1000px;"></div>

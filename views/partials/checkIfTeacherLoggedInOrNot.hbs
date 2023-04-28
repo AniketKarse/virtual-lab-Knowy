@@ -11,10 +11,21 @@
     logout.addEventListener('click', (e) => {
 
         {{!-- localStorage.clear(); --}}
-        localStorage.removeItem("teacher");
+
+        if(JSON.parse(localStorage.getItem("teacher")).designation == "superAdmin"){
+            localStorage.removeItem("teacher");
+        localStorage.removeItem("isLoggedInTeacher");
+        localStorage.removeItem("jwt");
+             window.location.href = "../teacher/login"
+             
+        }else{
+             localStorage.removeItem("teacher");
         localStorage.removeItem("isLoggedInTeacher");
         localStorage.removeItem("jwt");
          window.location.href = "teacher/login"
+        }
+
+       
 
     })
     
