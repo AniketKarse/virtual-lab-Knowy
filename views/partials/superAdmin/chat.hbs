@@ -28,13 +28,12 @@
       
         <div class="card-body">
             <h5 class="card-title" id="chat_question">${data.question}</h5>
-            <textarea  rows="4" cols="60"   class="card-text" id="chat_answer" name="answer">${data.answer}</textarea>
-            <br>
-            <button type="button" onclick="updateAnswer('${data._id}')" class="btn btn-dark">SUBMIT</button>
+            <textarea rows="4" cols="50" class="card-text" id="chat_answer" name="answer" disabled>${data.answer}</textarea>
+            <hr>
+           <p>${data.teacherName}</p>
+        
         </div>
-   
-           
- 
+        
     </form>
 
     `
@@ -48,7 +47,7 @@
         const loading = document.getElementById("loading")
         loading.innerHTML = "LOADING..."
 
-        fetch(`https://virtuallab-chat-api.onrender.com/chat/getChats/${JSON.parse(localStorage.getItem('teacher')).subject}`)
+        fetch(`https://virtuallab-chat-api.onrender.com/chat/getAllChats`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);

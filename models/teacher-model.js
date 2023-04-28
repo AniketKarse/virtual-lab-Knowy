@@ -13,6 +13,10 @@ const teacherSchema = new mongoose.Schema({
     },
     password: {
         type: String
+    },
+    designation: {
+        type: String
+        
     }
 })
 

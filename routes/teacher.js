@@ -78,6 +78,12 @@ router.post('/login', async (req, res) => {
   
   })
 
+  router.get('/superAdmin', (req, res) => {
+
+    res.render('superAdmin/teacher-dashboard')
+
+  })
+
 
 
 

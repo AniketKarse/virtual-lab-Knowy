@@ -182,10 +182,11 @@ POST http://localhost:3000/teacher/saveTeacher HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Dr. Sachin Kapur",
-    "subject": "CHEMISTRY",
-    "teacherID": "102",
-    "password": "ABCD"
+    "name": "Mr. John wick",
+    "subject": "ADMIN",
+    "teacherID": "105",
+    "password": "ABCD",
+    "designation": "superAdmin"
 }
 
 ###
