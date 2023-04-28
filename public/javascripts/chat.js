@@ -69,8 +69,11 @@ questionForm.addEventListener('submit',  (e) => {
     }
 
      fetch('https://virtuallab-chat-api.onrender.com/chat/createChat', options)
-        .then(res => res.json())
         .then(
+            setTimeout(function(){
+                history.go(0)
+            }, 3000)
+            
             // window.location.href = window.location.href
         )
 
