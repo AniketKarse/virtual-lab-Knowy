@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-sm-6" id="chatClm_1">
             <br>
-            <div class="card-header" id="myQuestions">
+            {{!-- <div class="card-header" id="myQuestions">
                 <button class="btn btn-secondary" type="button">All</button>
                 <button class="btn btn-secondary" type="button">My</button>
                 <button class="btn btn-secondary" type="button">PHYSICS</button>
@@ -12,13 +12,26 @@
                 <button class="btn btn-secondary" type="button">BIOLOGY</button>
                 <button class="btn btn-secondary" type="button">C PROG</button>
                 <button class="btn btn-secondary" type="button">HTML</button>
-            </div>
+            </div> --}}
 
+            {{!-- <br>
             <br>
-            <br>
-            <br>
+            <br> --}}
 
             <div id="chatArea">
+                <br>
+                {{!-- This search the whole window --}}
+                <div id="searchBar">
+                    <input placeholder="Search Key Words" type="text"
+                        id="search">
+                    <input type="button" value="Search"
+                        onclick="search(document.getElementById('search').value)">
+                </div>
+
+                <br>
+                <br>
+           
+
 
                 <div id="loading" style="text-align:
                     center;margin-top:50px;color:red;font-weight:700;"></div>
@@ -75,9 +88,11 @@
 
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
+                    <hr>
 
                 </div>
             </div>
+
 
         </div>
     </div>

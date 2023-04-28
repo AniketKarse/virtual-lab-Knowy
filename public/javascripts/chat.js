@@ -76,3 +76,9 @@ questionForm.addEventListener('submit',  (e) => {
 
 
 })
+
+
+
+function search(string){
+    window.find(string, false, false, true);
+}

@@ -43,6 +43,18 @@
     font-weight: 700;
 }
 
+
+#searchBar{
+    position: fixed;
+    z-index:100;
+    width: 500px;
+    background-color: #F8F8F8;
+    padding: 10px;
+    border: 1px solid black;
+   
+    
+   
+}
 /* -----------------------------------
 TEACHER CHAT BOARD */
 

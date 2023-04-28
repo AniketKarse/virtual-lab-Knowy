@@ -8,10 +8,13 @@
     <table class="table table-light " id="myTable">
         <thead>
             <tr>
+                
                 <th scope="col">ID</th>
                 <th scope="col">NAME</th>
                 <th scope="col">CLASS</th>
                 <th scope="col">SCORE</th>
+                <th scope="col">PROGRESS</th>
+        
 
             </tr>
         </thead>
@@ -74,17 +77,24 @@ function myFunction() {
       let c2 = row.insertCell(1);
       let c3 = row.insertCell(2);
       let c4 = row.insertCell(3);
+      let c5 = row.insertCell(4);
 
 
+      c1.setAttribute('id', data[i].studentID)
+      
+      
       c1.innerText = data[i].studentID
       c2.innerText = data[i].name
       c3.innerText = data[i].class
       c4.innerText = data[i].totalScore
-
+      c5.innerHTML = `<button onClick="showStudentProgressByRedirecting(this.id)" id="${data[i].studentID}" >See Progress</button>`
+     
       row.appendChild(c1);
       row.appendChild(c2);
       row.appendChild(c3);
       row.appendChild(c4);
+      row.appendChild(c5);
+
 
 
     }
@@ -92,7 +102,9 @@ function myFunction() {
 
   });
 
-  
+
+
+
 
 
 
