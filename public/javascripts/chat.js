@@ -55,7 +55,7 @@ const questionForm = document.getElementById("questionForm")
 
 questionForm.addEventListener('submit',  (e) => {
     e.preventDefault()
-
+    alert("Question Submitted Successfully")
     var questionFormData = Object.fromEntries(new FormData(questionForm))
     questionFormData.studentName = JSON.parse(localStorage.getItem('user')).name
     console.log(questionFormData)
@@ -70,7 +70,9 @@ questionForm.addEventListener('submit',  (e) => {
 
      fetch('https://virtuallab-chat-api.onrender.com/chat/createChat', options)
         .then(res => res.json())
-        .then()
+        .then(
+            // window.location.href = window.location.href
+        )
 
 
 

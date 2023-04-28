@@ -182,7 +182,7 @@ POST http://localhost:3000/teacher/saveTeacher HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Mr. John wick",
+    "name": "",
     "subject": "ADMIN",
     "teacherID": "105",
     "password": "ABCD",
